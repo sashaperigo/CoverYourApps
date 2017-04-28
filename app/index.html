@@ -17,6 +17,10 @@
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
     -->
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
+    <script src="bower_components/angular-aria/angular-aria.js" type="text/javascript"></script>
+    <script src="bower_components/angular-material/angular-material.js" type="text/javascript"></script>
+    <script src="bower_components/angular-resource/angular-resource.js" types="text/javascript"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="components/version/version.js"></script>
@@ -24,29 +28,29 @@
     <script src="components/version/interpolate-filter.js"></script>
     <script src="mainController.js"></script>
     <script src="components/view1/view1Controller.js"></script>
-    <script src="components/view2/view2Controller.js"></script>    
+    <script src="components/view2/view2Controller.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="main.css">
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <div class="nav">
-        <div class="title">
-            <h2>Club Security</h2>
-        </div>
-        <div class="right-nav">
+    <md-toolbar layout="row" layout-align="space-around center" class="md-primary md-hue-2">
+        <h2>Club Security</h2>
+        <span flex></span>
+        <md-button>
             Sign Up
-        </div>
-    </div>
+        </md-button>
+    </md-toolbar>
     <div class="container" flex layout="row">
         <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
-            <div>
-                <ul>
-                    <li>Module 1</li>
-                    <li>Module 2</li>
-                </ul>
+            <div class="user-list">
+                <md-list>
+                    <md-list-item>Module 1</md-list-item>
+                    <md-list-item>Module 2</md-list-item>
+                </md-list>
             </div>
         </md-sidenav>
         <md-content flex id="content">

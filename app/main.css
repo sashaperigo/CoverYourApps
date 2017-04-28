@@ -10,11 +10,11 @@ html {
     box-sizing: border-box;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background: #eee;
-    padding: 0.5em 1em 0.5em 1em;
+md-toolbar {
+    padding: 0 1em 0 1em;
+    height: 2em;
+}
+
+.container {
+    height: 100%;
 }
