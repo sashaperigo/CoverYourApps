@@ -30,28 +30,28 @@
     <script src="components/view1/view1Controller.js"></script>
     <script src="components/view2/view2Controller.js"></script>
     <!-- Styles -->
-    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oxygen">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css" />
     <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <md-toolbar layout="row" layout-align="space-around center" class="md-primary md-hue-2">
+    <md-toolbar layout="row" layout-align="space-around center" class="nav">
         <h2>Club Security</h2>
         <span flex></span>
-        <md-button>
-            Sign Up
-        </md-button>
+        <div class="nav-button"><a href="">Learn</a></div>
+        <div class="nav-button"><a href="">About Us</a></div>
+        <div class="nav-button"><a href="">Sign Up</a></div>
     </md-toolbar>
     <div class="container" flex layout="row">
-        <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
-            <div class="user-list">
-                <md-list>
-                    <md-list-item>Module 1</md-list-item>
-                    <md-list-item>Module 2</md-list-item>
-                </md-list>
-            </div>
+        <md-sidenav md-is-locked-open="true">
+            <md-list>
+                <md-list-item>Dashboard</md-list-item>
+                <md-list-item>Module 1</md-list-item>
+                <md-list-item>Module 2</md-list-item>
+            </md-list>
         </md-sidenav>
         <md-content flex id="content">
             <!--[if lt IE 7]>

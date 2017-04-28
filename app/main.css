@@ -1,20 +1,52 @@
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
+body,
 html {
-    font-family: Helvetica;
-    text-align: center;
-    box-sizing: border-box;
+    font-family: "Oxygen", "Oxygen", "Helvetica Neue", sans-serif;
+    font-size: 11pt;
+    color: #3e3e40;
 }
 
-md-toolbar {
-    padding: 0 1em 0 1em;
-    height: 2em;
+md-toolbar.nav {
+    background-color: white;
+    color: #225470;
+    padding: 0.5em 1em 0 1em;
+    margin: -0.5em 0 0 0;
+    height: 3em;
+    line-height: 2.5em;
+    border-bottom: solid 1px #D4D5D6;
+}
+
+md-toolbar .nav-button {
+    height: 100%;
+    padding: 0 1rem 0 1rem;
+}
+
+md-toolbar .nav-button a {
+    text-decoration: none;
+    color: #225470;
+    font-size: 12pt;
+}
+
+md-toolbar .nav-button:hover {
+    border-bottom: solid 3px #225470;
 }
 
 .container {
     height: 100%;
+}
+
+md-sidenav {
+    padding: 0.5em 1em 0 1em;
+}
+
+md-sidenav md-list-item.md-no-proxy {
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+md-sidenav md-list-item:not(:last-child) {
+    border-bottom: solid 1px #D4D5D6;
+}
+
+md-sidenav md-list-item:hover {
+    background-color: #e9eaea;
 }
