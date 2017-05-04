@@ -25,5 +25,11 @@ myApp.config(['$locationProvider', '$routeProvider',
 myApp.controller('MainController', ['$scope',
     function($scope) {
         $scope.main = {};
+
+        $scope.main.showDropdown = false;
+
+        $scope.myFunction = function(element) {
+            $scope.main.showDropdown = !$scope.main.showDropdown;
+        };
     }
 ]);

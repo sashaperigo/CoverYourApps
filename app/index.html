@@ -38,7 +38,14 @@
 
 <body>
     <md-toolbar layout="row" layout-align="space-around center" class="nav">
-        <md-icon md-svg-icon="img/icons/menu.svg" class="svg" role="img" aria-hidden="true"></md-icon>
+        <div class="dropdown">
+            <md-icon md-svg-icon="img/icons/menu.svg" class="dropdown svg" role="img" aria-hidden="true" ng-click="myFunction()"></md-icon>
+            <div id="dropdown" class="dropdown-content" ng-if="main.showDropdown">
+                <a href="#!/about-us">About Us</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
         <div class="search-box">
             <div class="search-container">
                 <md-icon md-svg-icon="img/icons/search.svg" class="svg" role="img" aria-hidden="true"></md-icon>
