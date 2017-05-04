@@ -1,52 +1,140 @@
 body,
 html {
-    font-family: "Oxygen", "Oxygen", "Helvetica Neue", sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
     font-size: 11pt;
     color: #3e3e40;
 }
 
+a {
+    text-decoration: none;
+    color: #3e3e40;
+}
+
 md-toolbar.nav {
-    background-color: white;
-    color: #225470;
-    padding: 0.5em 1em 0 1em;
+    background: #3dd6da;
+    /*    background: -webkit-linear-gradient(left top, #3dd6da, #11accd);
+    background: -o-linear-gradient(bottom right, #3dd6da, #11accd);
+    background: -moz-linear-gradient(bottom right, #3dd6da, #11accd);
+    background: linear-gradient(to bottom right, #3dd6da, #11accd);*/
+    padding: 0.5em 2em 0 2em;
     margin: -0.5em 0 0 0;
-    height: 3em;
-    line-height: 2.5em;
-    border-bottom: solid 1px #D4D5D6;
+    height: 3.5em;
+    line-height: 3em;
+    border-bottom: solid 1px #84e3ea;
+}
+
+md-toolbar.nav a {
+    color: white;
+}
+
+md-toolbar h2 {
+    justify-content: center;
+    margin-top: 2px;
+    position: absolute;
+}
+
+md-toolbar .svg {
+    opacity: 0.8;
+}
+
+.search-container {
+    margin-left: 1rem;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.search-container input#search {
+    height: 35px;
+    width: 200px;
+    background: #84e3ea;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: white;
+    font-weight: bold;
+    padding-left: 7px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.search-container input#search:focus {
+    outline-width: 0;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.search-container .svg {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    margin-right: 7px;
+    margin-top: 7px;
+    z-index: 1;
+    color: white;
 }
 
 md-toolbar .nav-button {
+    font-size: 11pt;
+}
+
+.md-subheader {
+    height: 400px;
+    background: #3dd6da;
+    background: -webkit-linear-gradient(#3dd6da, #11accd);
+    background: -o-linear-gradient(#3dd6da, #11accd);
+    background: -moz-linear-gradient(#3dd6da, #11accd);
+    background: linear-gradient(#3dd6da, #11accd);
+}
+
+.md-subheader .md-subheader-inner {
+    display: table;
     height: 100%;
-    padding: 0 1rem 0 1rem;
+    width: 100%;
+    position: absolute;
 }
 
-md-toolbar .nav-button a {
-    text-decoration: none;
-    color: #225470;
-    font-size: 12pt;
+.md-subheader .md-subheader-content {
+    display: table-cell;
+    vertical-align: middle;
 }
 
-md-toolbar .nav-button:hover {
-    border-bottom: solid 3px #225470;
-}
-
-.container {
-    height: 100%;
-}
-
-md-sidenav {
-    padding: 0.5em 1em 0 1em;
-}
-
-md-sidenav md-list-item.md-no-proxy {
+.md-subheader .header-text {
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+    line-height: 1.5;
     font-weight: bold;
-    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-md-sidenav md-list-item:not(:last-child) {
-    border-bottom: solid 1px #D4D5D6;
+.content-container {
+    text-align: center;
+    padding: 0.5em 1em 1em 1em;
 }
 
-md-sidenav md-list-item:hover {
-    background-color: #e9eaea;
+.content-container.about-us {
+    font-family: font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, sans-serif;
 }

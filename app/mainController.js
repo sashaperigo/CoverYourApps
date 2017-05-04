@@ -7,7 +7,18 @@ myApp.config(['$locationProvider', '$routeProvider',
     function($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 
-        $routeProvider.otherwise({ redirectTo: '/view1' });
+        $routeProvider.
+        when('/about-us', {
+            templateUrl: 'components/about-us/aboutUs.html',
+            controller: 'AboutUsController'
+        }).
+        when('/phishing', {
+            templateUrl: 'components/phishing/phishing.html',
+            controller: 'PhishingController'
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
     }
 ]);
 

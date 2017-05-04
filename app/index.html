@@ -27,10 +27,9 @@
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
     <script src="mainController.js"></script>
-    <script src="components/view1/view1Controller.js"></script>
-    <script src="components/view2/view2Controller.js"></script>
+    <script src="components/phishing/phishingController.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oxygen">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css" />
@@ -39,20 +38,24 @@
 
 <body>
     <md-toolbar layout="row" layout-align="space-around center" class="nav">
-        <h2>Club Security</h2>
+        <md-icon md-svg-icon="img/icons/menu.svg" class="svg" role="img" aria-hidden="true"></md-icon>
+        <div class="search-box">
+            <div class="search-container">
+                <md-icon md-svg-icon="img/icons/search.svg" class="svg" role="img" aria-hidden="true"></md-icon>
+                <input type="search" id="search" placeholder="Search" />
+            </div>
+        </div>
         <span flex></span>
-        <div class="nav-button"><a href="">Learn</a></div>
-        <div class="nav-button"><a href="">About Us</a></div>
-        <div class="nav-button"><a href="">Sign Up</a></div>
+        <h2><a href="/">Club Security</a></h2>
+        <span flex></span>
+        <div class="nav-button"><a href="">New user/ Sign up</a></div>
     </md-toolbar>
+    <md-subheader>
+        <div class="header-text">
+            Internet safety demystified.
+        </div>
+    </md-subheader>
     <div class="container" flex layout="row">
-        <md-sidenav md-is-locked-open="true">
-            <md-list>
-                <md-list-item>Dashboard</md-list-item>
-                <md-list-item>Module 1</md-list-item>
-                <md-list-item>Module 2</md-list-item>
-            </md-list>
-        </md-sidenav>
         <md-content flex id="content">
             <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
