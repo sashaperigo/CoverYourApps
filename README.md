@@ -1,4 +1,4 @@
-# ClubSecurity
+# Cover Your Apps
 
 A teaching platform aimed at non-technically savvy people that teaches computer security best practices.
 
