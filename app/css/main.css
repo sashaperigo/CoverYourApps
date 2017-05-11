@@ -14,8 +14,11 @@ a {
     color: #000000;
 }
 
+
+
 md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
-    background-color: #ffffff;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
     color: #000000;
 }
 
@@ -37,8 +40,9 @@ md-toolbar a:hover {
 
 .logo {
     position: absolute;
-    top: 10%;
+    top: -20px;
     left: 10%;
+    max-height: 100px;
 }
 
 .container {
