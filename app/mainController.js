@@ -8,13 +8,17 @@ myApp.config(['$locationProvider', '$routeProvider',
         $locationProvider.hashPrefix('!');
 
         $routeProvider.
+        when('/', {
+            templateUrl: 'components/module-list/moduleList.html',
+            controller: 'ModuleListController'
+        }).
         when('/about-us', {
             templateUrl: 'components/about-us/aboutUs.html',
             controller: 'AboutUsController'
         }).
-        when('/phishing', {
-            templateUrl: 'components/phishing/phishing.html',
-            controller: 'PhishingController'
+        when('/module', {
+            templateUrl: 'components/module/module.html',
+            controller: 'ModuleController'
         }).
         otherwise({
             redirectTo: '/'

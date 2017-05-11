@@ -28,15 +28,16 @@
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
     <script src="mainController.js"></script>
-    <script src="components/phishing/phishingController.js"></script>
+    <script src="components/about-us/aboutUsController.js"></script>
+    <script src="components/module/moduleController.js"></script>
+    <script src="components/module-list/moduleListController.js"></script>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css" />
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css" />
-    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/main.css" />
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -47,7 +48,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -55,19 +56,17 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
 </head>
 
 <body>
     <md-toolbar layout="row" layout-align="space-around center" class="nav">
         <div class="col-sm-3">
-            <a href="#!"><img src="/img/Logo.png" class="img-responsive logo"></a>
+            <a href="#!/"><img src="/img/Logo.png" class="img-responsive logo"></a>
         </div>
         <div class="col-sm-8"></div>
         <div class="col-sm-2">
             <a href="#!/about-us">About Us</a>
         </div>
-
         <!-- <div class="dropdown">
             <md-icon md-svg-icon="img/icons/menu.svg" class="dropdown svg" role="img" aria-hidden="true" ng-click="myFunction()"></md-icon>
             <div id="dropdown" class="dropdown-content" ng-if="main.showDropdown">
@@ -89,7 +88,7 @@
     </md-toolbar>
     <md-subheader>
         <div class="header-text">
-            Internet safety demystified.
+            Cover Your Apps
         </div>
     </md-subheader>
     <div class="container" flex layout="row">
@@ -97,7 +96,9 @@
             <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-            <div ng-view></div>
+            <div ng-view>
+                <div ng-if="window.location.pathname === '/'" ng-include="'components/module-list/moduleList.html'"></div>
+            </div>
         </md-content>
     </div>
 </body>
