@@ -1,4 +1,9 @@
 .container {
+    /* This height is calculated by subtracting the height
+	 * of the header (56px), the height of the footer (48px), 
+	 * and the height of the subheader (150px) from the total
+	 * height. If you update the height of the subheader, 
+	 * make sure to fix this CSS! */
     max-height: calc(100vh - 56px - 48px - 150px);
     background-color: black;
     height: 100%;
@@ -7,7 +12,6 @@
 
 
 /* Overriding a grid preset */
-
 @media (min-width: 768px) {
     .container {
         width: auto;
@@ -51,14 +55,6 @@
     width: 64.66666666666%;
     right: 0;
 }
-
-
-/*
-.interactive .helper {
-    display: inline-block;
-    height: inherit;
-    vertical-align: middle;
-}*/
 
 .interactive img {
     top: 0;
