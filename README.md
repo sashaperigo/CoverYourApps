@@ -20,3 +20,15 @@ Look for the ```bower_components/``` folder under ```app/```. If for some reason
 The web server should be ready to go! Run ```npm start``` to start the server. The app will be accessible at ```localhost:8000/index.html```.
 
 If you get stuck at any point, check out the angular seed repo README!
+
+## Setting up the database locally (for Mac)
+
+0. (If you already have PostgreSQL installed or want to install it some other way, go ahead, but this an easy way.)
+
+1. Install [Postgres.app](http://postgresapp.com/) either by clicking on that link and installing as usual, or if you have [Homebrew](https://brew.sh) do `brew update && brew cask install postgres`. 🎉
+
+2. Go to the root directory in your command line and run ```. database/db-setup.sh``` Hopefully that works and gives you a little table of our names.
+
+3. Run the webserver (`npm start` etc.).
+
+4. Try out [https://localhost/api/dbtest/](https://localhost/api/dbtest/). You should get some JSON.
