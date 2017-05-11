@@ -1,9 +1,9 @@
 {
-  "name": "ClubSecurity",
+  "name": "CoverYourApps",
   "private": true,
   "version": "0.0.0",
   "description": "An interactive way to learn computer security and privacy",
-  "repository": "https://github.com/sashaperigo/ClubSecurity",
+  "repository": "https://github.com/sashaperigo/CoverYourApps",
   "license": "Apache-2.0",
   "devDependencies": {
     "bower": "^1.7.7",
