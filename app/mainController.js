@@ -16,6 +16,10 @@ myApp.config(['$locationProvider', '$routeProvider',
             templateUrl: 'components/phishing/phishing.html',
             controller: 'PhishingController'
         }).
+        when('/module', {
+            templateUrl: 'components/module/module.html',
+            controller: 'AuthenticationController'
+        }).
         otherwise({
             redirectTo: '/'
         });

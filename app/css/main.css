@@ -3,6 +3,7 @@ html {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 11pt;
     color: #000000;
+    overflow-y: hidden;
 }
 
 a:visited {
@@ -14,7 +15,8 @@ a {
     color: #000000;
 }
 
-md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
     background-color: #ffffff;
     color: #000000;
 }
@@ -29,7 +31,6 @@ md-toolbar a:link {
     text-decoration: none;
 }
 
-
 md-toolbar a:hover {
     color: #851e1e;
     text-decoration: none;
@@ -42,13 +43,15 @@ md-toolbar a:hover {
 }
 
 .container {
-    background-color: #ffffff;
+    height: 100%;
+    margin: 0;
 }
 
-
 .md-subheader {
-    height: 200px;
+    height: 150px;
     background-color: #d3d3d3;
     color: #000000;
     text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }

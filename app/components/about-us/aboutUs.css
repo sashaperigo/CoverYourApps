@@ -1,0 +1,6 @@
+/* Overriding a grid preset */
+@media (min-width: 768px) {
+    .container {
+        width: auto;
+    }
+}

@@ -1,0 +1,90 @@
+.container {
+    max-height: calc(100vh - 56px - 48px - 150px);
+    background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+
+/* Overriding a grid preset */
+
+@media (min-width: 768px) {
+    .container {
+        width: auto;
+    }
+}
+
+.container md-content {
+    background-color: inherit;
+}
+
+.text {
+    position: absolute;
+    width: 33.3333333333334%;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.text .text-header .svg {
+    margin-right: 1rem;
+}
+
+.text-header {
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    padding-left: 1.5rem;
+    background-color: #d3d3d3;
+}
+
+.text .text-content {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.interactive {
+    position: absolute;
+    background-color: #d3d3d3;
+    height: 100%;
+    /* Leave 2 percent margin between sections */
+    width: 64.66666666666%;
+    right: 0;
+}
+
+
+/*
+.interactive .helper {
+    display: inline-block;
+    height: inherit;
+    vertical-align: middle;
+}*/
+
+.interactive img {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.bottom-bar {
+    height: 40px;
+    background-color: #8f0f1c;
+    border-top: 2px solid black;
+}
+
+md-toolbar.footer {
+    position: fixed;
+    background-color: darkgrey;
+    border-top: 2px solid black;
+    top: calc(100vh - 56px);
+    font-weight: 600;
+    line-height: 56px;
+    margin-left: -15px;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+    clear: both;
+}
