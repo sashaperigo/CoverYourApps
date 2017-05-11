@@ -1,5 +1,5 @@
 'use strict';
 
-myApp.controller('AuthenticationController', ['$scope', '$rootScope',
+myApp.controller('ModuleController', ['$scope', '$rootScope',
     function($scope, $rootScope) {}
 ]);

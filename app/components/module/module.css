@@ -10,14 +10,6 @@
     margin: 0;
 }
 
-
-/* Overriding a grid preset */
-@media (min-width: 768px) {
-    .container {
-        width: auto;
-    }
-}
-
 .container md-content {
     background-color: inherit;
 }

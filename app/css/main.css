@@ -47,6 +47,13 @@ md-toolbar a:hover {
     margin: 0;
 }
 
+/* Overriding a grid preset */
+@media (min-width: 768px) {
+    .container {
+        width: auto;
+    }
+}
+
 .md-subheader {
     height: 150px;
     background-color: #d3d3d3;

@@ -28,8 +28,8 @@
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
     <script src="mainController.js"></script>
-    <script src="components/phishing/phishingController.js"></script>
     <script src="components/module/moduleController.js"></script>
+    <script src="components/module-list/moduleListController.js"></script>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
@@ -60,7 +60,7 @@
 <body>
     <md-toolbar layout="row" layout-align="space-around center" class="nav">
         <div class="col-sm-3">
-            <a href="#!"><img src="/img/Logo.png" class="img-responsive logo"></a>
+            <a href="#!/"><img src="/img/Logo.png" class="img-responsive logo"></a>
         </div>
         <div class="col-sm-8"></div>
         <div class="col-sm-2">
@@ -95,7 +95,9 @@
             <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-            <div ng-view></div>
+            <div ng-view>
+                <div ng-if="window.location.pathname === '/'" ng-include="'components/module-list/moduleList.html'"></div>
+            </div>
         </md-content>
     </div>
 </body>
