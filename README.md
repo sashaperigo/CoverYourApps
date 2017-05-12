@@ -35,4 +35,4 @@ If you get stuck at any point, check out the angular seed repo README!
 
 5. Run the webserver (`npm start` etc.).
 
-6. Try out [https://localhost:8000/api/dbtest/](https://localhost:8000/api/dbtest/). You should get some JSON.
+6. Try out [http://localhost:8000/api/dbtest/](https://localhost:8000/api/dbtest/). You should get some JSON.
