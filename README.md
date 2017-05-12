@@ -27,8 +27,12 @@ If you get stuck at any point, check out the angular seed repo README!
 
 1. Install [Postgres.app](http://postgresapp.com/) either by clicking on that link and installing as usual, or if you have [Homebrew](https://brew.sh) do `brew update && brew cask install postgres`. 🎉
 
-2. Go to the root directory in your command line and run ```. database/db-setup.sh``` Hopefully that works and gives you a little table of our names.
+2. Open Postgres.app to start your Postgres server.
 
-3. Run the webserver (`npm start` etc.).
+3. Go to the project directory in your command line and run ```. database/db-setup.sh``` Hopefully that works and gives you a little table of our names.
 
-4. Try out [https://localhost/api/dbtest/](https://localhost/api/dbtest/). You should get some JSON.
+4. `npm install` to make sure you have all the up to date db modules.
+
+5. Run the webserver (`npm start` etc.).
+
+6. Try out [https://localhost:8000/api/dbtest/](https://localhost:8000/api/dbtest/). You should get some JSON.
