@@ -13,10 +13,10 @@
     </div>
 </div>
 <md-toolbar layout-align="space-around center" class="footer">
-    <span>Module Name</span>
+    <span>{{module.name}}</span>
     <span flex></span>
-    <md-button>Back</md-button>
-    <span>1/9</span>
-    <md-button>Next</md-button>
+    <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
+    <span>{{module.pageNumber}}/{{module.maxPages}}</span>
+    <md-button ng-disabled="module.pageNumber >= module.maxPages" ng-click="module.incrementPage()">Next</md-button>
     <span flex></span>
 </md-toolbar>

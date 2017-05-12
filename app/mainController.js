@@ -16,7 +16,11 @@ myApp.config(['$locationProvider', '$routeProvider',
             templateUrl: 'components/about-us/aboutUs.html',
             controller: 'AboutUsController'
         }).
-        when('/module', {
+        when('/auth', {
+            templateUrl: 'components/module/module.html',
+            controller: 'ModuleController'
+        }).
+        when('/phishing', {
             templateUrl: 'components/module/module.html',
             controller: 'ModuleController'
         }).
@@ -30,10 +34,5 @@ myApp.controller('MainController', ['$scope',
     function($scope) {
         $scope.main = {};
 
-        $scope.main.showDropdown = false;
-
-        $scope.myFunction = function(element) {
-            $scope.main.showDropdown = !$scope.main.showDropdown;
-        };
     }
 ]);
