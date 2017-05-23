@@ -5,6 +5,11 @@ html {
     color: #000000;
 }
 
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 a:visited {
     text-decoration: none;
 }

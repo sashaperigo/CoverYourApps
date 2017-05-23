@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
         if (bodyWidth)
-            jssor_slider1.$ScaleWidth(Math.min(bodyWidth*.99, 1920));
+            jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
         else
             window.setTimeout(ScaleSlider, 30);
     }

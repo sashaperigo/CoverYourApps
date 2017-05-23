@@ -17,7 +17,7 @@ myApp.config(['$locationProvider', '$routeProvider',
             controller: 'AboutUsController'
         }).
         when('/module-list', {
-            templateUrl: 'components/module-list/module-list.html',
+            templateUrl: 'components/module-list/moduleList.html',
             controller: 'ModuleListController'
         }).
         when('/auth', {
