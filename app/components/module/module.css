@@ -1,9 +1,10 @@
-.container {
+.module-container {
     /* This height is calculated by subtracting the height
 	 * of the footer (48px), and the height of the subheader
      * (150px) from the total height. If you update the height
      * of the subheader, make sure to fix this CSS! */
     max-height: calc(100vh - 48px - 150px);
+    padding-bottom: 100%;
     border-top: 2px solid black;
     background-color: black;
     height: 100%;
