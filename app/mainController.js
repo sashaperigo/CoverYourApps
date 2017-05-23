@@ -9,12 +9,16 @@ myApp.config(['$locationProvider', '$routeProvider',
 
         $routeProvider.
         when('/', {
-            templateUrl: 'components/module-list/moduleList.html',
-            controller: 'ModuleListController'
+            templateUrl: 'components/landing/landing.html',
+            controller: 'landingController'
         }).
         when('/about-us', {
             templateUrl: 'components/about-us/aboutUs.html',
             controller: 'AboutUsController'
+        }).
+        when('/module-list', {
+            templateUrl: 'components/module-list/module-list.html',
+            controller: 'ModuleListController'
         }).
         when('/auth', {
             templateUrl: 'components/module/module.html',

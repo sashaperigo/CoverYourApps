@@ -23,7 +23,8 @@ a:hover {
 
 md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
+    height: 100px;
+    background-color: rgba(211, 211, 211, 0.95);
     color: #000000;
 }
 
@@ -62,8 +63,8 @@ md-toolbar a:hover {
 }
 
 .md-subheader {
-    height: 150px;
-    background-color: #d3d3d3;
+    height: 100px;
+    height: 100px;
     color: #000000;
     text-align: center;
 }
