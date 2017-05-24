@@ -68,10 +68,9 @@ md-toolbar.footer {
     position: fixed;
     background-color: darkgrey;
     border-top: 2px solid black;
-    top: calc(100vh - 56px);
+    top: calc(100vh - 100px);
     font-weight: 600;
     line-height: 56px;
-    margin-left: -15px;
     padding: 0 1rem 0 1rem;
     display: flex;
     flex-direction: row;
