@@ -172,8 +172,8 @@
       {
         "slideType": "quizImage",
         "text": "Would you trust the site on the right?",
-        "imgSrc": "",
-        "imgCitation": "",
+        "imgSrc": "img/module-img/bank-of-the-vvest.png",
+        "imgCitation": "http://people.ischool.berkeley.edu/~hearst/papers/why_phishing_works.pdf",
         "options": [
           {
             "text": "Yes",
@@ -248,7 +248,27 @@
       },
       {
         "slideType": "text",
-        "text":"Knowing when you’re on an https connection can help you identify whether you’re talking to a trustworthy website or not. Even then, adversaries can use https to trick you into a false sense of security—so watch out!"
+        "text":"Knowing when you’re on an HTTPS connection can help you identify whether you’re talking to a trustworthy website or not. Even then, adversaries can use https to trick you into a false sense of security—so watch out!"
+      }
+    ]
+  },
+  {
+    "sectionName": "Final phishing simulation",
+    "slides": [
+      {
+        "slideType": "text",
+        "text": "Now let's put your skills to the test."
+      },
+      {
+        "slideType": "text",
+        "text": "We’ll put you into the shoes of a high-level member of a Presidential Campaign. Your name is Jon Podesta. Your email address is john.podesta@gmail.com, and your password is \"cleft cam synod lacy\". Take note of this password!"
+      },
+      {
+        "slideType": "text",
+        "text": "You’ll be working your way through a scenario in Jon’s inbox. If you think you’re being phished, you can delete the email at any time."
+      },
+      {
+        "slideType": "emailSimulation"
       }
     ]
   }
