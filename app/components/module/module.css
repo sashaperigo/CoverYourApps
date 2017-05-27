@@ -1,3 +1,7 @@
+body {
+    overflow-y: hidden;
+}
+
 .module-container {
     /* This height is calculated by subtracting the height
 	 * of the footer (48px), and the height of the subheader
@@ -9,6 +13,7 @@
     background-color: black;
     height: 100%;
     margin: 0;
+    overflow-y: hidden;
 }
 
 .container md-content {
@@ -19,7 +24,7 @@
     position: absolute;
     width: 33.3333333333334%;
     left: 0;
-    height: 100%;
+    max-height: calc(100vh - 48px - 150px);
     background-color: white;
     overflow-y: scroll;
 }
@@ -43,10 +48,12 @@
 .interactive {
     position: absolute;
     background-color: #d3d3d3;
+    max-height: calc(100vh - 48px - 150px);
     height: 100%;
     /* Leave 2 percent margin between sections */
     width: 64.66666666666%;
     right: 0;
+    overflow-y: hidden;
 }
 
 .interactive img {
