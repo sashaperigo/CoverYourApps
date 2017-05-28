@@ -6,9 +6,19 @@
     max-height: calc(100vh - 48px - 150px);
     padding-bottom: 100%;
     border-top: 2px solid black;
-    background-color: black;
     height: 100%;
     margin: 0;
+}
+
+md-toolbar.header {
+    position: fixed;
+    border-top: 2px solid black;
+    font-weight: 600;
+    line-height: 56px;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+    clear: both;
 }
 
 .container md-content {

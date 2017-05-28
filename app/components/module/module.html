@@ -1,12 +1,17 @@
 <link rel="stylesheet" href="components/module/module.css" />
 <div class="module-container">
     <div class="content-grid">
+        <div class = "md-toolbar.header">
+            <div class = "sectionNames" ng-repeat = "currentName in module.sectionNames">
+                <md-button ng-click="module.setSection(currentName)">{{currentName}}</md-button>
+            </div>
+        </div>
+        <!--<div class = "text-header">{{module.scripts[module.pageNumber].sectionName}}</div>-->
         <div class="text">
             <div class="text-header">
                 <md-icon md-svg-icon="img/icons/book.svg" class="svg" role="img" aria-hidden="true"></md-icon>Learn</div>
             <div class="text-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur odio eu elementum rutrum. Nunc efficitur sodales magna, ut mattis sapien. Maecenas a orci ullamcorper, feugiat mauris vitae, lacinia erat. Sed sit amet purus neque. Nullam ac egestas tellus. Donec ut est consequat, molestie magna ut, lacinia massa. Quisque pulvinar placerat dolor, ac tristique sapien pellentesque aliquam. Suspendisse eu ante gravida, rutrum lacus ac, auctor turpis. Cras consectetur urna metus, nec hendrerit odio pellentesque eu. Proin lacus enim, volutpat vel neque at, consequat semper urna. Duis blandit enim in ex sodales iaculis. Mauris sollicitudin pretium congue. Quisque faucibus mattis aliquet. Nullam porta nulla purus, eu porta ex pharetra nec. Aliquam tristique fringilla velit, non pellentesque neque cursus vel. Nunc ac mi vulputate, condimentum neque eget, interdum augue.</p>
-                <p>In consectetur porta pulvinar. Sed et ipsum vel magna dapibus dictum a ut velit. Suspendisse ut enim pellentesque, dapibus nibh at, pretium velit. Fusce ullamcorper neque imperdiet, sagittis nulla id, dignissim lorem. Praesent nec urna odio. Integer commodo tellus sed metus sagittis feugiat. Vivamus volutpat neque et nisl fermentum euismod. Cras tincidunt risus vitae rhoncus sollicitudin. Proin mollis, leo non posuere dictum, erat turpis gravida nisl, sit amet rhoncus urna diam nec tellus. Sed tristique nulla erat, nec accumsan nisi mattis sit amet.</p>
+                <p>{{module.scripts[module.section][module.pageNumber].text}}</p>
             </div>
         </div>
         <div class="interactive">
@@ -17,7 +22,7 @@
         <span>{{module.name}}</span>
         <span flex></span>
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
-        <span>{{module.pageNumber}}/{{module.maxPages}}</span>
+        <span>{{module.pageNumber}}/{{module.length}}</span>
         <md-button ng-disabled="module.pageNumber >= module.maxPages" ng-click="module.incrementPage()">Next</md-button>
         <span flex></span>
     </md-toolbar>
