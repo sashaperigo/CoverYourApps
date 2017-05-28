@@ -37,6 +37,5 @@ myApp.config(['$locationProvider', '$routeProvider',
 myApp.controller('MainController', ['$scope',
     function($scope) {
         $scope.main = {};
-
     }
 ]);

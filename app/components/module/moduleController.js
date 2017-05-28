@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
+var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
     function($scope, $rootScope, $location) {
         $scope.module = {};
         $scope.module.name = "";
@@ -12,14 +12,14 @@ myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
         $scope.module.section = "";
         $scope.module.length = 10;
 
-        $scope.module.moduleComponent = "sketchyUrl";
+        $scope.module.moduleComponent = true;
         $scope.module.moduleImage = false;
 
         $scope.$on('$viewContentLoaded', function() {
             if ($location.path().includes('auth')) {
-            	$scope.module.name = "Authentication";
+                $scope.module.name = "Authentication";
             } else if ($location.path().includes('phishing')) {
-            	$scope.module.name = "Phishing";
+                $scope.module.name = "Phishing";
             }
             $scope.module.pageNumber = 1;
 
@@ -28,17 +28,17 @@ myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
         });
 
         $scope.module.decrementPage = function() {
-        	if ($scope.module.pageNumber === 1) {
-        		return;
-        	}
-        	$scope.module.pageNumber--;
+            if ($scope.module.pageNumber === 1) {
+                return;
+            }
+            $scope.module.pageNumber--;
         };
-        
+
         $scope.module.setSection = function(clicked) {
             $scope.module.section = clicked;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
         };
-        
+
         $scope.main.FetchModel = function(url, callback) {
             var data;
             var xmlhttp = new XMLHttpRequest();
@@ -51,21 +51,27 @@ myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
             xmlhttp.send();
         };
         $scope.callback = function(data) {
-            $scope.$apply(function () {
+            $scope.$apply(function() {
                 $scope.module.json = data;
-                for(var i = 0; i < data.length; i++) {
+                for (var i = 0; i < data.length; i++) {
                     $scope.module.sectionNames[i] = data[i].sectionName;
                     $scope.module.scripts[data[i].sectionName] = data[i].slides;
                 }
             });
         };
         $scope.main.FetchModel("/module_text/phishing.json", $scope.callback);
-        
+
         $scope.module.incrementPage = function() {
-        	if ($scope.module.pageNumber >= $scope.module.maxPages) {
-        		return;
-        	}
-        	$scope.module.pageNumber++;
+            if ($scope.module.pageNumber >= $scope.module.maxPages) {
+                return;
+            }
+            $scope.module.pageNumber++;
         };
     }
 ]);
+
+myApp.component('module', {
+    templateUrl: '/components/module/module.html',
+    controller: ModuleController,
+    bindings: {}
+});

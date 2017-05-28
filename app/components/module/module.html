@@ -1,23 +1,23 @@
 <link rel="stylesheet" href="components/module/module.css" />
 <div class="module-container">
     <div class="content-grid">
-        <div class = "md-toolbar.header">
-            <div class = "sectionNames" ng-repeat = "currentName in module.sectionNames">
-                <md-button ng-click="module.setSection(currentName)">{{currentName}}</md-button>
-            </div>
-        </div>
         <!--<div class = "text-header">{{module.scripts[module.pageNumber].sectionName}}</div>-->
         <div class="text">
             <div class="text-header">
                 <md-icon md-svg-icon="img/icons/book.svg" class="svg" role="img" aria-hidden="true"></md-icon>Learn</div>
             <div class="text-content">
+                <div class="md-toolbar.header">
+                    <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
+                        <md-button ng-click="module.setSection(currentName)">{{currentName}}</md-button>
+                    </div>
+                </div>
                 <p>{{module.scripts[module.section][module.pageNumber].text}}</p>
             </div>
         </div>
         <div class="interactive">
-            <ng-view ng-if="module.moduleComponent">
-                <ng-include ng-if="module.moduleComponent === 'sketchyUrl'" src="../sketchy-url/sketchyUrl.html"></ng-include>
-            </ng-view>
+            <div ng-if="module.moduleComponent">
+                <sketchy-url></sketchy-url>
+            </div>
             <img ng-if="module.moduleImage" src="/img/stock-photo.jpg" />
         </div>
     </div>
