@@ -44,7 +44,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
 
-            $scope.$apply(function() {
+            $scope.safeApply(function() {
                 if (slide.imageSrc) {
                     $scope.module.moduleImage = slide.imageSrc;
                 } else {

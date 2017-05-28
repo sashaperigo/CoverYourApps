@@ -37,5 +37,28 @@ myApp.config(['$locationProvider', '$routeProvider',
 myApp.controller('MainController', ['$scope',
     function($scope) {
         $scope.main = {};
+
+        /* Code from: https://coderwall.com/p/ngisma/safe-apply-in-angular-js
+         *
+         * Used in displayPageContent() in moduleController.js to patch an
+         * issue where apply should be called the first time a module loads,
+         * but does not need to be called after the fact. This led to a
+         * multitude of '$apply already in progress' errors being thrown,
+         * and the images in the module were not changing.
+         *
+         * This function fixes that issue by wrapping $scope.apply() in a check
+         * to ensure that apply is not already being called. Feel free to use
+         * elsewhere as well!
+         */
+        $scope.safeApply = function(fn) {
+            var phase = this.$root.$$phase;
+            if (phase == '$apply' || phase == '$digest') {
+                if (fn && (typeof(fn) === 'function')) {
+                    fn();
+                }
+            } else {
+                this.$apply(fn);
+            }
+        };
     }
 ]);
