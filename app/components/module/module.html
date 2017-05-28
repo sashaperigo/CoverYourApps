@@ -1,17 +1,19 @@
 <link rel="stylesheet" href="components/module/module.css" />
 <div class="module-container">
+    <div class="section-label">{{module.section}}</div>
     <div class="content-grid">
-        <!--<div class = "text-header">{{module.scripts[module.pageNumber].sectionName}}</div>-->
         <div class="text">
             <div class="text-header">
-                <md-icon md-svg-icon="img/icons/book.svg" class="svg" role="img" aria-hidden="true"></md-icon>Learn</div>
-            <div class="text-content">
-                <div class="md-toolbar.header">
+                <md-icon md-svg-icon="img/icons/book.svg" class="svg" role="img" aria-hidden="true"></md-icon>
+                Learn
+            </div>
+            <div id="text-content">
+<!--                 <div class="md-toolbar.header">
                     <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
-                        <md-button ng-click="module.setSection(currentName)">{{currentName}}</md-button>
+                        <div ng-click="module.setSection(currentName)">{{currentName}}</div>
                     </div>
-                </div>
-                <p>{{module.scripts[module.section][module.pageNumber].text}}</p>
+                </div> -->
+                <!-- <p>{{module.scripts[module.section][module.pageNumber].text}}</p> -->
             </div>
         </div>
         <div class="interactive">
@@ -26,7 +28,8 @@
         <span flex></span>
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
-        <md-button ng-disabled="module.pageNumber >= module.maxPages" ng-click="module.incrementPage()">Next</md-button>
+        <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
         <span flex></span>
+        <md-button ng-show="module.pageNumber === module.length" ng-click="module.nextSection()" class="next-section">Next Section</md-button>
     </md-toolbar>
 </div>

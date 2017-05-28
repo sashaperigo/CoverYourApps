@@ -4,18 +4,28 @@ body {
 
 .module-container {
     /* This height is calculated by subtracting the height
-	 * of the footer (48px), and the height of the subheader
+     * of the footer (48px), and the height of the subheader
      * (150px) from the total height. If you update the height
      * of the subheader, make sure to fix this CSS! */
-    max-height: calc(100vh - 48px - 150px);
+    max-height: calc(100vh - 75px - 150px);
     padding-bottom: 100%;
-    border-top: 2px solid black;
+    background-color: black;
     height: 100%;
     margin: 0;
     overflow-y: hidden;
 }
 
-md-toolbar.header {
+.module-container .section-label {
+    background: gray;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 0 1.5rem 0 1rem;
+}
+
+/*md-toolbar.header {
     position: fixed;
     border-top: 2px solid black;
     font-weight: 600;
@@ -24,7 +34,7 @@ md-toolbar.header {
     display: flex;
     flex-direction: row;
     clear: both;
-}
+}*/
 
 .container md-content {
     background-color: inherit;
@@ -33,9 +43,12 @@ md-toolbar.header {
 .text {
     position: absolute;
     width: 33.3333333333334%;
+    max-width: 33.3333333333334%;
     left: 0;
-    max-height: calc(100vh - 48px - 150px);
+    min-height: calc(100vh - 75px - 150px);
+    max-height: calc(100vh - 75px - 150px);
     background-color: white;
+    overflow-x: wrap;
     overflow-y: scroll;
 }
 
@@ -51,14 +64,14 @@ md-toolbar.header {
     background-color: #d3d3d3;
 }
 
-.text .text-content {
+.text #text-content {
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .interactive {
     position: absolute;
     background-color: #d3d3d3;
-    max-height: calc(100vh - 48px - 150px);
+    max-height: calc(100vh - 75px - 150px);
     height: 100%;
     /* Leave 2 percent margin between sections */
     width: 64.66666666666%;
@@ -83,13 +96,24 @@ md-toolbar.header {
 
 md-toolbar.footer {
     position: fixed;
-    background-color: darkgrey;
-    border-top: 2px solid black;
-    top: calc(100vh - 100px);
+    background-color: gray;
+    top: calc(100vh - 75px);
     font-weight: 600;
-    line-height: 56px;
+    height: 75px;
+    line-height: 75px;
     padding: 0 1rem 0 1rem;
     display: flex;
     flex-direction: row;
     clear: both;
+}
+
+md-toolbar.footer .next-section {
+    background-color: #b92631;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+md-toolbar.footer .next-section:hover {
+    background-color: #8f0f1c;
 }

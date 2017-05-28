@@ -9,6 +9,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.json = "";
         $scope.module.scripts = {};
         $scope.module.sectionNames = {};
+        $scope.module.sectionNumber = 0;
         $scope.module.section = "";
         $scope.module.length = 10;
 
@@ -16,26 +17,60 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.moduleImage = false;
 
         $scope.$on('$viewContentLoaded', function() {
+            var jsonSrc = "";
             if ($location.path().includes('auth')) {
                 $scope.module.name = "Authentication";
             } else if ($location.path().includes('phishing')) {
                 $scope.module.name = "Phishing";
+                jsonSrc = "/module_text/phishing.json";
             }
             $scope.module.pageNumber = 1;
 
-            // Retrieve this from json files.
-            $scope.module.maxPages = 10;
+            $scope.main.FetchModel(jsonSrc, function(data) {
+                $scope.$apply(function() {
+                    $scope.module.json = data;
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.module.sectionNames[i] = data[i].sectionName;
+                        $scope.module.scripts[data[i].sectionName] = data[i].slides;
+                    }
+                });
+                $scope.module.nextSection();
+                $scope.module.displayPageContent();
+            });
         });
+
+        $scope.module.displayPageContent = function() {
+            var sectionSlides = $scope.module.json[$scope.module.sectionNumber - 1].slides;
+            var textContainer = document.getElementById("text-content");
+            textContainer.innerHTML = sectionSlides[$scope.module.pageNumber - 1].text;
+        };
 
         $scope.module.decrementPage = function() {
             if ($scope.module.pageNumber === 1) {
                 return;
             }
             $scope.module.pageNumber--;
+            $scope.module.displayPageContent();
+        };
+
+        $scope.module.incrementPage = function() {
+            if ($scope.module.pageNumber >= $scope.module.length) {
+                return;
+            }
+            $scope.module.pageNumber++;
+            $scope.module.displayPageContent();
+        };
+
+        $scope.module.nextSection = function() {
+            $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
+            $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
+            $scope.module.pageNumber = 1;
+            $scope.module.sectionNumber++;
         };
 
         $scope.module.setSection = function(clicked) {
             $scope.module.section = clicked;
+            $scope.module.pageNumber = 1;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
         };
 
@@ -49,23 +84,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             };
             xmlhttp.open("GET", url, true);
             xmlhttp.send();
-        };
-        $scope.callback = function(data) {
-            $scope.$apply(function() {
-                $scope.module.json = data;
-                for (var i = 0; i < data.length; i++) {
-                    $scope.module.sectionNames[i] = data[i].sectionName;
-                    $scope.module.scripts[data[i].sectionName] = data[i].slides;
-                }
-            });
-        };
-        $scope.main.FetchModel("/module_text/phishing.json", $scope.callback);
-
-        $scope.module.incrementPage = function() {
-            if ($scope.module.pageNumber >= $scope.module.maxPages) {
-                return;
-            }
-            $scope.module.pageNumber++;
         };
     }
 ]);
