@@ -42,14 +42,15 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.displayPageContent = function() {
             var slide = $scope.module.json[$scope.module.sectionNumber - 1].slides[$scope.module.pageNumber - 1];
             var textContainer = document.getElementById("text-content");
-
-            if (slide.imageSrc) {
-                $scope.module.moduleImage = slide.imageSrc;
-            } else {
-                $scope.module.moduleImage = null;
-            }
-
             textContainer.innerHTML = slide.text;
+
+            $scope.$apply(function() {
+                if (slide.imageSrc) {
+                    $scope.module.moduleImage = slide.imageSrc;
+                } else {
+                    $scope.module.moduleImage = null;
+                }
+            });
         };
 
         $scope.module.decrementPage = function() {
