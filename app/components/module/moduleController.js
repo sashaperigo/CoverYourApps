@@ -13,8 +13,8 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.section = "";
         $scope.module.length = 10;
 
-        $scope.module.moduleComponent = true;
-        $scope.module.moduleImage = false;
+        $scope.module.moduleComponent = null;
+        $scope.module.moduleImage = null;
 
         $scope.$on('$viewContentLoaded', function() {
             var jsonSrc = "";
@@ -40,9 +40,16 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         });
 
         $scope.module.displayPageContent = function() {
-            var sectionSlides = $scope.module.json[$scope.module.sectionNumber - 1].slides;
+            var slide = $scope.module.json[$scope.module.sectionNumber - 1].slides[$scope.module.pageNumber - 1];
             var textContainer = document.getElementById("text-content");
-            textContainer.innerHTML = sectionSlides[$scope.module.pageNumber - 1].text;
+
+            if (slide.imageSrc) {
+                $scope.module.moduleImage = slide.imageSrc;
+            } else {
+                $scope.module.moduleImage = null;
+            }
+
+            textContainer.innerHTML = slide.text;
         };
 
         $scope.module.decrementPage = function() {
@@ -66,6 +73,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
             $scope.module.pageNumber = 1;
             $scope.module.sectionNumber++;
+            $scope.module.displayPageContent();
         };
 
         $scope.module.setSection = function(clicked) {

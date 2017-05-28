@@ -8,7 +8,7 @@
                 Learn
             </div>
             <div id="text-content">
-<!--                 <div class="md-toolbar.header">
+                <!--                 <div class="md-toolbar.header">
                     <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
                         <div ng-click="module.setSection(currentName)">{{currentName}}</div>
                     </div>
@@ -20,7 +20,7 @@
             <div ng-if="module.moduleComponent">
                 <sketchy-url></sketchy-url>
             </div>
-            <img ng-if="module.moduleImage" src="/img/stock-photo.jpg" />
+            <div ng-if="module.moduleImage" class="image-container"><img src={{module.moduleImage}} /></div>
         </div>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
