@@ -5,11 +5,15 @@ myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
         $scope.module = {};
         $scope.module.name = "";
         $scope.module.pageNumber = 0;
+
         $scope.module.json = "";
         $scope.module.scripts = {};
         $scope.module.sectionNames = {};
         $scope.module.section = "";
         $scope.module.length = 10;
+
+        $scope.module.moduleComponent = "sketchyUrl";
+        $scope.module.moduleImage = false;
 
         $scope.$on('$viewContentLoaded', function() {
             if ($location.path().includes('auth')) {
@@ -32,8 +36,8 @@ myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
         
         $scope.module.setSection = function(clicked) {
             $scope.module.section = clicked;
-            $scope.module.length = module.scripts[$scope.module.section].length;
-        }
+            $scope.module.length = $scope.module.scripts[$scope.module.section].length;
+        };
         
         $scope.main.FetchModel = function(url, callback) {
             var data;

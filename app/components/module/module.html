@@ -15,7 +15,10 @@
             </div>
         </div>
         <div class="interactive">
-            <img src="/img/stock-photo.jpg" />
+            <ng-view ng-if="module.moduleComponent">
+                <ng-include ng-if="module.moduleComponent === 'sketchyUrl'" src="../sketchy-url/sketchyUrl.html"></ng-include>
+            </ng-view>
+            <img ng-if="module.moduleImage" src="/img/stock-photo.jpg" />
         </div>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
