@@ -50,11 +50,17 @@ md-toolbar a:hover {
 
 .logo {
     position: absolute;
-    top: -40px;
+    top: -20px;
     left: 10%;
     max-height: 80px;
     min-height: 50px;
     min-width: 50px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        top: -40px;
+    }
 }
 
 .container {
