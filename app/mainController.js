@@ -34,8 +34,8 @@ myApp.config(['$locationProvider', '$routeProvider',
     }
 ]);
 
-myApp.controller('MainController', ['$scope',
-    function($scope) {
+myApp.controller('MainController', ['$scope', '$http',
+    function($scope, $http) {
         $scope.main = {};
         $scope.main.FetchModel = function(url, callback) {
             var data;
@@ -70,6 +70,26 @@ myApp.controller('MainController', ['$scope',
             } else {
                 this.$apply(fn);
             }
+        };
+
+        $scope.main.trackBehavior = function(resource, behavior, callback) {
+            $http.post('api/track/' + resource + '/' + behavior)
+              .then(function successCallback(response) {
+                  var total = response.data.reduce(function(soFar, entry) {
+                      return soFar + (+entry.count)
+                  }, 0);
+                  console.log(total);
+                  var resultString = '';
+                  for (var i = 0; i < response.data.length; i++) {
+                      var percent = Math.round(100 * response.data[i].count / total).toString();
+                      resultString += percent + '% of people selected ' +
+                        response.data[i].behavior + '. ';
+                  }
+                  callback(response.data, resultString);
+              }, function errorCallback(response) {
+                  console.error(response.data || 'Error loading data');
+                  alert('There was an error loading data.');
+              });
         };
     }
 ]);
