@@ -1,3 +1,10 @@
-body {
-	background-color: pink;
+.sketchy-url-container {
+	padding: 1rem;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.sketchy-url-container a {
+	color: blue;
 }

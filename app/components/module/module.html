@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="components/module/module.css" />
+<header>
+    <link rel="stylesheet" href="components/module/module.css" />
+</header>
 <div class="module-container">
     <div class="section-label">{{module.section}}</div>
     <div class="content-grid">
@@ -8,7 +10,7 @@
                 Learn
             </div>
             <div id="text-content">
-                <!--                 <div class="md-toolbar.header">
+                <!-- <div class="md-toolbar.header">
                     <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
                         <div ng-click="module.setSection(currentName)">{{currentName}}</div>
                     </div>
@@ -17,10 +19,8 @@
             </div>
         </div>
         <div class="interactive">
-            <div ng-if="module.moduleComponent">
-                <sketchy-url></sketchy-url>
-            </div>
-            <div ng-if="module.moduleImage" class="image-container"><img src="{{module.moduleImage}}" /></div>
+            <div ng-if="module.moduleComponent === 'sketchyUrl'" ng-controller="SketchyUrlController as sketchyUrl"></div>
+            <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
         </div>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">

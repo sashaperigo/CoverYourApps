@@ -43,7 +43,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var slide = $scope.module.json[$scope.module.sectionNumber - 1].slides[$scope.module.pageNumber - 1];
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
-
             $scope.safeApply(function() {
                 if (slide.imageSrc) {
                     $scope.module.moduleImage = slide.imageSrc;
@@ -99,6 +98,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
 myApp.component('module', {
     templateUrl: '/components/module/module.html',
-    controller: ModuleController,
-    bindings: {}
+    transclude: true,
+    controller: ModuleController
 });
