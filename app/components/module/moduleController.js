@@ -81,18 +81,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.pageNumber = 1;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
         };
-
-        $scope.main.FetchModel = function(url, callback) {
-            var data;
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                    callback(JSON.parse(xmlhttp.responseText));
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        };
     }
 ]);
 
