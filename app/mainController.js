@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngResource']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial']);
 
 myApp.config(['$locationProvider', '$routeProvider',
     function($locationProvider, $routeProvider) {
