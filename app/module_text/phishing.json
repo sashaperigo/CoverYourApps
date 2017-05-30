@@ -35,7 +35,7 @@
         "text": "Each section will involve an introduction of crucial web security skills, followed by interactive tests to see if you can identify phishing content. At the end of this module, you’ll get to play a political operative in a high-stakes Presidential election--one marked by increased hacking attempts on campaigns."
     }]
 }, {
-    "sectionName": "Section One: Taking Typos and Names",
+    "sectionName": "Taking Typos and Names",
     "slides": [{
         "slideType": "text",
         "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some are clear, some are extremely subtle. We’ll start out with more recognizable issues in phishing emails before moving onto more inconspicuous ones."
@@ -108,7 +108,7 @@
         "text": "Knowing how to detect illegitimate or spoofed email addresses is a crucial first line of defense against phishing. Unfortunately, there are a plethora of other ways to phish people--and these approaches are more imperceptible than faked email addresses."
     }]
 }, {
-    "sectionName": "Section Two",
+    "sectionName": "Scrutinize Links",
     "slides": [{
         "slideType": "text",
         "text": "A phishing email is typically never an email alone; they often include links to other sites. Even if the email address of a phisher looks legitimate, sometimes links in their emails may raise a red flag. This section will introduce you to basic rules for rooting out suspicious links."
@@ -148,7 +148,7 @@
         }]
     }]
 }, {
-    "sectionName": "Section Three: Using your browser's URL bar to examine a site's authenticity",
+    "sectionName": "Using your browser's URL bar to examine a site's authenticity",
     "slides": [{
         "slideType": "textImage",
         "title": "Knowing when you are on an HTTPS connection",
