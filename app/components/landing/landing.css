@@ -27,3 +27,16 @@
     max-width: 100%;
     overflow-x: hidden;
 }
+
+.row.row-even,
+.row.row-odd {
+    padding: 5em;
+}
+
+.row-odd {
+    background-color: #ffffff;
+}
+
+.row-even {
+    background-color: rgba(211, 211, 211, 1);
+}

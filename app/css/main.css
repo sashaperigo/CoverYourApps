@@ -10,10 +10,6 @@ html {
     padding-left: 0px;
 }
 
-.container {
-    margin: 1em;
-}
-
 a:visited {
     text-decoration: none;
 }
@@ -69,7 +65,10 @@ md-toolbar a:hover {
 
 .container {
     height: 100%;
-    margin: 0;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /* Overriding a grid preset */
@@ -92,4 +91,9 @@ a.button {
     font-weight: 600;
     font-size: 1.25em;
     margin: 0 auto
+}
+
+.row.footer {
+   background-color: rgba(211, 211, 211, 1);
+   text-align: center;
 }
