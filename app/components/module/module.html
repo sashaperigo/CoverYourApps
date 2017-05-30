@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="interactive">
-            <div ng-if="module.moduleComponent === 'sketchyUrl'" ng-controller="SketchyUrlController as sketchyUrl"></div>
+            <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
             <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
         </div>
     </div>
