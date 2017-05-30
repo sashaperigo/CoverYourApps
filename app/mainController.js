@@ -37,6 +37,7 @@ myApp.config(['$locationProvider', '$routeProvider',
 myApp.controller('MainController', ['$scope', '$http',
     function($scope, $http) {
         $scope.main = {};
+
         $scope.main.FetchModel = function(url, callback) {
             var data;
             var xmlhttp = new XMLHttpRequest();
@@ -71,14 +72,23 @@ myApp.controller('MainController', ['$scope', '$http',
                 this.$apply(fn);
             }
         };
-
+        /* Tracks a behavior and responds with previously saved tracking.
+         *
+         * Call this with any two strings:
+         * resource is what you're tracking, like a quiz (e.g. 'bankofthevvest')
+         * behavior is what the user choice was, like their answer (e.g. 'yes')
+         *      and then a callback function that gets two arguments:
+         * data is an array of objects that contain behaviors and counts.
+         *   e.g. [{"behavior":"no","count":"35"},{"behavior":"yes","count":"19"}]
+         * resultString is a string that summarizes stuff
+         * e.g. "70% of people selected no. 30% of people selected yes"
+         */
         $scope.main.trackBehavior = function(resource, behavior, callback) {
             $http.post('api/track/' + resource + '/' + behavior)
               .then(function successCallback(response) {
                   var total = response.data.reduce(function(soFar, entry) {
                       return soFar + (+entry.count)
                   }, 0);
-                  console.log(total);
                   var resultString = '';
                   for (var i = 0; i < response.data.length; i++) {
                       var percent = Math.round(100 * response.data[i].count / total).toString();
