@@ -1,9 +1,28 @@
 .container {
-	margin-top: 1em;
+    margin: 1em;
 }
 
 .md-button {
 	margin-top: 1em;
 	font-size: 1.5em;
 	font-weight: 600;
+	background-color: transparent;
+}
+
+.md-button:hover {
+	background-color: transparent;
+}
+
+.module-button{
+	text-align: center;
+	margin: 1em auto;
+}
+
+.module-button i {
+	font-size: 3em;
+}
+
+.module-button:hover {
+	color: #851e1e;
+	cursor: pointer;
 }

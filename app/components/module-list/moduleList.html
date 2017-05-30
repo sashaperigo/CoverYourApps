@@ -1,4 +1,31 @@
 <link rel="stylesheet" href="components/module-list/moduleList.css" />
-<md-button ng-href="#!/auth">Authentication</md-button>
-<br />
-<md-button ng-href="#!/phishing">Phishing</md-button>
+<div class="container">
+	<h1>Learn</h1>
+	<p>
+		Select from the following modules to learn more about these topics
+	</p>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<a ng-href="#!/auth" class="button">
+			<div class="col-md-2 module-button">
+				<div class-"row">
+					<i class="glyphicon glyphicon-lock"></i>
+				</div>
+				<div class="row">
+					Authentication
+				</div>
+			</div>
+		</a>
+		<a ng-href="#!/phishing" class="button">
+			<div class="col-md-2 module-button">
+				<div class="row">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="row">
+					Phishing
+				</div>
+			</div>
+		</a>
+		<div class="col-md-2"></div>
+	</div>
+</div>

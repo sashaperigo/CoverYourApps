@@ -10,6 +10,10 @@ html {
     padding-left: 0px;
 }
 
+.container {
+    margin: 1em;
+}
+
 a:visited {
     text-decoration: none;
 }
@@ -80,4 +84,12 @@ md-toolbar a:hover {
     height: 100px;
     color: #000000;
     text-align: center;
+}
+
+a.button {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin: 0 auto
 }
