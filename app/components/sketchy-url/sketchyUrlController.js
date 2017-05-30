@@ -3,9 +3,6 @@
 var SketchyUrlController = myApp.controller('SketchyUrlController', ['$scope', '$rootScope',
     function($scope, $rootScope) {
         $scope.sketchyUrl = {};
-        $scope.sketchyUrl.name = "Hi!";
-        console.log('loaded sketchyurl');
-        console.log($scope.main);
     }
 ]);
 

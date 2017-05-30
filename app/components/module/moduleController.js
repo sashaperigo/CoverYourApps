@@ -4,28 +4,30 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
     function($scope, $rootScope, $location) {
         $scope.module = {};
         $scope.module.name = "";
-        $scope.module.pageNumber = 0;
+        $scope.module.pageNumber = 1;
 
         $scope.module.json = "";
         $scope.module.scripts = {};
         $scope.module.sectionNames = {};
         $scope.module.sectionNumber = 0;
         $scope.module.section = "";
-        $scope.module.length = 10;
+        $scope.module.length = 0;
 
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
 
         $scope.$on('$viewContentLoaded', function() {
+            // Select module from URL path
             var jsonSrc = "";
             if ($location.path().includes('auth')) {
                 $scope.module.name = "Authentication";
+                jsonSrc = "/module_text/auth.json";
             } else if ($location.path().includes('phishing')) {
                 $scope.module.name = "Phishing";
                 jsonSrc = "/module_text/phishing.json";
             }
-            $scope.module.pageNumber = 1;
 
+            // Load content from json
             $scope.main.FetchModel(jsonSrc, function(data) {
                 $scope.$apply(function() {
                     $scope.module.json = data;
@@ -35,14 +37,20 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     }
                 });
                 $scope.module.nextSection();
-                $scope.module.displayPageContent();
             });
         });
 
+        // Change slide number and content
         $scope.module.displayPageContent = function() {
-            var slide = $scope.module.json[$scope.module.sectionNumber - 1].slides[$scope.module.pageNumber - 1];
+            var section = $scope.module.json[$scope.module.sectionNumber - 1];
+            var slide = section.slides[$scope.module.pageNumber - 1];
+
+            // Place text into the inner HTML so the HTML tags within the
+            // json render properly
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
+
+            // Load image if there is one
             $scope.safeApply(function() {
                 if (slide.imageSrc) {
                     $scope.module.moduleImage = slide.imageSrc;
@@ -52,6 +60,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             });
         };
 
+        // Return to the previous slide in a section
         $scope.module.decrementPage = function() {
             if ($scope.module.pageNumber === 1) {
                 return;
@@ -60,6 +69,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
+        // Advance to the next slide in a section
         $scope.module.incrementPage = function() {
             if ($scope.module.pageNumber >= $scope.module.length) {
                 return;
@@ -68,6 +78,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
+        // Advance to the next section
         $scope.module.nextSection = function() {
             $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
             $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
@@ -76,6 +87,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
+        // Select a content section
         $scope.module.setSection = function(clicked) {
             $scope.module.section = clicked;
             $scope.module.pageNumber = 1;
