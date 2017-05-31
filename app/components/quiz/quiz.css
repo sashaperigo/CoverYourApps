@@ -8,3 +8,33 @@
 .quiz-container a {
 	color: blue;
 }
+
+#submit { 
+    background: #dddada; 
+    color: 000000; 
+    padding: 3px; 
+    text-align: center; 
+    margin: auto;
+    width: 50%;
+    cursor: pointer; 
+    border: 1px solid gray;
+}
+
+#submit:hover { 
+    background: #3d91b8; 
+    color: #ffffff; 
+    padding: 3px; 
+    text-align: center; 
+    margin: auto;
+    width: 50%;
+    cursor: pointer; 
+    border: 1px solid gray; 
+} 
+
+.correctAnswer {
+    background-color: limegreen;
+}
+
+.incorrectAnswer {
+    background-color: red;
+}

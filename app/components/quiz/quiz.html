@@ -1,9 +1,16 @@
 <link rel="stylesheet" href="components/quiz/quiz.css" />
 <div class="quiz-container">
-    <h3>Quiz time!!</h3>
+    <h1>Quiz time!</h1>
     <br />
     <p class="question">{{module.slide.text}}</p>
+    <div class="image" ng-if = "module.slideType === 'quizImage'">
+        <img ng-show="module.moduleImage" src="{{module.slide.imageSrc}}"/>
+        <p>{{module.slide.imageCitation}}</p>
+    </div>
     <ul class="answers" ng-repeat="currentOption in module.slide.options">
-        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">{{currentOption.text}}</label><br/>
+        <div id="submit" ng-if="module.displayAnswer === false" ng-click="module.submitResponse(currentOption)">{{currentOption.text}}</div>
     </ul>
+    <div class="correctAnswer" ng-if="module.displayAnswer === true && module.responseCorrect === true">Correct!</div>
+    <div class="incorrectAnswer" ng-if="module.displayAnswer === true && module.responseCorrect !== true">Not quite!</div>
+    <div class="answer" ng-if="module.displayAnswer === true">{{module.response}}</div>
 </div>
