@@ -104,7 +104,7 @@ A slide with an interactive multiple choice "quiz" with as many options as you'd
 ```
 ---
 
-### quizImage
+### quiz
 Like quiz but with a focused image. Not sure how this will be laid out yet.
 
 #### Attributes
@@ -117,7 +117,7 @@ Like quiz but with a focused image. Not sure how this will be laid out yet.
 #### Example
 ```
 {
-  "slideType": "quizImage",
+  "slideType": "quiz",
   "intro": "Perhaps you clicked the \"Open in Docs\" button. You were brought to this Google authentication page. Did you also grant authentication to this \"Google Docs\" application?",
   "imageSrc": "img/module-img/google-docs-hack.gif",
   "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/",

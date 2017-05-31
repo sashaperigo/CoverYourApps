@@ -1,11 +1,14 @@
+<link rel="stylesheet" href="components/text-image/textImage.css" />
 <div class="text">
-    <div class="text-header">
-        Description
+    <div id="text-header" ng-if="$ctrl.slide.title">
+        {{ $ctrl.slide.title }}
     </div>
     <div id="text-content">
         {{ $ctrl.slide.text }}
     </div>
 </div>
 <div class="interactive">
-    <img ng-src="{{ $ctrl.slide.imageSrc }}" />
+    <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
+    <sketchy-https ng-if="$ctrl.slide.slideType === 'sketchyHttps'"></sketchy-https>
+    <img ng-if="$ctrl.slide.slideType !== 'sketchyUrl' && $ctrl.slide.slideType !== 'sketchyHttps'" ng-src="{{ $ctrl.slide.imageSrc }}" />
 </div>

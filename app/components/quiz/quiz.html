@@ -2,15 +2,16 @@
 <div class="quiz-container">
     <h1>Quiz time!</h1>
     <br />
-    <p class="question">{{module.slide.text}}</p>
-    <div class="image" ng-if = "module.slideType === 'quizImage'">
-        <img ng-show="module.moduleImage" src="{{module.slide.imageSrc}}"/>
-        <p>{{module.slide.imageCitation}}</p>
+    <p class="question">{{ $ctrl.slide.text }}</p>
+    {{ $ctrl.slide.imageSrc }}
+    <div class="image" ng-if="$ctrl.slide.imgSrc">
+        <img ng-src="{{ $ctrl.slide.imgSrc }}"/>
+        <p>{{ $ctrl.slide.imgCitation }}</p>
     </div>
-    <ul class="answers" ng-repeat="currentOption in module.slide.options">
-        <div id="submit" ng-if="module.displayAnswer === false" ng-click="module.submitResponse(currentOption)">{{currentOption.text}}</div>
+    <ul class="answers" ng-repeat="currentOption in $ctrl.slide.options">
+        <div id="submit" ng-if="!quiz.displayAnswer" ng-click="quiz.submitResponse(currentOption)">{{ currentOption.text }}</div>
     </ul>
-    <div class="correctAnswer" ng-if="module.displayAnswer === true && module.responseCorrect === true">Correct!</div>
-    <div class="incorrectAnswer" ng-if="module.displayAnswer === true && module.responseCorrect !== true">Not quite!</div>
-    <div class="answer" ng-if="module.displayAnswer === true">{{module.response}}</div>
+    <div class="correctAnswer" ng-if="quiz.displayAnswer && quiz.responseCorrect">Correct!</div>
+    <div class="incorrectAnswer" ng-if="quiz.displayAnswer && !quiz.responseCorrect">Not quite!</div>
+    <div class="answer" ng-if="quiz.displayAnswer">{{ $ctrl.response }}</div>
 </div>

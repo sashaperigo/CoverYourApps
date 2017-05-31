@@ -16,6 +16,12 @@ body {
     overflow-y: hidden;
 }
 
+.content-grid {
+    width: 100%;
+    background-color: #d3d3d3;
+    height: calc(100vh - 75px - 150px);
+}
+
 .section-label {
     background: gray;
     width: 100%;
@@ -44,20 +50,24 @@ body {
     display: block;
 }
 
+
 /* Creates triangle at the top of the dropdown */
- .dropdown-content ul:before {
-     border-bottom: 10px solid #f9f9f9;
-     border-left: 10px solid transparent;
-     border-right: 10px solid transparent;
-     content: "";
-     height: 0;
-     position: absolute;
-     left: 0;
-     top: -10px;
-     width: 0;
- }
+
+.dropdown-content ul:before {
+    border-bottom: 10px solid #f9f9f9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 0;
+}
+
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content ul {
     display: none;
     position: absolute;
@@ -65,10 +75,13 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    -webkit-padding-start: 0; /* Overriding preset */
+    -webkit-padding-start: 0;
+    /* Overriding preset */
 }
 
+
 /* Links inside the dropdown */
+
 .dropdown-content li {
     color: black;
     margin: 0;
@@ -80,52 +93,6 @@ body {
 
 .container md-content {
     background-color: inherit;
-}
-
-.text {
-    position: absolute;
-    width: 33.3333333333334%;
-    max-width: 33.3333333333334%;
-    left: 0;
-    min-height: calc(100vh - 75px - 150px);
-    max-height: calc(100vh - 75px - 150px);
-    background-color: white;
-    overflow-x: wrap;
-    overflow-y: scroll;
-    padding: 0 0 0 0rem;
-}
-
-#text-header {
-    height: auto;
-    line-height: 30px;
-    font-weight: 700;
-    padding: 0.25rem 0 0.25rem 1rem;
-    background-color: #d3d3d3;
-}
-
-.text #text-content {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-}
-
-.interactive {
-    position: absolute;
-    background-color: #d3d3d3;
-    max-height: calc(100vh - 75px - 150px);
-    height: 100%;
-    /* Leave 2 percent margin between sections */
-    width: 64.66666666666%;
-    right: 0;
-    overflow-y: hidden;
-}
-
-.interactive img {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    margin: auto;
-    vertical-align: middle;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .bottom-bar {

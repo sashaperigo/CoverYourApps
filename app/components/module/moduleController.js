@@ -18,9 +18,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
-        $scope.module.displayAnswer = false;
-        $scope.module.response = "";
-        $scope.module.responseCorrect = false;
 
         $scope.module.currentSlide = null;
 
@@ -50,13 +47,16 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         // Change slide number and content
         $scope.module.displayPageContent = function() {
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
-            $scope.module.currentSlide = section.slides[$scope.module.pageNumber - 1];
+            var slide = section.slides[$scope.module.pageNumber - 1];
+            $scope.module.slide = slide;
+            $scope.module.currentSlide = slide;
+            console.log(slide);
+            $scope.module.slideType = slide.slideType;
+
             $scope.safeApply();
-            console.log($scope.module.currentSlide);
->>>>>>> alec
         };
 
-        $scope.test = function() {console.log($scope.module.length);};
+        $scope.test = function() { console.log($scope.module.length); };
 
         // Return to the previous slide in a section
         $scope.module.decrementPage = function() {
@@ -100,17 +100,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.pageNumber = 1;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
             $scope.module.displayPageContent();
-        };
-
-        $scope.module.submitResponse = function(clicked) {
-            $scope.module.displayAnswer = true;
-            for(var i = 0; i < $scope.module.slide.options.length; i++) {
-                var currentOption = $scope.module.slide.options[i];
-                if(clicked.text === currentOption.text) {
-                    $scope.module.response = currentOption.feedback;
-                    $scope.module.responseCorrect = currentOption.correct;
-                }
-            }
         };
     }
 ]);

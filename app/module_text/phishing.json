@@ -141,7 +141,7 @@
         "slideType": "text",
         "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website. Trusted websites tend to use HTTPS."
     }, {
-        "slideType": "quizImage",
+        "slideType": "quiz",
         "text": "Would you trust the site on the right?",
         "imgSrc": "img/module-img/bank-of-the-vvest.png",
         "imgCitation": "http://people.ischool.berkeley.edu/~hearst/papers/why_phishing_works.pdf",
