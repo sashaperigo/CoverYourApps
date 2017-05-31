@@ -7,8 +7,8 @@ var SketchyHttpsController = myApp.controller('SketchyHttpsController', ['$scope
 ]);
 
 myApp.component('sketchyHttps', {
-    templateUrl: '/components/sketchy-url/sketchyHttps.html',
-    controller: 'SketchyHttps',
+    templateUrl: '/components/sketchy-https/sketchyHttps.html',
+    controller: 'SketchyHttpsController',
     bindings: {
         module: '<' //= to make two-way binded
     }

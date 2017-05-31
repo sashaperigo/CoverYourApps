@@ -1,32 +1,37 @@
-<link rel="stylesheet" href="components/sketchy-url/sketchyHttps.css" />
+<link rel="stylesheet" href="components/sketchy-https/sketchyHttps.css" />
 <div class="sketchy-https-container">
-  <!-- <h2>Canvas: Assignment Graded</h2>
-  <hr>
-  <div class="faked-email-header">
-    <b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;
-    <br>
-    to me
-  </div>
-  <div class="faked-email-reply">
-    <img src="/img/etc/email-reply-img.png" width="100px"/>
-  </div>
-  <div class="delete-email">
-    <md-button class="md-warn md-raised md-hue-2" onclick="alert('You successfully avoided a sketchy link!'); return false;">Delete</md-button>
-  </div>
-  <br><br>
-  <div class="faked-email-content"><br><br>
-    You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br>
-    <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter / BIOE 80)</b><br><br>
-    TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1.<br><br>
-
-    <p>
-      <md-button class="md-raised md-primary" href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" onclick="alert('This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.'); return false;">Check your grade here</md-button>
-    </p> -->
-    <md-input-container class="md-icon-float md-block">
-      <!-- Use floating label instead of placeholder -->
-      <label>Name</label>
-      <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
-      <input ng-model="user.name" type="text">
-    </md-input-container>
-  </div>
+    <h2>Canvas: Assignment Graded</h2>
+    <hr>
+    <div class="faked-email-header">
+        <b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;
+        <br> to me
+    </div>
+    <div class="faked-email-reply">
+        <img src="/img/etc/email-reply-img.png" width="100px" />
+    </div>
+    <div class="delete-email">
+        <md-button class="md-warn md-raised md-hue-2" onclick="alert('You successfully avoided a sketchy link!'); return false;">Delete</md-button>
+    </div>
+    <br />
+    <br />
+    <div class="faked-email-content">
+        <br />
+        <br /> You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:
+        <br />
+        <br />
+        <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter / BIOE 80)</b>
+        <br />
+        <br /> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1.
+        <br />
+        <br />
+        <p>
+            <md-button class="md-raised md-primary" href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" onclick="alert('This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.'); return false;">Check your grade here</md-button>
+        </p>
+        <md-input-container class="md-icon-float md-block">
+            <!-- Use floating label instead of placeholder -->
+            <label>Name</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+            <input ng-model="user.name" type="text">
+        </md-input-container>
+    </div>
 </div>
