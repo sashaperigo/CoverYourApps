@@ -6,8 +6,13 @@
         "imageSrc": "img/module-img/google-docs-screenshot.jpg",
         "imageCitation": "https://twitter.com/zeynep/status/859840026082988038"
     }, {
-        "slideType": "quizImage",
-        "text": "Perhaps you clicked the \"Open in Docs\" button. You were brought to this Google authentication page. Did you also grant authentication to this \"Google Docs\" application?",
+        "slideType": "textImage",
+        "text": "Perhaps you clicked the \"Open in Docs\" button. If you did, were brought to this Google authentication page.",
+        "imageSrc": "img/module-img/google-docs-hack.gif",
+        "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/"
+    },{
+        "slideType": "textImage",
+        "text": "Did you also grant authentication to this \"Google Docs\" application?",
         "imageSrc": "img/module-img/google-docs-hack.gif",
         "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
         "options": [{
@@ -40,7 +45,7 @@
         "slideType": "text",
         "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some are clear, some are extremely subtle. We’ll start out with more recognizable issues in phishing emails before moving onto more inconspicuous ones."
     }, {
-        "slideType": "textImage",
+        "slideType": "sketchyBCC",
         "title": "Bizarre BCCs and CCs",
         "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated!",
         "imageSrc": "img/module-img/google-docs-screenshot-highlight.jpg",
@@ -123,14 +128,14 @@
         "imgSrc": "img/module-img/tk-domain.jpg",
         "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "title": "Exposing longer URLs",
         "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link."
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button."
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",

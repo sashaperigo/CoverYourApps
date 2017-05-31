@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="components/sketchy-https/sketchyHttps.css" />
 <div class="sketchy-https-container">
-    <h2>Canvas: Assignment Graded</h2>
+    <!-- <h2>Canvas: Assignment Graded</h2>
     <hr>
     <div class="faked-email-header">
         <b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;
@@ -26,12 +26,12 @@
         <br />
         <p>
             <md-button class="md-raised md-primary" href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" onclick="alert('This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.'); return false;">Check your grade here</md-button>
-        </p>
+        </p> -->
         <md-input-container class="md-icon-float md-block">
             <!-- Use floating label instead of placeholder -->
-            <label>Name</label>
-            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
-            <input ng-model="user.name" type="text">
+            <label>URL</label>
+            <md-icon md-svg-src="/img/icons/ic_lock_black_24px.svg" class="name"></md-icon>
+            <input ng-model="user.name" type="text" ng-value="butts">
         </md-input-container>
     </div>
 </div>

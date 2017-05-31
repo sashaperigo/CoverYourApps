@@ -16,7 +16,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.slideType = "";
         $scope.module.slide = {};
 
-        $scope.module.moduleComponent = "sketchyHttps";
+        $scope.module.moduleComponent = "sketchyUrl";
         $scope.module.moduleImage = null;
 
 

@@ -138,7 +138,7 @@ Like quiz but with a focused image. Not sure how this will be laid out yet.
 
 ## One-off slideTypes (fun interactives)
 
-### sketchyLink
+### sketchyUrl
 TODO
 
 ### emailSimulation
