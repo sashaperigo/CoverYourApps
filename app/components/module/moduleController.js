@@ -51,6 +51,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
+            $scope.module.slideType = slide.slideType;
 
             // Place text into the inner HTML so the HTML tags within the
             // json render properly
