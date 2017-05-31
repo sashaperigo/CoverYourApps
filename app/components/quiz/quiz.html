@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="components/quiz/quiz.css" />
+<div class="quiz-container">
+    <h3>Quiz time!!</h3>
+    <br />
+    <p class="question">{{module.slide.text}}</p>
+    <ul class="answers" ng-repeat="currentOption in module.slide.options">
+        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">{{currentOption.text}}</label><br/>
+    </ul>
+</div>
