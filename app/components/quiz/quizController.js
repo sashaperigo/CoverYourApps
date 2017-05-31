@@ -13,6 +13,6 @@ myApp.component('quiz', {
     templateUrl: '/components/quiz/quiz.html',
     controller: 'QuizController',
     bindings: {
-        module: '<' //= to make two-way binded
+        module: '=' //= to make two-way binded
     }
 });

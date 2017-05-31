@@ -157,3 +157,14 @@ md-toolbar.footer .next-section {
 md-toolbar.footer .next-section:hover {
     background-color: #8f0f1c;
 }
+
+md-toolbar.footer .prev-section {
+    background-color: #b92631;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+md-toolbar.footer .prev-section:hover {
+    background-color: #8f0f1c;
+}

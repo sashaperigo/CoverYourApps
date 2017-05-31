@@ -18,7 +18,9 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
-
+        $scope.module.displayAnswer = false;
+        $scope.module.response = "";
+        $scope.module.responseCorrect = false;
 
         $scope.$on('$viewContentLoaded', function() {
             // Select module from URL path
@@ -55,11 +57,11 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
             $scope.safeApply(function() {
-                if (slide.imageSrc) {
-                    $scope.module.moduleImage = slide.imageSrc;
-                } else {
-                    $scope.module.moduleImage = null;
-                }
+                 if (slide.imageSrc) {
+                     $scope.module.moduleImage = slide.imageSrc;
+                 } else {
+                     $scope.module.moduleImage = null;
+                 }
             });
         };
 
@@ -89,6 +91,14 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.sectionNumber++;
             $scope.module.displayPageContent();
         };
+        
+        $scope.module.prevSection = function() {
+            $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
+            $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
+            $scope.module.pageNumber = 1;
+            $scope.module.sectionNumber--;
+            $scope.module.displayPageContent();
+        };
 
         // Manually switch content section with dropdown menu
         $scope.module.setSection = function(index, name) {
@@ -97,6 +107,17 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.pageNumber = 1;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
             $scope.module.displayPageContent();
+        };
+        
+        $scope.module.submitResponse = function(clicked) {
+            $scope.module.displayAnswer = true;
+            for(var i = 0; i < $scope.module.slide.options.length; i++) {
+                var currentOption = $scope.module.slide.options[i];
+                if(clicked.text === currentOption.text) {
+                    $scope.module.response = currentOption.feedback;
+                    $scope.module.responseCorrect = currentOption.correct;
+                }
+            }
         };
     }
 ]);

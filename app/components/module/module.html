@@ -16,19 +16,17 @@
             <div class="text-header">
                 Description
             </div>
-            <div id="text-content">
-            </div>
         </div>
         <div class="interactive">
-            <sketchy-https ng-if="module.slideType === 'sketchyHttps'"></sketchy-https>
-            <sketchy-url ng-if="module.slideType === 'sketchyUrl'"></sketchy-url>
-            <quiz ng-if="module.slideType === 'quiz'">{{module.slideType}}</quiz>
-            <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
+            <sketchy-https ng-if="module.moduleComponent === 'sketchyHttps'"></sketchy-https>
+            <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
+            <quiz ng-if="module.slideType === 'quiz' || module.slideType === 'quizImage'">{{module.slideType}}</quiz>
         </div>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
         <span>{{module.name}}</span>
         <span flex></span>
+        <md-button ng-show="module.pageNumber === 1 && module.sectionNumber !== 1" ng-click="module.prevSection()" class="prev-section">Move back to section {{module.sectionNumber-1}}/{{module.json.length}}</md-button>
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
         <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
