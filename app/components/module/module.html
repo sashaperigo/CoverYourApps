@@ -21,6 +21,7 @@
         </div>
         <div class="interactive">
             <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
+            <quiz ng-if="module.slideType === 'quiz'">{{module.slideType}}</quiz>
             <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
         </div>
     </div>
@@ -31,6 +32,6 @@
         <span>{{module.pageNumber}}/{{module.length}}</span>
         <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
         <span flex></span>
-        <md-button ng-show="module.pageNumber === module.length" ng-click="module.nextSection()" class="next-section">Next Section</md-button>
+        <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Move onto section {{module.sectionNumber}}/{{module.json.length}}</md-button>
     </md-toolbar>
 </div>
