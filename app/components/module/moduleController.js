@@ -50,13 +50,9 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
             $scope.module.currentSlide = slide;
-            console.log(slide);
             $scope.module.slideType = slide.slideType;
-
             $scope.safeApply();
         };
-
-        $scope.test = function() { console.log($scope.module.length); };
 
         // Return to the previous slide in a section
         $scope.module.decrementPage = function() {
