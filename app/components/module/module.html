@@ -4,7 +4,7 @@
 <div class="module-container">
     <div class="section-label" ng-click="module.sectionDropdown()">
         <md-icon md-svg-icon="img/icons/menu.svg" class="svg" role="img" aria-hidden="true"></md-icon>
-        Section {{module.sectionNumber}}: {{module.section}}
+        <h4>Section {{module.sectionNumber}}: {{module.section}}</h4>
         <div class="dropdown-content">
             <ul>
                 <li ng-repeat="name in module.sectionNames" ng-click="module.setSection($index, name)">{{name}}</li>
