@@ -128,10 +128,13 @@
         "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link."
     }, {
         "slideType": "sketchyLink",
-        "text": "Try copying the link to the right and pasting it in the box below."
+        "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button."
+    }, {
+        "slideType": "sketchyLink",
+        "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",
-        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website."
+        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website. Trusted websites tend to use HTTPS."
     }, {
         "slideType": "quizImage",
         "text": "Would you trust the site on the right?",
@@ -146,6 +149,9 @@
             "correct": true,
             "feedback": "You avoided a sophisticated phishing attack. Congrats!"
         }]
+    }, {
+        "slideType": "text",
+        "text": "While HTTPS usage can be an indicator of a site's security and trustworthiness, online adversaries have begun to exploit HTTPS use to trick everyday internet users into trusting malicious sites. The next module will teach you to discern and avoid decieving HTTPS websites."
     }]
 }, {
     "sectionName": "Examining URL Authenticity",

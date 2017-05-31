@@ -16,9 +16,9 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.slideType = "";
         $scope.module.slide = {};
 
-        $scope.module.moduleComponent = "";
+        $scope.module.moduleComponent = "sketchyHttps";
         $scope.module.moduleImage = null;
-        
+
 
         $scope.$on('$viewContentLoaded', function() {
             // Select module from URL path
@@ -54,15 +54,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             // json render properly
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
-            
-            $scope.safeApply(function() {
-                if (slide.imageSrc) {
-                    $scope.module.moduleImage = slide.imageSrc;
-                } else {
-                    $scope.module.moduleImage = null;
-                }
-                $scope.module.slideType = slide.slideType;
-            });
+            // $scope.safeApply(function() {
+            //     if (slide.imageSrc) {
+            //         $scope.module.moduleImage = slide.imageSrc;
+            //     } else {
+            //         $scope.module.moduleImage = null;
+            //     }
+            // });
         };
 
         // Return to the previous slide in a section
@@ -92,7 +90,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
-        // Manually switch content section with dropdown menu 
+        // Manually switch content section with dropdown menu
         $scope.module.setSection = function(index, name) {
             $scope.module.section = name;
             $scope.module.sectionNumber = index + 1; // Switch from 0 to 1 index

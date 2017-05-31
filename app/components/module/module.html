@@ -20,6 +20,7 @@
             </div>
         </div>
         <div class="interactive">
+            <sketchy-https ng-if="module.moduleComponent === 'sketchyHttps'"></sketchy-https>
             <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
             <quiz ng-if="module.slideType === 'quiz'">{{module.slideType}}</quiz>
             <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
