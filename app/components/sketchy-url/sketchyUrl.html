@@ -1,8 +1,22 @@
 <link rel="stylesheet" href="components/sketchy-url/sketchyUrl.css" />
 <div class="sketchy-url-container">
-    <h3>Click below to check your progress on Cover Your Apps!</h3>
-    <br />
-    <p><a href="http://progress.coveryourass.con" onclick="alert('This is an unsafe link!'); return false;">http://progress.coveryourapps.com/</a></p>
-    <div ng-if="module.pageNumber === 1">Hi!</div>
-    {{sketchyUrl.name}}
+    <h2>Canvas: Assignment Graded</h2>
+    <hr>
+    <div class="faked-email-header">
+    <b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;
+    <br>
+    to me
+    </div>
+    <div class="faked-email-reply">
+    <img src="/img/etc/email-reply-img.png" width="100px"/>
+    </div>
+    <div class="faked-email-content"><br><br>
+    You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br>
+    <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter / BIOE 80)</b><br><br>
+    TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1.<br><br>
+
+    <p>
+      <md-button class="md-raised md-primary" href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" onclick="alert('This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.'); return false;">Check your grade here</md-button>
+    </p>
+    </div>
 </div>

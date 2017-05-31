@@ -13,7 +13,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.section = "";
         $scope.module.length = 10;
 
-        $scope.module.moduleComponent = null;
+        $scope.module.moduleComponent = "sketchyUrl";
         $scope.module.moduleImage = null;
 
         $scope.$on('$viewContentLoaded', function() {
@@ -43,13 +43,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var slide = $scope.module.json[$scope.module.sectionNumber - 1].slides[$scope.module.pageNumber - 1];
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
-            $scope.safeApply(function() {
-                if (slide.imageSrc) {
-                    $scope.module.moduleImage = slide.imageSrc;
-                } else {
-                    $scope.module.moduleImage = null;
-                }
-            });
+            // $scope.safeApply(function() {
+            //     if (slide.imageSrc) {
+            //         $scope.module.moduleImage = slide.imageSrc;
+            //     } else {
+            //         $scope.module.moduleImage = null;
+            //     }
+            // });
         };
 
         $scope.module.decrementPage = function() {
