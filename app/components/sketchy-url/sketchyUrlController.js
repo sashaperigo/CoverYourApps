@@ -10,6 +10,6 @@ myApp.component('sketchyUrl', {
     templateUrl: '/components/sketchy-url/sketchyUrl.html',
     controller: 'SketchyUrlController',
     bindings: {
-        module: '<'
+        module: '<' //= to make two-way binded
     }
 });

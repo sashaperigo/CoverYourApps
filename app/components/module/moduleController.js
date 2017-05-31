@@ -11,10 +11,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.sectionNames = {};
         $scope.module.sectionNumber = 0;
         $scope.module.section = "";
-        $scope.module.length = 0;
+        $scope.module.length = 10;
+        $scope.module.slideType = "";
+        $scope.module.slide = {};
 
-        $scope.module.moduleComponent = null;
+        $scope.module.moduleComponent = "";
         $scope.module.moduleImage = null;
+        
 
         $scope.$on('$viewContentLoaded', function() {
             // Select module from URL path
@@ -44,19 +47,20 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.displayPageContent = function() {
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
             var slide = section.slides[$scope.module.pageNumber - 1];
+            $scope.module.slide = slide;
 
             // Place text into the inner HTML so the HTML tags within the
             // json render properly
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
-
-            // Load image if there is one
+            
             $scope.safeApply(function() {
                 if (slide.imageSrc) {
                     $scope.module.moduleImage = slide.imageSrc;
                 } else {
                     $scope.module.moduleImage = null;
                 }
+                $scope.module.slideType = slide.slideType;
             });
         };
 
