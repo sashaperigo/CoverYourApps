@@ -11,7 +11,7 @@
     <img src="/img/etc/email-reply-img.png" width="100px"/>
   </div>
   <div class="delete-email">
-    <md-button class="md-warn md-raised md-hue-2" onclick="alert('You successfully avoided a sketchy link!'); return false;">Delete</md-button>
+    <md-button class="md-warn md-raised md-hue-2" ng-click="showCorrect($event)">Delete</md-button>
   </div>
   <br><br>
   <div class="faked-email-content"><br><br>
@@ -20,7 +20,7 @@
     TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1.<br><br>
 
     <p>
-      <md-button class="md-raised md-primary" href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" onclick="alert('This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.'); return false;">Check your grade here</md-button>
+      <md-button class="md-raised md-primary" ng-href="http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html" ng-mousedown="showIncorrect($event)">Check your grade here</md-button>
     </p>
   </div>
 </div>
