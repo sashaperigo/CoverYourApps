@@ -12,16 +12,12 @@
         </div>
     </div>
     <div class="content-grid">
-        <div class="text">
-            <div id="text-header" ng-if="module.slide.title">{{module.slide.title}}</div>
-            <div id="text-content"></div>
-        </div>
-        <div class="interactive">
-            <sketchy-https ng-if="module.moduleComponent === 'sketchyHttps'"></sketchy-https>
-            <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
-            <quiz ng-if="module.slideType === 'quiz' || module.slideType === 'quizImage'"></quiz>
-            <!--<img ng-show="module.moduleImage" src="{{module.moduleImage}}" />-->
-        </div>
+        <text-slide ng-if="module.currentSlide.slideType === 'text'" slide="module.currentSlide"></text-slide>
+        <text-image ng-if="module.currentSlide.slideType === 'textImage'"slide="module.currentSlide"></text-image>
+        <sketchy-url ng-if="module.currentSlide.slideType === 'sketchyUrl'"></sketchy-url>
+        <sketchy-https ng-if="module.currentSlide.slideType === 'sketchyHttps'"></sketchy-https>
+        <quiz ng-if="module.currentSlide.slideType === 'quiz'" slide="module.currentSlide"></quiz>
+        <quiz-image ng-if="module.currentSlide.slideType === 'quizImage'" slide="module.currentSlide"></quizImage>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
         <span>{{module.name}}</span>
@@ -30,6 +26,7 @@
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
         <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
+        <a ng-click="test">{{module.length}}</a>
         <span flex></span>
         <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Move on to section {{module.sectionNumber + 1}} of {{module.json.length}}</md-button>
     </md-toolbar>
