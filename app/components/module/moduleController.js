@@ -55,8 +55,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             console.log($scope.module.currentSlide);
         };
 
-        $scope.test = function() {console.log($scope.module.length);};
-
         // Return to the previous slide in a section
         $scope.module.decrementPage = function() {
             if ($scope.module.pageNumber === 1) {
