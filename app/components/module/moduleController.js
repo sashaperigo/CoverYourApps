@@ -53,7 +53,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.currentSlide = section.slides[$scope.module.pageNumber - 1];
             $scope.safeApply();
             console.log($scope.module.currentSlide);
->>>>>>> alec
         };
 
         $scope.test = function() {console.log($scope.module.length);};
