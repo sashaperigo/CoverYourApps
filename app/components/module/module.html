@@ -4,23 +4,9 @@
 <div class="module-container">
     <div class="section-label">Section {{module.sectionNumber}}: {{module.section}}</div>
     <div class="content-grid">
-        <div class="text">
-            <div class="text-header">
-                Description
-            </div>
-            <div id="text-content">
-                <!-- <div class="md-toolbar.header">
-                    <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
-                        <div ng-click="module.setSection(currentName)">{{currentName}}</div>
-                    </div>
-                </div> -->
-                <!-- <p>{{module.scripts[module.section][module.pageNumber].text}}</p> -->
-            </div>
-        </div>
-        <div class="interactive">
+            <text-slide ng-if="module.currentSlide.slideType === 'text'" slide="module.currentSlide"></text-slide>
+            <text-image ng-if="module.currentSlide.slideType === 'textImage'"slide="module.currentSlide"></text-image>
             <sketchy-url ng-if="module.moduleComponent === 'sketchyUrl'"></sketchy-url>
-            <img ng-show="module.moduleImage" src="{{module.moduleImage}}" />
-        </div>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
         <span>{{module.name}}</span>
@@ -28,6 +14,7 @@
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
         <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
+        <a ng-click="test">{{module.length}}</a>
         <span flex></span>
         <md-button ng-show="module.pageNumber === module.length" ng-click="module.nextSection()" class="next-section">Next Section</md-button>
     </md-toolbar>
