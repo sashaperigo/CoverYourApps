@@ -123,14 +123,14 @@
         "imgSrc": "img/module-img/tk-domain.jpg",
         "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "title": "Exposing longer URLs",
         "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link."
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button."
     }, {
-        "slideType": "sketchyLink",
+        "slideType": "sketchyUrl",
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",

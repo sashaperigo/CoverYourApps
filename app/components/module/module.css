@@ -95,11 +95,11 @@ body {
     padding: 0 0 0 0rem;
 }
 
-.text-header {
-    height: 40px;
-    line-height: 40px;
+#text-header {
+    height: auto;
+    line-height: 30px;
     font-weight: 700;
-    padding: 0 0 0 1rem;
+    padding: 0.25rem 0 0.25rem 1rem;
     background-color: #d3d3d3;
 }
 
