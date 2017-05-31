@@ -108,7 +108,7 @@
         "text": "Knowing how to detect illegitimate or spoofed email addresses is a crucial first line of defense against phishing. Unfortunately, there are a plethora of other ways to phish people--and these approaches are more imperceptible than faked email addresses."
     }]
 }, {
-    "sectionName": "Scrutinize Links",
+    "sectionName": "Scrutinizing Links",
     "slides": [{
         "slideType": "text",
         "text": "A phishing email is typically never an email alone; they often include links to other sites. Even if the email address of a phisher looks legitimate, sometimes links in their emails may raise a red flag. This section will introduce you to basic rules for rooting out suspicious links."
@@ -148,7 +148,7 @@
         }]
     }]
 }, {
-    "sectionName": "Using your browser's URL bar to examine a site's authenticity",
+    "sectionName": "Examining URL Authenticity",
     "slides": [{
         "slideType": "textImage",
         "title": "Knowing when you are on an HTTPS connection",
@@ -196,7 +196,7 @@
         "text": "Knowing when you’re on an HTTPS connection can help you identify whether you’re talking to a trustworthy website or not. Even then, adversaries can use https to trick you into a false sense of security—so watch out!"
     }]
 }, {
-    "sectionName": "Final phishing simulation",
+    "sectionName": "Final Simulation",
     "slides": [{
         "slideType": "text",
         "text": "Now let's put your skills to the test."

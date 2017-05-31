@@ -2,19 +2,21 @@
     <link rel="stylesheet" href="components/module/module.css" />
 </header>
 <div class="module-container">
-    <div class="section-label">Section {{module.sectionNumber}}: {{module.section}}</div>
+    <div class="section-label" ng-click="module.sectionDropdown()">
+        <md-icon md-svg-icon="img/icons/menu.svg" class="svg" role="img" aria-hidden="true"></md-icon>
+        Section {{module.sectionNumber}}: {{module.section}}
+        <div class="dropdown-content">
+            <ul>
+                <li ng-repeat="name in module.sectionNames" ng-click="module.setSection($index, name)">{{name}}</li>
+            </ul>
+        </div>
+    </div>
     <div class="content-grid">
         <div class="text">
             <div class="text-header">
                 Description
             </div>
             <div id="text-content">
-                <!-- <div class="md-toolbar.header">
-                    <div class="sectionNames" ng-repeat="currentName in module.sectionNames">
-                        <div ng-click="module.setSection(currentName)">{{currentName}}</div>
-                    </div>
-                </div> -->
-                <!-- <p>{{module.scripts[module.section][module.pageNumber].text}}</p> -->
             </div>
         </div>
         <div class="interactive">

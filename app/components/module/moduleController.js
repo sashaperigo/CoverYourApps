@@ -9,6 +9,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.json = "";
         $scope.module.scripts = {};
         $scope.module.sectionNames = {};
+
         $scope.module.sectionNumber = 0;
         $scope.module.section = "";
         $scope.module.length = 0;
@@ -87,11 +88,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
-        // Select a content section
-        $scope.module.setSection = function(clicked) {
-            $scope.module.section = clicked;
+        // Manually switch content section with dropdown menu 
+        $scope.module.setSection = function(index, name) {
+            $scope.module.section = name;
+            $scope.module.sectionNumber = index + 1; // Switch from 0 to 1 index
             $scope.module.pageNumber = 1;
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
+            $scope.module.displayPageContent();
         };
     }
 ]);

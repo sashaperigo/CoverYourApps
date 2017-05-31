@@ -1,5 +1,6 @@
 body {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .module-container {
@@ -15,7 +16,7 @@ body {
     overflow-y: hidden;
 }
 
-.module-container .section-label {
+.section-label {
     background: gray;
     width: 100%;
     height: 50px;
@@ -23,18 +24,58 @@ body {
     font-size: 1.2em;
     font-weight: 700;
     padding: 0 1.5rem 0 1rem;
+    cursor: pointer;
 }
 
-/*md-toolbar.header {
-    position: fixed;
-    border-top: 2px solid black;
-    font-weight: 600;
-    line-height: 56px;
-    padding: 0 1rem 0 1rem;
-    display: flex;
-    flex-direction: row;
-    clear: both;
-}*/
+.section-label md-icon.svg {
+    color: black;
+    opacity: 0.8;
+    height: 20px;
+    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    margin-right: 1rem;
+}
+
+.section-label:hover .dropdown-content ul {
+    display: block;
+}
+
+/* Creates triangle at the top of the dropdown */
+ .dropdown-content ul:before {
+     border-bottom: 10px solid #f9f9f9;
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+     content: "";
+     height: 0;
+     position: absolute;
+     left: 0;
+     top: -10px;
+     width: 0;
+ }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    -webkit-padding-start: 0; /* Overriding preset */
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+    color: black;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+}
 
 .container md-content {
     background-color: inherit;
