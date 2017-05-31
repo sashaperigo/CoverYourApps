@@ -54,13 +54,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             // json render properly
             var textContainer = document.getElementById("text-content");
             textContainer.innerHTML = slide.text;
-            // $scope.safeApply(function() {
-            //     if (slide.imageSrc) {
-            //         $scope.module.moduleImage = slide.imageSrc;
-            //     } else {
-            //         $scope.module.moduleImage = null;
-            //     }
-            // });
+            $scope.safeApply(function() {
+                if (slide.imageSrc) {
+                    $scope.module.moduleImage = slide.imageSrc;
+                } else {
+                    $scope.module.moduleImage = null;
+                }
+            });
         };
 
         // Return to the previous slide in a section
