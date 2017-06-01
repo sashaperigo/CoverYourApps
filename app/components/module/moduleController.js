@@ -107,14 +107,13 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.quizResponseCorrect = false;
 
         $scope.module.submitQuizResponse = function(clicked) {
+            console.log($scope.module.slide.name);
             $scope.module.displayQuizAnswer = true;
-            for (var i = 0; i < $scope.module.slide.options.length; i++) {
-                var currentOption = $scope.module.slide.options[i];
-                if (clicked.text === currentOption.text) {
-                    $scope.module.quizResponse = currentOption.feedback;
-                    $scope.module.quizResponseCorrect = currentOption.correct;
-                }
-            }
+            $scope.module.quizResponseCorrect = clicked.correct;
+            $scope.main.trackBehavior($scope.module.slide.name, clicked.text,
+                    function(data, resultString) {
+                $scope.module.quizResponse = clicked.feedback + ' ' + resultString;
+            });
         };
 
         // Saves current section number and page number to session
@@ -147,5 +146,5 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 myApp.component('module', {
     templateUrl: '/components/module/module.html',
     transclude: true,
-    controller: ModuleController
+    controller: 'ModuleController'
 });

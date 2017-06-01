@@ -12,6 +12,7 @@
         "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/"
     },{
         "slideType": "quiz",
+        "name": "docs-hack",
         "text": "Should you grant authentication to this \"Google Docs\" application?",
         "imgSrc": "img/module-img/google-docs-hack.gif",
         "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
@@ -69,6 +70,7 @@
         "text": "This next suggestion may sound silly and unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like head.of.philippines@gmail.com to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
     }, {
         "slideType": "quiz",
+        "name": "head-of-russia",
         "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
@@ -87,6 +89,7 @@
         }]
     }, {
         "slideType": "quiz",
+        "name": "head-of-philippines",
         "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com?",
         "options": [{
             "text": "Yes",
@@ -103,6 +106,7 @@
         "text": "This next example isn’t related to typos, but still highlights the importance of scrutinizing the email addresses of people asking you for sensitive information."
     }, {
         "slideType": "quiz",
+        "name": "google-email",
         "text": "If you got an email from no-reply@accounts.google-email.com asking you to update personal profile information, would you trust it and click its embedded link to update your information?",
         "options": [{
             "text": "Yes",
@@ -161,6 +165,7 @@
         "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website. Trusted websites tend to use HTTPS."
     }, {
         "slideType": "quiz",
+        "name": "bank-of-the-vvest",
         "text": "Do you trust this site?",
         "imgSrc": "img/module-img/bank-of-the-vvest.png",
         "imgCitation": "http://people.ischool.berkeley.edu/~hearst/papers/why_phishing_works.pdf",
@@ -199,6 +204,7 @@
         "text": "As good as the intentions of Let’s Encrypt are, however, phishers use this service to issue certificates for deceiving websites. In fact, their use of certificates makes their sites look extremely trustworthy! In March 2017, <a href=\"https://www.thesslstore.com/blog/lets-encrypt-phishing/\">security researchers found that Let’s Encrypt issued 14,000 certificates to PayPal phishing sites</a>. Even if a site looks legitimate and has a certificate, ensure that its URL is legitimate and not a clever trick!"
     }, {
         "slideType": "quiz",
+        "name": "shopping.paypal",
         "text": "Do you trust the following site? (Assume it has a valid certificate: i.e. green lock) <h3>https://shopping.paypal.com/index</h3>",
         "options": [{
             "text": "Yes",
@@ -211,6 +217,7 @@
         }]
     }, {
         "slideType": "quiz",
+        "name": "secure-alert",
         "text": "Do you trust the following site? (Assume it has a valid certificate: i.e. green lock) <h3>https://paypal.com.secure-alert.net</h3>",
         "options": [{
             "text": "Yes",
