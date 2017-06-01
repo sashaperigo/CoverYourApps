@@ -19,8 +19,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
 
-        $scope.module.currentSlide = null;
-
         $scope.$on('$viewContentLoaded', function() {
             // Select module from URL path
             var jsonSrc = "";
@@ -41,7 +39,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                 }
                 $scope.module.loadProgress();
             });
-
         });
 
         // Change slide number and content
@@ -49,49 +46,47 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
-            $scope.module.currentSlide = slide;
+            $scope.module.displayQuizAnswer = false; // Set this variable on the slide itself
             $scope.module.slideType = slide.slideType;
             $scope.safeApply();
-            console.log($scope.module.currentSlide);
             $scope.module.saveProgress();
         };
 
         // Return to the previous slide in a section
         $scope.module.decrementPage = function() {
-            if ($scope.module.pageNumber === 1) {
-                return;
-            }
+            console.assert($scope.module.pageNumber !== 1,
+                "Error: user is on the first slide of the section!");
             $scope.module.pageNumber--;
+            $scope.module.displayQuizAnswer = false;
             $scope.module.displayPageContent();
-            $scope.module.displayAnswer = false;
         };
 
         // Advance to the next slide in a section
         $scope.module.incrementPage = function(ev) {
-            if ($scope.module.pageNumber >= $scope.module.length) {
-                return;
-            }
+            console.assert($scope.module.pageNumber !== $scope.module.length,
+                "Error: user is on the last slide in the section!");
+            console.assert(!($scope.module.slideType === "quiz" && $scope.module.displayQuizAnswer === false),
+                "Error: user should not proceed without answering quiz question!");
             $scope.module.pageNumber++;
+            $scope.module.displayQuizAnswer = false;
             $scope.module.displayPageContent();
-            $scope.module.displayAnswer = false;
         };
 
         // Advance to the next section
         $scope.module.nextSection = function() {
-            if($scope.module.displayAnswer === true || ($scope.module.slideType !== "quiz" && $scope.module.slideType !== "quizImage")) {
-                $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
-                $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
-                $scope.module.pageNumber = 1;
-                $scope.module.sectionNumber++;
-                $scope.module.displayPageContent();
-            } else {
-                console.log("oops");
-            }
-        };
-
-        $scope.module.prevSection = function() {
+            console.assert(!($scope.module.slideType === "quiz" && $scope.module.displayQuizAnswer === false),
+                "Error: user should not proceed without answering quiz question!");
             $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
             $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
+            $scope.module.pageNumber = 1;
+            $scope.module.sectionNumber++;
+            $scope.module.displayPageContent();
+        };
+
+        // Return to the previous section
+        $scope.module.prevSection = function() {
+            $scope.module.section = $scope.module.json[$scope.module.sectionNumber - 2].sectionName;
+            $scope.module.length = $scope.module.json[$scope.module.sectionNumber - 2].slides.length;
             $scope.module.pageNumber = 1;
             $scope.module.sectionNumber--;
             $scope.module.displayPageContent();
@@ -106,13 +101,19 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayPageContent();
         };
 
-        $scope.module.submitResponse = function(clicked) {
-            $scope.module.displayAnswer = true;
-            for(var i = 0; i < $scope.module.slide.options.length; i++) {
+        // Quiz variables need to be in the moduleController because they have
+        // to be accessible in both module.html and quiz.html!
+        $scope.module.displayQuizAnswer = false;
+        $scope.module.quizResponse = "";
+        $scope.module.quizResponseCorrect = false;
+
+        $scope.module.submitQuizResponse = function(clicked) {
+            $scope.module.displayQuizAnswer = true;
+            for (var i = 0; i < $scope.module.slide.options.length; i++) {
                 var currentOption = $scope.module.slide.options[i];
-                if(clicked.text === currentOption.text) {
-                    $scope.module.response = currentOption.feedback;
-                    $scope.module.responseCorrect = currentOption.correct;
+                if (clicked.text === currentOption.text) {
+                    $scope.module.quizResponse = currentOption.feedback;
+                    $scope.module.quizResponseCorrect = currentOption.correct;
                 }
             }
         };
@@ -120,29 +121,26 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         // Saves current section number and page number to session
         $scope.module.loadProgress = function() {
             $http.get('/api/progress/' + $scope.module.name)
-              .then(function successCallback(response) {
-                  console.log('got some saved progress:', response.data)
-                  $scope.module.sectionNumber = response.data.section;
-                  $scope.module.section = $scope.module.sectionNames[$scope.module.sectionNumber - 1]; // AAAAH INDEXING
-                  $scope.module.pageNumber = response.data.page;
-                  $scope.module.length = $scope.module.scripts[$scope.module.section].length;
-                  $scope.module.displayPageContent();
-              }, function errorCallback(response) {
-                  // If there's an error, load the first page of the first section
-                  console.error(response.data || 'Error loading saved progress');
-                  var firstSectionName = $scope.module.sectionNames[0];
-                  $scope.module.setSection(0, firstSectionName);
-              });
+                .then(function successCallback(response) {
+                    $scope.module.sectionNumber = response.data.section;
+                    $scope.module.section = $scope.module.sectionNames[$scope.module.sectionNumber - 1]; // AAAAH INDEXING
+                    $scope.module.pageNumber = response.data.page;
+                    $scope.module.length = $scope.module.scripts[$scope.module.section].length;
+                    $scope.module.displayPageContent();
+                }, function errorCallback(response) {
+                    // If there's an error, load the first page of the first section
+                    console.error(response.data || 'Error loading saved progress');
+                    var firstSectionName = $scope.module.sectionNames[0];
+                    $scope.module.setSection(0, firstSectionName);
+                });
         };
 
         // Loads saved section/page from session - if none, load first page
         $scope.module.saveProgress = function() {
             $http.post('/api/progress/' + $scope.module.name + '/' + $scope.module.sectionNumber + '/' + $scope.module.pageNumber)
-              .then(function successCallback(response) {
-                  console.log('saved progress!');
-              }, function errrorCallback(response) {
-                  console.error(response.data || 'Error saving progress');
-              });
+                .then(function successCallback(response) {}, function errrorCallback(response) {
+                    console.error(response.data || 'Error saving progress');
+                });
         }
     }
 ]);
