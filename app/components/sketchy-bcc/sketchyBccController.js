@@ -7,36 +7,36 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
         $scope.sketchyBcc.content = ctrl.slide.emailData;
 
         $scope.sketchyBcc.showCorrect = function(ev) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        // Modal dialogs should fully cover application
-        // to prevent interaction outside of dialog
-        $mdDialog.show(
-          $mdDialog.alert()
-            .parent(angular.element(document.querySelector('#popupContainer')))
-            .clickOutsideToClose(true)
-            .title('Good choice!')
-            .textContent('Congratulations! You successfully avoided this phishing attack.')
-            .ariaLabel('Alert Dialog Demo')
-            .ok('Got it!')
-            .targetEvent(ev)
-        );
-      };
+            // Appending dialog to document.body to cover sidenav in docs app
+            // Modal dialogs should fully cover application
+            // to prevent interaction outside of dialog
+            $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(true)
+                .title('Good choice!')
+                .textContent('Congratulations! You successfully avoided this phishing attack.')
+                .ariaLabel('Alert Dialog Demo')
+                .ok('Got it!')
+                .targetEvent(ev)
+            );
+        };
 
-      $scope.sketchyBcc.showIncorrect = function(ev) {
-      // Appending dialog to document.body to cover sidenav in docs app
-      // Modal dialogs should fully cover application
-      // to prevent interaction outside of dialog
-      $mdDialog.show(
-        $mdDialog.alert()
-          .parent(angular.element(document.querySelector('#popupContainer')))
-          .clickOutsideToClose(true)
-          .title('Uh oh!')
-          .textContent('You fell for an email with a suspicious bcc/cc field, suggesting foul play.')
-          .ariaLabel('Alert Dialog Demo')
-          .ok('Got it!')
-          .targetEvent(ev)
-      );
-    };
+        $scope.sketchyBcc.showIncorrect = function(ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            // Modal dialogs should fully cover application
+            // to prevent interaction outside of dialog
+            $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(true)
+                .title('Uh oh!')
+                .textContent('You fell for an email with a suspicious bcc/cc field, suggesting foul play.')
+                .ariaLabel('Alert Dialog Demo')
+                .ok('Got it!')
+                .targetEvent(ev)
+            );
+        };
     }
 ]);
 
@@ -45,6 +45,5 @@ myApp.component('sketchyBcc', {
     controller: 'SketchyBccController',
     bindings: {
         slide: '<'
-        // module: '<' //= to make two-way binded
     }
 });

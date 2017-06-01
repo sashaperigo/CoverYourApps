@@ -17,7 +17,11 @@ myApp.component('quiz', {
     templateUrl: '/components/quiz/quiz.html',
     controller: 'QuizController',
     bindings: {
-        module: '=', // Bind the entire module scope as a parent
+        module: '=',    /* Here we're binding the entire module scope
+                         * as the parent of the quiz scope. This is
+                         * essential so we can prevent the user from
+                         * moving forward until they've answered the
+                         * quiz question! */
         slide: '<'
     }
 });

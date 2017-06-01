@@ -76,6 +76,7 @@ myApp.controller('MainController', ['$scope', '$http',
                 this.$apply(fn);
             }
         };
+
         /* Tracks a behavior and responds with previously saved tracking.
          *
          * Call this with any two strings:
@@ -89,21 +90,21 @@ myApp.controller('MainController', ['$scope', '$http',
          */
         $scope.main.trackBehavior = function(resource, behavior, callback) {
             $http.post('api/track/' + resource + '/' + behavior)
-              .then(function successCallback(response) {
-                  var total = response.data.reduce(function(soFar, entry) {
-                      return soFar + (+entry.count)
-                  }, 0);
-                  var resultString = '';
-                  for (var i = 0; i < response.data.length; i++) {
-                      var percent = Math.round(100 * response.data[i].count / total).toString();
-                      resultString += percent + '% of people selected ' +
-                        response.data[i].behavior + '. ';
-                  }
-                  callback(response.data, resultString);
-              }, function errorCallback(response) {
-                  console.error(response.data || 'Error loading data');
-                  alert('There was an error loading data.');
-              });
+                .then(function successCallback(response) {
+                    var total = response.data.reduce(function(soFar, entry) {
+                        return soFar + (+entry.count)
+                    }, 0);
+                    var resultString = '';
+                    for (var i = 0; i < response.data.length; i++) {
+                        var percent = Math.round(100 * response.data[i].count / total).toString();
+                        resultString += '<p><b>' + percent + '%</b> of people selected ' +
+                            response.data[i].behavior + '</p>';
+                    }
+                    callback(response.data, resultString);
+                }, function errorCallback(response) {
+                    console.error(response.data || 'Error loading data');
+                    alert('There was an error loading data.');
+                });
         };
     }
 ]);

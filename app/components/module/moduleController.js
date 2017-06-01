@@ -105,14 +105,16 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.displayQuizAnswer = false;
         $scope.module.quizResponse = "";
         $scope.module.quizResponseCorrect = false;
+        $scope.module.quizStatistics = "";
 
         $scope.module.submitQuizResponse = function(clicked) {
             console.log($scope.module.slide.name);
             $scope.module.displayQuizAnswer = true;
             $scope.module.quizResponseCorrect = clicked.correct;
+            $scope.module.quizResponse = clicked.feedback;
             $scope.main.trackBehavior($scope.module.slide.name, clicked.text,
                     function(data, resultString) {
-                $scope.module.quizResponse = clicked.feedback + ' ' + resultString;
+                $scope.module.quizStatistics = resultString;
             });
         };
 

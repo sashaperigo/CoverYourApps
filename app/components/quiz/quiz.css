@@ -7,35 +7,53 @@
     text-align: center;
 }
 
-.quiz-container img {
-    border: 2px solid black;
-    max-width: 500px;
+.prompt {
+    display: block;
 }
 
-.question {
+.prompt .question {
     padding-top: 1rem;
 }
 
-.image {
+.prompt .image {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-.answers {
+.prompt .image img {
+    border: 2px solid black;
+    max-width: 500px;
+}
+
+.prompt .answers {
     display: inline-block;
 }
 
-.answers+.answers {
+.prompt .answers+.answers {
     padding-left: 4rem;
 }
 
-.answers .md-button.submit {
+.prompt .answers .md-button.submit {
     background-color: gray;
     color: white;
 }
 
-.answers button+button {
-    padding-right: 5rem;
+.feedback {
+    display: block;
+    position: absolute;
+    background: white;
+    opacity: 0.98;
+    border-radius: 2rem;
+    padding: 2rem;
+    z-index: 1;
+    top: calc(50px + 2%);
+    height: calc((100vh - 75px - 150px) * 0.90);
+    width: 95%;
+    box-shadow: -1px 1px 10px 0 gray;
+}
+
+.feedback h4 {
+    line-height: 1.2;
 }
 
 .correctAnswer {
