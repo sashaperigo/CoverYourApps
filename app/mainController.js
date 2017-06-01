@@ -34,6 +34,10 @@ myApp.config(['$locationProvider', '$routeProvider',
     }
 ]);
 
+myApp.filter('html', ['$sce', function($sce) {
+    return $sce.trustAsHtml;
+}]);
+
 myApp.controller('MainController', ['$scope', '$http',
     function($scope, $http) {
         $scope.main = {};

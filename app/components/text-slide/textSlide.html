@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="components/text-slide/textSlide.css" />
 <div class="interactive">
     <h1 ng-if="$ctrl.slide.title">{{ $ctrl.slide.title }}</h1>
-    <h4 ng-bind-html="slideText"></h4>
+    <h4 ng-bind-html="$ctrl.slide.text | html"></h4>
 </div>
