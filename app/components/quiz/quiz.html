@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="components/quiz/quiz.css" />
 <div class="quiz-container">
-    <h2 class="question">{{ $ctrl.slide.text }}</h2>
+    <h2 class="question" ng-bind-html="$ctrl.slide.text | html"></h2>
     <div class="image" ng-if="$ctrl.slide.imgSrc">
         <img ng-src="{{ $ctrl.slide.imgSrc }}" />
         <p>
@@ -13,5 +13,5 @@
     </div>
     <div class="correctAnswer" ng-if="module.displayQuizAnswer && module.quizResponseCorrect">Correct!</div>
     <div class="incorrectAnswer" ng-if="module.displayQuizAnswer && !module.quizResponseCorrect">Not quite!</div>
-    <div class="answer" ng-if="module.displayQuizAnswer">{{ module.quizResponse }}</div>
+    <div class="answer" ng-if="module.displayQuizAnswer" ng-bind-html="module.quizResponse | html"></div>
 </div>
