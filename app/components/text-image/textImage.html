@@ -10,5 +10,6 @@
 <div class="interactive">
     <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
     <sketchy-https ng-if="$ctrl.slide.slideType === 'sketchyHttps'"></sketchy-https>
+    <sketchy-bcc ng-if="$ctrl.slide.slideType === 'sketchyBcc'"></sketchy-bcc>
     <img ng-if="$ctrl.slide.slideType === 'textImage'" ng-src="{{ $ctrl.slide.imgSrc }}" />
 </div>
