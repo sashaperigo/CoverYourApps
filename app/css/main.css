@@ -5,7 +5,7 @@ html {
     color: #000000;
 }
 
-.container-fluid{
+.container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 }
@@ -26,7 +26,8 @@ a:hover {
     color: #851e1e;
 }
 
-md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
     position: fixed;
     height: 100px;
     background-color: rgba(211, 211, 211, 0.95);
@@ -71,7 +72,9 @@ md-toolbar a:hover {
     margin-bottom: 1em;
 }
 
+
 /* Overriding a grid preset */
+
 @media (min-width: 768px) {
     .container {
         width: auto;
@@ -94,6 +97,12 @@ a.button {
 }
 
 .row.footer {
-   background-color: rgba(211, 211, 211, 1);
-   text-align: center;
+    background-color: rgba(211, 211, 211, 1);
+    text-align: center;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.col-xs-12 p {
+    margin-bottom: 0;
 }
