@@ -3,8 +3,7 @@
     <div id="text-header" ng-if="$ctrl.slide.title">
         {{ $ctrl.slide.title }}
     </div>
-    <div id="text-content">
-        {{ $ctrl.slide.text }}
+    <div id="text-content" ng-bind-html="slideText">
     </div>
 </div>
 <div class="interactive">

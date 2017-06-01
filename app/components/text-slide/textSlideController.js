@@ -1,7 +1,9 @@
 'use strict';
 
-myApp.controller('textSlideController', ['$scope', '$rootScope',
-    function($scope, $rootScope) {
+myApp.controller('textSlideController', ['$scope', '$sce',
+    function($scope, $sce) {
+        var ctrl = this;
+        $scope.slideText = $sce.trustAsHtml(ctrl.slide.text);
     }
 ]);
 
