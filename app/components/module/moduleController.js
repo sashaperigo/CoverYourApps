@@ -16,7 +16,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.slideType = "";
         $scope.module.slide = {};
 
-        $scope.module.moduleComponent = null;
+        $scope.module.moduleComponent = 'sketchyBcc';
         $scope.module.moduleImage = null;
 
         $scope.module.currentSlide = null;
@@ -51,9 +51,24 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.slide = slide;
             $scope.module.currentSlide = slide;
             $scope.module.slideType = slide.slideType;
+// <<<<<<< Updated upstream
             $scope.safeApply();
             console.log($scope.module.currentSlide);
             $scope.module.saveProgress();
+// =======
+//
+//             // Place text into the inner HTML so the HTML tags within the
+//             // json render properly
+//             var textContainer = document.getElementById("text-content");
+//             textContainer.innerHTML = slide.text;
+//             // $scope.safeApply(function() {
+//             //      if (slide.imageSrc) {
+//             //          $scope.module.moduleImage = slide.imageSrc;
+//             //      } else {
+//             //          $scope.module.moduleImage = null;
+//             //      }
+//             // });
+// >>>>>>> Stashed changes
         };
 
         // Return to the previous slide in a section
