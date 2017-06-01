@@ -4,9 +4,9 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
     function($scope, $rootScope, $mdDialog) {
         var ctrl = this;
         $scope.sketchyBcc = {};
-        $scope.content = ctrl.slide.emailData;
+        $scope.sketchyBcc.content = ctrl.slide.emailData;
 
-        $scope.showCorrect = function(ev) {
+        $scope.sketchyBcc.showCorrect = function(ev) {
         // Appending dialog to document.body to cover sidenav in docs app
         // Modal dialogs should fully cover application
         // to prevent interaction outside of dialog
@@ -22,7 +22,7 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
         );
       };
 
-      $scope.showIncorrect = function(ev) {
+      $scope.sketchyBcc.showIncorrect = function(ev) {
       // Appending dialog to document.body to cover sidenav in docs app
       // Modal dialogs should fully cover application
       // to prevent interaction outside of dialog
