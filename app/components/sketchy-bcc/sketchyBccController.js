@@ -4,7 +4,7 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
     function($scope, $rootScope, $mdDialog) {
         var ctrl = this;
         $scope.sketchyBcc = {};
-        $scope.content = $ctrl.slide.emailData;
+        $scope.content = ctrl.slide.emailData;
 
         $scope.showCorrect = function(ev) {
         // Appending dialog to document.body to cover sidenav in docs app

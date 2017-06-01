@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="components/sketchy-bcc/sketchyBcc.css" />
 <div class="sketchy-bcc-container">
-  <h2>{{content}}</h2>
+  <h2>{{ content.subject }}</h2>
   <hr>
   <div class="faked-email-header">
-    <b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;
+    <span ng-bind-html="content.from | html"></span>
     <br>
-    to hhhhhhhhhhhhhh., bcc: USERNAME_HERE
+    <span ng-bind-html="content.to | html"></span>
   </div>
   <div class="faked-email-reply">
     <img src="/img/etc/email-reply-img.png" width="100px"/>
@@ -15,7 +15,7 @@
   </div>
   <br><br>
   <div class="faked-email-content"><br><br>
-    Sasha Perigo has invited you to view the following document:
+    <span ng-bind-html="content.text | html"></span>
     <br><br>
     <p>
       <md-button class="md-raised md-primary" ng-mousedown="showIncorrect($event)">Open in Docs</md-button>

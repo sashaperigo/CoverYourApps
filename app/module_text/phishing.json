@@ -51,8 +51,8 @@
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
-            "to": "hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
-            "text": "Sasha Perigo has invited you to view the following document:<br><br>"
+            "to": "to: hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
+            "text": "Sasha Perigo has invited you to view the following document:"
         },
         "options": [{
             "text": "Delete",
