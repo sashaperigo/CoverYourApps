@@ -141,7 +141,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                 .then(function successCallback(response) {}, function errrorCallback(response) {
                     console.error(response.data || 'Error saving progress');
                 });
-        }
+        };
     }
 ]);
 

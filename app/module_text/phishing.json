@@ -45,18 +45,37 @@
         "slideType": "text",
         "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some are clear, some are extremely subtle. We’ll start out with more recognizable issues in phishing emails before moving onto more inconspicuous ones."
     }, {
-        "slideType": "sketchyBCC",
+        "slideType": "sketchyBcc",
         "title": "Bizarre BCCs and CCs",
         "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated!",
-        "imageSrc": "img/module-img/google-docs-screenshot-highlight.jpg",
-        "imageCitation": "https://twitter.com/zeynep/status/859840026082988038"
+        "emailData": {
+            "subject": "Sasha Perigo has shared a document on Google Docs with you",
+            "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
+            "to": "hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
+            "text": "Sasha Perigo has invited you to view the following document:<br><br>"
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "feedback": "Congratulations! You successfully avoided this phishing attack."
+        }, {
+            "text": "Open in Google Docs",
+            "correct": false,
+            "feedback": "You fell for an email with a suspicious bcc/cc field, suggesting foul play."
+        }]
     }, {
         "slideType": "text",
         "title": "Have you <i>actually</i> looked at who an email came from?",
         "text": "This next suggestion may sound silly and unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like head.of.philippines@gmail.com to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
     }, {
         "slideType": "quiz",
-        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate.</p><p>You're representing Russia at this conference. You get an email from head.of.russianfederation@gmail.com. Do you trust it and respond to it?</p>",
+        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p>",
+        "emailData": {
+            "subject": "Urgent Message from Head of State",
+            "from": "<b>Head of Russian Federation</b> &lt;head.of.russianfederation@gmail.com&gt;",
+            "to": "Delegation of Russian Federation",
+            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br>"
+        },
         "options": [{
             "text": "Yes",
             "correct": true,

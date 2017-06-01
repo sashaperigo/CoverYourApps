@@ -11,7 +11,7 @@
     </div>
     <div class="content-grid">
         <text-slide ng-if="module.slide.slideType === 'text'" slide="module.slide"></text-slide>
-        <text-image ng-if="module.slide.slideType === 'textImage' || module.slide.slideType === 'sketchyUrl'|| module.slide.slideType === 'sketchyHttps'" slide="module.slide"></text-image>
+        <text-image ng-if="module.slide.slideType === 'textImage' || module.slide.slideType === 'sketchyUrl' || module.slide.slideType === 'sketchyHttps' || module.slide.slideType === 'sketchyBcc'" slide="module.slide"></text-image>
         <quiz ng-if="module.slide.slideType === 'quiz'" slide="module.slide"></quiz>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
