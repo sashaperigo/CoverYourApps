@@ -3,18 +3,18 @@
     "slides": [{
         "slideType": "textImage",
         "text": "On May 3, 2017, you may have received an email from a friend that said \"[friend’s name] has shared a document on Google Docs with you.\" Inside, you would have seen an email like the one on the right. It looks legitimate, including to the blue button used across multiple Google apps.",
-        "imageSrc": "img/module-img/google-docs-screenshot.jpg",
-        "imageCitation": "https://twitter.com/zeynep/status/859840026082988038"
+        "imgSrc": "img/module-img/google-docs-screenshot.jpg",
+        "imgCitation": "https://twitter.com/zeynep/status/859840026082988038"
     }, {
         "slideType": "textImage",
         "text": "Perhaps you clicked the \"Open in Docs\" button. If you did, were brought to this Google authentication page.",
-        "imageSrc": "img/module-img/google-docs-hack.gif",
-        "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/"
+        "imgSrc": "img/module-img/google-docs-hack.gif",
+        "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/"
     },{
-        "slideType": "textImage",
-        "text": "Did you also grant authentication to this \"Google Docs\" application?",
-        "imageSrc": "img/module-img/google-docs-hack.gif",
-        "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
+        "slideType": "quiz",
+        "text": "Should you grant authentication to this \"Google Docs\" application?",
+        "imgSrc": "img/module-img/google-docs-hack.gif",
+        "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
         "options": [{
             "text": "Yes",
             "correct": false,
@@ -27,8 +27,8 @@
     }, {
         "slideType": "textImage",
         "text": "Clearly, phishers online have moved far beyond the days of Nigerian Prince Scams.",
-        "imageSrc": "img/module-img/nigerian-scam.jpg",
-        "imageCitation": "https://commons.wikimedia.org/wiki/File:NigerianScam.jpg"
+        "imgSrc": "img/module-img/nigerian-scam.jpg",
+        "imgCitation": "https://commons.wikimedia.org/wiki/File:NigerianScam.jpg"
     }, {
         "slideType": "text",
         "text": "This module will help you detect phishing attacks and defend yourself from digital snoops. <a href=\"https://www.verizon.com/about/news/verizons-2016-data-breach-investigations-report-finds-cybercriminals-are-exploiting-human\">Ninety percent of data breaches start with phishing attacks</a>, so it is imperative to protect yourself from being deceived online."
@@ -125,8 +125,8 @@
         "slideType": "textImage",
         "title": "A solution?",
         "text": "Luckily, services like Gmail can snuff out emails that spoof real addresses. If you ever see this red banner, proceed very carefully (if at all)!",
-        "imageSrc": "img/module-img/gmail-warning.png",
-        "imageCitation": "https://www.linkedin.com/pulse/how-much-trust-do-you-put-your-gmail-inbox-messages-renato-marinho"
+        "imgSrc": "img/module-img/gmail-warning.png",
+        "imgCitation": "https://www.linkedin.com/pulse/how-much-trust-do-you-put-your-gmail-inbox-messages-renato-marinho"
     }, {
         "slideType": "text",
         "text": "Knowing how to detect illegitimate or spoofed email addresses is a crucial first line of defense against phishing. Unfortunately, there are a plethora of other ways to phish people--and these approaches are more imperceptible than faked email addresses."
@@ -154,14 +154,14 @@
         "slideType": "sketchyUrl",
         "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button."
     }, {
-        "slideType": "sketchyUrl",
+        "slideType": "text",
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",
         "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website. Trusted websites tend to use HTTPS."
     }, {
         "slideType": "quiz",
-        "text": "Would you trust the site on the right?",
+        "text": "Do you trust this site?",
         "imgSrc": "img/module-img/bank-of-the-vvest.png",
         "imgCitation": "http://people.ischool.berkeley.edu/~hearst/papers/why_phishing_works.pdf",
         "options": [{
@@ -183,14 +183,14 @@
         "slideType": "textImage",
         "title": "Knowing when you are on an HTTPS connection",
         "text": "Google Chrome does an especially good job of <a href=\"https://support.google.com/chrome/answer/95617\">showing when you are on a secure HTTPS connection</a>. Take a look at your URL bar: if there’s a green lock saying that you have a \"Secure\" connection, you’re on HTTPS! Otherwise, if you see a red cross or grey \"i\" you are on an insecure connection and should be careful about sharing your personal information.",
-        "imageSrc": "img/module-img/chrome-https.png",
-        "imageCitation": "https://support.google.com/chrome/answer/95617"
+        "imgSrc": "img/module-img/chrome-https.png",
+        "imgCitation": "https://support.google.com/chrome/answer/95617"
     }, {
         "slideType": "textImage",
         "title": "Intro to certs",
         "text": "HTTPS sites use something called certificates to demonstrate a website’s identity; when sharing data with a website, certificates help prove that you’re talking to the party you expect. (In this case: the actual twitter.com and not some attacker impersonating twitter.com)",
         "imgSrc": "img/module-img/twitter-cert.png",
-        "imageCitation": "https://twitter.com"
+        "imgCitation": "https://twitter.com"
     }, {
         "slideType": "text",
         "text": "Certificates are a crucial part of https and are worth examining. More and more websites are beginning to use certs and establish secure HTTPS connections by default. Projects like <a href=\"https://letsencrypt.org/\">Let’s Encrypt</a> issue certificates to any website in an attempt to encourage more people to use secure connections by default."

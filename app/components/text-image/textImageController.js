@@ -2,6 +2,7 @@
 
 myApp.controller('textImageController', ['$scope', '$rootScope',
     function($scope, $rootScope) {
+    	console.log(this);
     }
 ]);
 

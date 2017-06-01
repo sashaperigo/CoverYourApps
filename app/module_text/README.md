@@ -58,16 +58,16 @@ A slide that (by preliminary design) will display some text in a left column and
 
 * *text*: A string of HTML to render on the left side
 * *title* (optional): A string that's the title of the slide, to be rendered above the image
-* *imageSrc*: A string that is the URL of the image. (For now, assuming we keep storing these images in the same place, should start `img/module-img/...`
-* *imageCitation* (optional): A URL to where the image came from
+* *imgSrc*: A string that is the URL of the image. (For now, assuming we keep storing these images in the same place, should start `img/module-img/...`
+* *imgCitation* (optional): A URL to where the image came from
 
 #### Example
 ```
 {
   "slideType": "textImage",
   "text": "On May 3, 2017, you may have received an email from a friend that said \"[friend’s name] has shared a document on Google Docs with you.\" Inside, you would have seen an email like the one on the right. It looks legitimate, including to the blue button used across multiple Google apps.",
-  "imageSrc": "img/module-img/google-docs-screenshot.jpg",
-  "imageCitation": "https://twitter.com/zeynep/status/859840026082988038"
+  "imgSrc": "img/module-img/google-docs-screenshot.jpg",
+  "imgCitation": "https://twitter.com/zeynep/status/859840026082988038"
 }
 ```
 ---
@@ -110,8 +110,8 @@ Like quiz but with a focused image. Not sure how this will be laid out yet.
 #### Attributes
 
 * *text*: string - see "quiz"
-* *imageSrc*: string - see "textImage"
-* *imageCitation*: string - see "textImage"
+* *imgSrc*: string - see "textImage"
+* *imgCitation*: string - see "textImage"
 * *options*: array - see "quiz"
 
 #### Example
@@ -119,8 +119,8 @@ Like quiz but with a focused image. Not sure how this will be laid out yet.
 {
   "slideType": "quiz",
   "intro": "Perhaps you clicked the \"Open in Docs\" button. You were brought to this Google authentication page. Did you also grant authentication to this \"Google Docs\" application?",
-  "imageSrc": "img/module-img/google-docs-hack.gif",
-  "imageCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
+  "imgSrc": "img/module-img/google-docs-hack.gif",
+  "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
   "options": [
     {
       "text": "Yes",

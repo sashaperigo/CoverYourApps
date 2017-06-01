@@ -46,7 +46,6 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
-            $scope.module.displayQuizAnswer = false; // Set this variable on the slide itself
             $scope.module.slideType = slide.slideType;
             $scope.safeApply();
             $scope.module.saveProgress();

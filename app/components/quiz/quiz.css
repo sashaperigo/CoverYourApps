@@ -1,32 +1,41 @@
+.content-grid {
+    overflow-y: scroll;
+}
+
 .quiz-container {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     text-align: center;
 }
 
-.quiz-container a {
-    color: blue;
+.quiz-container img {
+    border: 2px solid black;
+    max-width: 500px;
 }
 
-#submit {
-    background: #dddada;
-    color: 000000;
-    padding: 3px;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    cursor: pointer;
-    border: 1px solid gray;
+.question {
+    padding-top: 1rem;
 }
 
-#submit:hover {
-    background: #3d91b8;
-    color: #ffffff;
-    padding: 3px;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    cursor: pointer;
-    border: 1px solid gray;
+.image {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.answers {
+    display: inline-block;
+}
+
+.answers+.answers {
+    padding-left: 4rem;
+}
+
+.answers .md-button.submit {
+    background-color: gray;
+    color: white;
+}
+
+.answers button+button {
+    padding-right: 5rem;
 }
 
 .correctAnswer {
