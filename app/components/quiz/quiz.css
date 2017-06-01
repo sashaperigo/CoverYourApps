@@ -20,8 +20,11 @@
     padding-bottom: 1rem;
 }
 
+.img-citation {
+    font-size: .5em;
+}
+
 .prompt .image img {
-    border: 2px solid black;
     max-width: 500px;
 }
 

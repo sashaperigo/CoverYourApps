@@ -4,7 +4,7 @@
         <h2 class="question" ng-bind-html="$ctrl.slide.text | html"></h2>
         <div class="image" ng-if="$ctrl.slide.imgSrc">
             <img ng-src="{{ $ctrl.slide.imgSrc }}" />
-            <p>
+            <p class="img-citation"> Source: 
                 <a ng-href="{{ $ctrl.slide.imgCitation }}">{{ $ctrl.slide.imgCitation }}</a>
             </p>
         </div>
