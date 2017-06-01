@@ -1,7 +1,7 @@
 'use strict';
 
-var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootScope', '$location',
-    function($scope, $rootScope, $location) {
+var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootScope', '$location', '$http',
+    function($scope, $rootScope, $location, $http) {
         $scope.module = {};
         $scope.module.name = "";
         $scope.module.pageNumber = 1;
@@ -39,7 +39,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     $scope.module.sectionNames[i] = data[i].sectionName;
                     $scope.module.scripts[data[i].sectionName] = data[i].slides;
                 }
-                $scope.module.nextSection();
+                $scope.module.loadProgress();
             });
 
         });
@@ -52,6 +52,8 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.currentSlide = slide;
             $scope.module.slideType = slide.slideType;
             $scope.safeApply();
+            console.log($scope.module.currentSlide);
+            $scope.module.saveProgress();
         };
 
         // Return to the previous slide in a section
@@ -97,6 +99,45 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.length = $scope.module.scripts[$scope.module.section].length;
             $scope.module.displayPageContent();
         };
+
+        $scope.module.submitResponse = function(clicked) {
+            $scope.module.displayAnswer = true;
+            for(var i = 0; i < $scope.module.slide.options.length; i++) {
+                var currentOption = $scope.module.slide.options[i];
+                if(clicked.text === currentOption.text) {
+                    $scope.module.response = currentOption.feedback;
+                    $scope.module.responseCorrect = currentOption.correct;
+                }
+            }
+        };
+
+        // Saves current section number and page number to session
+        $scope.module.loadProgress = function() {
+            $http.get('/api/progress/' + $scope.module.name)
+              .then(function successCallback(response) {
+                  console.log('got some saved progress:', response.data)
+                  $scope.module.sectionNumber = response.data.section;
+                  $scope.module.section = $scope.module.sectionNames[$scope.module.sectionNumber - 1]; // AAAAH INDEXING
+                  $scope.module.pageNumber = response.data.page;
+                  $scope.module.length = $scope.module.scripts[$scope.module.section].length;
+                  $scope.module.displayPageContent();
+              }, function errorCallback(response) {
+                  // If there's an error, load the first page of the first section
+                  console.error(response.data || 'Error loading saved progress');
+                  var firstSectionName = $scope.module.sectionNames[0];
+                  $scope.module.setSection(0, firstSectionName);
+              });
+        };
+
+        // Loads saved section/page from session - if none, load first page
+        $scope.module.saveProgress = function() {
+            $http.post('/api/progress/' + $scope.module.name + '/' + $scope.module.sectionNumber + '/' + $scope.module.pageNumber)
+              .then(function successCallback(response) {
+                  console.log('saved progress!');
+              }, function errrorCallback(response) {
+                  console.error(response.data || 'Error saving progress');
+              });
+        }
     }
 ]);
 

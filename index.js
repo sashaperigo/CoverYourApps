@@ -72,6 +72,25 @@ app.get('/api/test-session/', function (req, res) {
   res.json(req.session);
 });
 
+app.post('/api/progress/:module/:section/:page', function (req, res) {
+    if (!req.session.progress) req.session.progress = {};
+    req.session.progress[req.params.module] = {
+        section: req.params.section,
+        page: req.params.page
+    };
+    res.json(req.params);
+});
+
+app.get('/api/progress/:module', function (req, res) {
+    var module = req.params.module;
+    if (!req.session.progress) req.session.progress = {};
+    if (!req.session.progress[module]) req.session.progress[module] = {
+        section: 1,
+        page: 1
+    };
+    res.json(req.session.progress[module]);
+});
+
 app.listen(8000, function () {
   console.log('Listening on port 8000!')
 });
