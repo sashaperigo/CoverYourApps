@@ -29,7 +29,10 @@
         <md-button ng-show="module.pageNumber === 1 && module.sectionNumber !== 1" ng-click="module.prevSection()" class="prev-section">Move back to section {{module.sectionNumber-1}}/{{module.json.length}}</md-button>
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
-        <md-button ng-disabled="module.pageNumber >= module.length" ng-click="module.incrementPage()">Next</md-button>
+        
+        <md-button ng-disabled="module.pageNumber >= module.length" ng-if="module.displayAnswer === true || (module.slideType !== 'quiz' && module.slideType !== 'quizImage')" ng-click="module.incrementPage($event)">Next</md-button>
+        <!--<md-button ng-disabled="module.pageNumber >= module.length" ng-if="module.displayAnswer !== true && (module.slideType === 'quiz' && module.slideType === 'quizImage')" onclick="alert('You successfully avoided a sketchy link!'); return false;">Next</md-button>-->
+        
         <span flex></span>
         <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Move on to section {{module.sectionNumber + 1}} of {{module.json.length}}</md-button>
     </md-toolbar>

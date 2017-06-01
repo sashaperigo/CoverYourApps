@@ -73,24 +73,30 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             }
             $scope.module.pageNumber--;
             $scope.module.displayPageContent();
+            $scope.module.displayAnswer = false;
         };
 
         // Advance to the next slide in a section
-        $scope.module.incrementPage = function() {
+        $scope.module.incrementPage = function(ev) {
             if ($scope.module.pageNumber >= $scope.module.length) {
                 return;
             }
             $scope.module.pageNumber++;
             $scope.module.displayPageContent();
+            $scope.module.displayAnswer = false;
         };
 
         // Advance to the next section
         $scope.module.nextSection = function() {
-            $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
-            $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
-            $scope.module.pageNumber = 1;
-            $scope.module.sectionNumber++;
-            $scope.module.displayPageContent();
+            if($scope.module.displayAnswer === true || ($scope.module.slideType !== "quiz" && $scope.module.slideType !== "quizImage")) {
+                $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
+                $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
+                $scope.module.pageNumber = 1;
+                $scope.module.sectionNumber++;
+                $scope.module.displayPageContent();
+            } else {
+                console.log("oops");
+            }
         };
         
         $scope.module.prevSection = function() {
