@@ -302,5 +302,7 @@
         "text": "You’ll be working your way through a scenario in Jon’s inbox. If you think you’re being phished, you can delete the email at any time."
     }, {
         "slideType": "emailSimulation"
+    }, {
+        "slideType": "completion"
     }]
 }]
