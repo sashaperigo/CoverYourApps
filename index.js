@@ -91,6 +91,7 @@ app.get('/api/progress/:module', function (req, res) {
     res.json(req.session.progress[module]);
 });
 
-app.listen(8000, function () {
-  console.log('Listening on port 8000!')
+var port = process.env.PORT || 8000;
+app.listen(port, function () {
+  console.log(`Listening on port ${port}!`)
 });
