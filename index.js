@@ -55,13 +55,13 @@ app.post('/api/track/:resource/:behavior', function (req, res) {
         t.none('INSERT INTO track(resource, behavior) values($1, $2)', newRow)
     ]);
   })
+    .then(data => {
+      res.json(data[0]);
+    })
     .catch(err => {
       console.error('Problem tracking resource/behavior:', newRow, '\n', err)
       res.status(500).send(err);
-    })
-    .then(data => {
-      res.json(data[0]);
-    });
+    });    
 });
 
 app.get('/api/test-session/', function (req, res) {
