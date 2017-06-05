@@ -1,12 +1,19 @@
 'use strict';
 
-var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '$rootScope', '$mdDialog',
+var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope', '$rootScope', '$mdDialog',
     function($scope, $rootScope, $mdDialog) {
         var ctrl = this;
-        $scope.sketchyBcc = {};
-        $scope.sketchyBcc.content = ctrl.slide.emailData;
+        $scope.sketchyEmail = {};
+        // Hacky module Controller acces TODO @Sasha can bind??
+        $scope.module = $scope.$parent.$parent.$parent.$parent.module;
 
-        $scope.sketchyBcc.showCorrect = function(ev) {
+        // Add URL for sketchyUrl simulation if necessary, otherwise leave link
+        // field blank.
+        if (ctrl.slide.options[1].link != null) {
+          $scope.sketchyUrl = ctrl.slide.options[1].link;
+        }
+
+        $scope.sketchyEmail.delete = function(ev) {
             // Appending dialog to document.body to cover sidenav in docs app
             // Modal dialogs should fully cover application
             // to prevent interaction outside of dialog
@@ -14,15 +21,16 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
                 $mdDialog.alert()
                 .parent(angular.element(document.querySelector('#popupContainer')))
                 .clickOutsideToClose(true)
-                .title('Good choice!')
-                .textContent('Congratulations! You successfully avoided this phishing attack.')
+                .title(ctrl.slide.options[0].header)
+                .textContent(ctrl.slide.options[0].feedback)
                 .ariaLabel('Alert Dialog Demo')
                 .ok('Got it!')
                 .targetEvent(ev)
             );
+            $scope.module.allowNext();
         };
 
-        $scope.sketchyBcc.showIncorrect = function(ev) {
+        $scope.sketchyEmail.reply = function(ev) {
             // Appending dialog to document.body to cover sidenav in docs app
             // Modal dialogs should fully cover application
             // to prevent interaction outside of dialog
@@ -30,19 +38,20 @@ var SketchyBccController = myApp.controller('SketchyBccController', ['$scope', '
                 $mdDialog.alert()
                 .parent(angular.element(document.querySelector('#popupContainer')))
                 .clickOutsideToClose(true)
-                .title('Uh oh!')
-                .textContent('You fell for an email with a suspicious bcc/cc field, suggesting foul play.')
+                .title(ctrl.slide.options[1].header)
+                .textContent(ctrl.slide.options[1].feedback)
                 .ariaLabel('Alert Dialog Demo')
                 .ok('Got it!')
                 .targetEvent(ev)
             );
+            $scope.module.allowNext();
         };
     }
 ]);
 
-myApp.component('sketchyBcc', {
-    templateUrl: '/components/sketchy-bcc/sketchyBcc.html',
-    controller: 'SketchyBccController',
+myApp.component('sketchyEmail', {
+    templateUrl: '/components/sketchy-email/sketchyEmail.html',
+    controller: 'SketchyEmailController',
     bindings: {
         slide: '<'
     }

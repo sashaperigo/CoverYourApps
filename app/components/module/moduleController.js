@@ -47,6 +47,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
             $scope.module.slideType = slide.slideType;
+
             $scope.safeApply();
             $scope.module.saveProgress();
         };
@@ -70,6 +71,11 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.displayQuizAnswer = false;
             $scope.module.displayPageContent();
         };
+
+        $scope.module.allowNext = function() {
+          console.log('allownext');
+          $scope.module.displayQuizAnswer = true;
+        }
 
         // Advance to the next section
         $scope.module.nextSection = function() {

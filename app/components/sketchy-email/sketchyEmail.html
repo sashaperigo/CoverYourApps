@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="components/sketchy-email/sketchyEmail.css" />
+<div class="sketchy-email-container">
+  <h2>{{ $ctrl.slide.emailData.subject }}</h2>
+  <hr>
+  <div class="faked-email-header">
+    <span ng-bind-html="$ctrl.slide.emailData.from | html"></span>
+    <br>
+    to: <span ng-bind-html="$ctrl.slide.emailData.to | html"></span>
+  </div>
+  <div class="faked-email-reply">
+    <img src="/img/etc/email-reply-img.png" width="100px"/>
+  </div>
+  <div class="delete-email">
+    <md-button class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)">{{ $ctrl.slide.options[0].text }}</md-button>
+  </div>
+  <br><br>
+  <div class="faked-email-content"><br><br>
+    <span ng-bind-html="$ctrl.slide.emailData.text | html"></span>
+    <br><br>
+    <p>
+      <md-button class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-mouseup="sketchyEmail.reply($event)">{{ $ctrl.slide.options[1].text }}</md-button>
+    </p>
+  </div>
+</div>
