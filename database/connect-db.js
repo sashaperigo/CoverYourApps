@@ -2,12 +2,12 @@
 
 var pgp = require('pg-promise')();
 
-var connection = {
-  host: process.env.dbhost || 'localhost',
-  port: process.env.dbport || 5432,
+var connection = process.env.DATABASE_URL || {
+  host: 'localhost',
+  port: 5432,
   database: 'coveryourapps',
-  user: process.env.dbuser || 'cya',
-  password: process.env.dbpassword || null
+  user: 'cya',
+  password: null
 };
 
 var db = pgp(connection);

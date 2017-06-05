@@ -12,13 +12,17 @@ app.use(session({
   store: new pgSession({
     pgPromise: db
   }),
-  secret: process.env.sessionsecret || 'local test secret',
+  secret: process.env.SESSION_SECRET || 'local test secret',
   resave: false,
   saveUninitialized: false,
   cookie: {
     secure: (process.env.NODE_ENV === 'production') // true only for production
   }
 }));
+
+if (process.env.NODE_ENV === 'production') {
+    app.set('trust proxy', 1);
+}
 
 // Runs angular app
 app.use(express.static(path.join(__dirname, 'app')));
@@ -55,12 +59,12 @@ app.post('/api/track/:resource/:behavior', function (req, res) {
         t.none('INSERT INTO track(resource, behavior) values($1, $2)', newRow)
     ]);
   })
+    .then(data => {
+      res.json(data[0]);
+    })
     .catch(err => {
       console.error('Problem tracking resource/behavior:', newRow, '\n', err)
       res.status(500).send(err);
-    })
-    .then(data => {
-      res.json(data[0]);
     });
 });
 
@@ -91,6 +95,7 @@ app.get('/api/progress/:module', function (req, res) {
     res.json(req.session.progress[module]);
 });
 
-app.listen(8000, function () {
-  console.log('Listening on port 8000!')
+var port = process.env.PORT || 8000;
+app.listen(port, function () {
+  console.log(`Listening on port ${port}!`)
 });
