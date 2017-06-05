@@ -6,8 +6,10 @@ var CompletionController = myApp.controller('CompletionController', ['$scope', '
         $scope.module = $scope.$parent.module;
 
         // TODO (Alec): Write me!
-        $scope.completion.resetCookie = function() {
-
+        $scope.completion.startOver = function() {
+            $scope.module.sectionNumber = 1;
+            $scope.module.pageNumber = 1;
+            $scope.module.displayPageContent();
         };
 
         /* Code written by StackOverflow user Smeegs in June 2016:
