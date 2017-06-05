@@ -20,6 +20,10 @@ app.use(session({
   }
 }));
 
+if (process.env.NODE_ENV === 'production') {
+    app.set('trust proxy', 1);
+}
+
 // Runs angular app
 app.use(express.static(path.join(__dirname, 'app')));
 
@@ -61,7 +65,7 @@ app.post('/api/track/:resource/:behavior', function (req, res) {
     .catch(err => {
       console.error('Problem tracking resource/behavior:', newRow, '\n', err)
       res.status(500).send(err);
-    });    
+    });
 });
 
 app.get('/api/test-session/', function (req, res) {
