@@ -12,7 +12,7 @@ app.use(session({
   store: new pgSession({
     pgPromise: db
   }),
-  secret: process.env.sessionsecret || 'local test secret',
+  secret: process.env.SESSION_SECRET || 'local test secret',
   resave: false,
   saveUninitialized: false,
   cookie: {
