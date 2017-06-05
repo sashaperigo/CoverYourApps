@@ -46,22 +46,24 @@
         "slideType": "text",
         "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some are clear, some are extremely subtle. We’ll start out with more recognizable issues in phishing emails before moving onto more inconspicuous ones."
     }, {
-        "slideType": "sketchyBcc",
+        "slideType": "sketchyEmail",
         "title": "Bizarre BCCs and CCs",
         "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated!",
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
-            "to": "to: hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
+            "to": "hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
             "text": "Sasha Perigo has invited you to view the following document:"
         },
         "options": [{
             "text": "Delete",
             "correct": true,
+            "header": "Good job!",
             "feedback": "Congratulations! You successfully avoided this phishing attack."
         }, {
             "text": "Open in Google Docs",
             "correct": false,
+            "header": "Uh oh!",
             "feedback": "You fell for an email with a suspicious bcc/cc field, suggesting foul play."
         }]
     }, {
@@ -69,7 +71,7 @@
         "title": "Have you <i>actually</i> looked at who an email came from?",
         "text": "This next suggestion may sound silly and unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like head.of.philippines@gmail.com to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
     }, {
-        "slideType": "quiz",
+        "slideType": "sketchyEmail",
         "name": "head-of-russia",
         "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p>",
         "emailData": {
@@ -79,43 +81,61 @@
             "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br>"
         },
         "options": [{
-            "text": "Yes",
-            "correct": true,
-            "feedback": "Everything is spelled correctly in this email address, suggesting that this should be an email from a legitimate source."
-        }, {
-            "text": "No",
+            "text": "Delete",
             "correct": false,
-            "feedback": "It's important to be cautious of sending any sensitive information over email, and this caution can include scrutinizing email addresses that have contacted you. Everything in this email address was spelled correctly, but it never hurts to exercise caution and request additional proof of identity from a person online."
+            "header": "You just deleted an email from your head of state...",
+            "feedback": "It's important to be cautious of sending any sensitive information over email, and this caution can include scrutinizing email addresses that have contacted you. Everything in this email address was spelled correctly and should be responded to, but it never hurts to exercise caution and request additional proof of identity from a person online."
+        }, {
+            "text": "Reply",
+            "correct": true,
+            "header": "Great!",
+            "feedback": "Everything is spelled correctly in this email address, suggesting that this should be an email from a legitimate source."
         }]
     }, {
-        "slideType": "quiz",
+        "slideType": "sketchyEmail",
         "name": "head-of-philippines",
         "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com?",
+        "emailData": {
+            "subject": "Urgent Message from Head of State",
+            "from": "<b>Head of Phillippines</b> &lt;head.of.philippines@gmail.com&gt;",
+            "to": "Delegation of the Phillippines",
+            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br>"
+        },
         "options": [{
-            "text": "Yes",
-            "correct": false,
-            "feedback": "You just got tricked by a subtle typo! Philippines has one \"l\", while this address has two \"l\"s!"
-        }, {
-            "text": "No",
+            "text": "Delete",
             "correct": true,
+            "header": "Great!",
             "feedback": "Good job sniffing out this slight typo! You'd like to make sure that if you're talking to the Filipino head of state, that head of state could spell their country correctly in their email address..."
+        }, {
+            "text": "Reply",
+            "correct": false,
+            "header": "Uh oh!",
+            "feedback": "You just got tricked by a subtle typo! Philippines, when correctly spelled, has one \"L\", while this address has two \"L\"s!"
         }]
     }, {
         "slideType": "text",
         "title": "Be wary of corporate account spoofs",
         "text": "This next example isn’t related to typos, but still highlights the importance of scrutinizing the email addresses of people asking you for sensitive information."
     }, {
-        "slideType": "quiz",
+        "slideType": "sketchyEmail",
         "name": "google-email",
         "text": "If you got an email from no-reply@accounts.google-email.com asking you to update personal profile information, would you trust it and click its embedded link to update your information?",
+        "emailData": {
+            "subject": "It's Time to Update Your Google Profile!",
+            "from": "<b>Google Account Services</b> &lt;no-reply@accounts.google-email.com&gt;",
+            "to": "me",
+            "text": "It's been a while since you've last updated information about your Google Account. Please update your information through the following link. <br><br>"
+        },
         "options": [{
-            "text": "Yes",
-            "correct": false,
-            "feedback": "You just got phished. Google-email doesn’t exist, but gmail does."
-        }, {
-            "text": "No",
+            "text": "Delete",
             "correct": true,
-            "feedback": "Good eye! \"Google-mail\" is not \"gmail\" nor \"googlemail\", the two domains for google’s email service."
+            "header": "Good eye!",
+            "feedback": "You avoided a phishing attempt! \"Google-mail\" is not \"gmail\" nor \"googlemail\", the two domains for google’s email service."
+        }, {
+            "text": "Update Profile Information",
+            "correct": false,
+            "header": "Uh oh!",
+            "feedback": "You just got phished. Google-email doesn’t exist, but gmail does."
         }]
     }, {
         "slideType": "text",
@@ -151,12 +171,49 @@
         "imgSrc": "img/module-img/tk-domain.jpg",
         "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
     }, {
-        "slideType": "sketchyUrl",
-        "title": "Exposing longer URLs",
-        "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link."
+        "slideType": "sketchyEmail",
+        "name": "sketchy-url",
+        "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link.",
+        "emailData": {
+            "subject": "Canvas: Assignment Graded",
+            "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
+            "to": "me",
+            "text": "You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "Good choice!",
+            "feedback": "Congratulations! You successfully avoided clicking a sketchy link."
+        }, {
+            "text": "Check Your Grade Here",
+            "correct": false,
+            "header": "Uh oh!",
+            "feedback": "This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.",
+            "link": "http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html"
+        }]
     }, {
-        "slideType": "sketchyUrl",
-        "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button."
+        "slideType": "sketchyEmail",
+        "title": "Exposing Longer URLs",
+        "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button.",
+        "emailData": {
+            "subject": "Canvas: Assignment Graded",
+            "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
+            "to": "me",
+            "text": "You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "Good choice!",
+            "feedback": "Congratulations! You successfully avoided clicking a sketchy link."
+        }, {
+            "text": "Check Your Grade Here",
+            "correct": false,
+            "header": "Uh oh!",
+            "feedback": "This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.",
+            "link": "http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html"
+        }]
     }, {
         "slideType": "text",
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
