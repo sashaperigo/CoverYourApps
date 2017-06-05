@@ -1,0 +1,26 @@
+canvas {
+    display: block;
+    position: relative;
+    pointer-events: none;
+}
+
+#content-container {
+    z-index: 1;
+    left: 12.5%;
+    max-height: calc(100vh - 75px - 150px);
+    width: 75%;
+    position: absolute;
+}
+
+#content-container .content {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#content-container h1 {
+    font-weight: 700;
+}
+
+#content-container h4 {
+    line-height: 1.5;
+}

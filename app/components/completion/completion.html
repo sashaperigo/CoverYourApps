@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="components/completion/completion.css" />
+<div id="content-container">
+    <div class="content">
+        <h1>You're a {{module.name.toLowerCase()}} master!</h1>
+        <br />
+        <h4>Congratulations on completing this course. <span ng-if="module.name === 'Phishing'">We're confident that you'd never fall for a "phish-y" email like the one Jon Podesta received.</span></h4>
+        <br />
+        <h4><b>Want to keep learning?</b></h4>
+        <md-button ng-href="http://localhost:8000/index.html#!/module-list">Course list</md-button><md-button ng-click="completion.resetCookie()">Start over</md-button>
+    </div>
+</div>
+<canvas id="canvas"></canvas>
