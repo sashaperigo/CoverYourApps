@@ -1,6 +1,5 @@
-
 function initQuiz(){
-	
+
 }
 
-window.onload = initQuiz();
+window.onload = initQuiz;
