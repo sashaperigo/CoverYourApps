@@ -18,7 +18,7 @@
     <span ng-bind-html="$ctrl.slide.emailData.text | html"></span>
     <br><br>
     <p>
-      <md-button class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-mouseup="sketchyEmail.reply($event)">{{ $ctrl.slide.options[1].text }}</md-button>
+      <md-button class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="sketchyEmail.reply($event)">{{ $ctrl.slide.options[1].text }}</md-button>
     </p>
   </div>
 </div>
