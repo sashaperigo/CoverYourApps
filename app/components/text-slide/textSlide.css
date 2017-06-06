@@ -1,13 +1,19 @@
 .interactive {
     width: 100%;
-    background-color: #d3d3d3;
     height: calc(100vh - 75px - 150px);
-    padding: 1rem;
+}
+
+.content {
+    margin-top: 225px;
+    transform: translateY(-50%);
+    width: 75%;
+    left: 12.5%;
+    position: absolute;
     text-align: center;
 }
 
-.interactive h4 {
-	line-height: 1.5;
+.interactive .content h3, h4 {
+    line-height: 1.5;
 }
 
 a {

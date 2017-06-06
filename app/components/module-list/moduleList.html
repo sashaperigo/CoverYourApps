@@ -7,11 +7,11 @@
         </p>
     </div>
     <div ng-repeat="module in moduleList.modules" class="module-listing">
-        <a ng-href="{{module.path}}" class="button module-button">
+        <a ng-href="{{module.path}}" class="module-button">
             <i class="{{module.icon}}"></i>
         </a>
         <div class="module-description">
-            <h4><a ng-href="{{module.path}}">{{module.name}}</a></h4>
+            <h4 class="module-name"><a ng-href="{{module.path}}">{{module.name}}</a></h4>
             <p>{{module.description}}</p>
         </div>
         <div style="clear: both;"></div>
