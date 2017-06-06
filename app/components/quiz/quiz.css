@@ -13,6 +13,7 @@
 
 .prompt .question {
     padding-top: 1rem;
+    text-align: left;
 }
 
 .prompt .image {
@@ -65,4 +66,8 @@
 
 .incorrectAnswer {
     background-color: red;
+}
+
+.answer-bar {
+    background-color: #851e1e;
 }
