@@ -18,7 +18,6 @@ body {
 
 .content-grid {
     width: 100%;
-    background-color: #d3d3d3;
     height: calc(100vh - 75px - 150px);
 }
 

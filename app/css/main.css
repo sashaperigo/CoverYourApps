@@ -36,11 +36,6 @@ md-toolbar:not(.md-menu-toolbar) {
     background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px rgb(211, 211, 211) solid;
     color: #000000;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 md-toolbar a,
@@ -141,5 +136,9 @@ a.button {
 .emphasize:hover{
     background-color: #851e1e;
     color: #ffffff;
+}
+
+.emphasize .md {
+    font-size: 1.25em;
 }
 
