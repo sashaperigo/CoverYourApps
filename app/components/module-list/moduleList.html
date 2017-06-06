@@ -1,52 +1,19 @@
 <link rel="stylesheet" href="components/module-list/moduleList.css" />
 <div class="container">
-	<h1>Learn</h1>
-	<p>
-		Select from the following modules to learn more about these topics
-	</p>
-	<div class="row">
-		<div class="col-md-2"></div>
-			<div class="col-md-2">
-				<a ng-href="#!/auth" class="button module-button">
-					<div>
-						<div class-"row">
-							<i class="glyphicon glyphicon-lock"></i>
-						</div>
-						<div class="row">
-							Authentication
-						</div>
-					</div>
-				</a>
-					<div class="row module-description">
-						<div class="col-xs-12">
-							<p>
-								Insert module description here
-							</p>
-						</div>
-					</div>
-			</div>
-
-
-		
-		<div class="col-md-2">
-			<a ng-href="#!/phishing" class="button module-button">
-				<div>
-					<div class="row">
-						<i class="glyphicon glyphicon-envelope"></i>
-					</div>
-					<div class="row">
-						Phishing
-					</div>
-				</div>
-			</a>
-			<div class="row module-description">
-				<div class="col-xs-12">
-					<p>
-						Insert module description here
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-2"></div>
-	</div>
+    <div class="header">
+        <h1>Start Learning</h1>
+        <br />
+        <p>Basic online safety skills can go a long way towards protecting your online identity. Select from one of the following courses to start learning today!
+        </p>
+    </div>
+    <div ng-repeat="module in moduleList.modules" class="module-listing">
+        <a ng-href="{{module.path}}" class="button module-button">
+            <i class="{{module.icon}}"></i>
+        </a>
+        <div class="module-description">
+            <h4><a ng-href="{{module.path}}">{{module.name}}</a></h4>
+            <p>{{module.description}}</p>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
 </div>

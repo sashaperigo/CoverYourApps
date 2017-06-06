@@ -1,3 +1,19 @@
+.container {
+    height: calc(100vh - 170px);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-weight: 700;
+}
+
+.header p {
+    line-height: 2;
+}
+
 .md-button {
     margin-top: 1em;
     font-size: 1.5em;
@@ -9,13 +25,19 @@
     background-color: transparent;
 }
 
+.module-listing {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 .module-button {
+    float: left;
     text-align: center;
     margin: 1em auto;
 }
 
 .module-button i {
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .module-button:hover {
@@ -24,5 +46,11 @@
 }
 
 .module-description {
-    text-align: center;
+    float: right;
+    width: 75%;
+}
+
+.module-description h4 {
+    text-transform: uppercase;
+    font-weight: 700;
 }
