@@ -87,6 +87,13 @@ myApp.controller('MainController', ['$scope', '$http',
          *   e.g. [{"behavior":"no","count":"35"},{"behavior":"yes","count":"19"}]
          * resultString is a string that summarizes stuff
          * e.g. "70% of people selected no. 30% of people selected yes"
+
+<div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+    50% Complete (info)
+  </div>
+</div>
          */
         $scope.main.trackBehavior = function(resource, behavior, callback) {
             $http.post('api/track/' + resource + '/' + behavior)
@@ -97,8 +104,11 @@ myApp.controller('MainController', ['$scope', '$http',
                     var resultString = '';
                     for (var i = 0; i < response.data.length; i++) {
                         var percent = Math.round(100 * response.data[i].count / total).toString();
-                        resultString += '<p><b>' + percent + '%</b> of people selected ' +
-                            response.data[i].behavior + '</p>';
+                        resultString+= '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"'
+                        resultString+= percent;
+                        resultString+= ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent +'%\">'
+                        resultString+= percent + '\% answered ' + response.data[i].behavior;
+                        resultString+= '</div></div>'
                     }
                     callback(response.data, resultString);
                 }, function errorCallback(response) {
