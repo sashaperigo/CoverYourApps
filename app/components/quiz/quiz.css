@@ -61,13 +61,41 @@
 }
 
 .correctAnswer {
-    background-color: limegreen;
+    background-color: #1e8552;
 }
 
 .incorrectAnswer {
-    background-color: red;
+    background-color: #851e1e;
 }
 
 .answer-bar {
     background-color: #851e1e;
+}
+
+.answer-padding {
+    height: 60px;
+}
+
+.statistic-subheader {
+    margin: 0;
+    text-align: left;
+    position: relative;
+    top: -1em;
+}
+
+.statistics-header{
+    text-align: left;
+}
+
+.answer-popup {
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    height: 60px;
+    padding: 20px;
+    z-index: 100000;
 }

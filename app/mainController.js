@@ -107,8 +107,8 @@ myApp.controller('MainController', ['$scope', '$http',
                         resultString+= '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"'
                         resultString+= percent;
                         resultString+= ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent +'%\">'
-                        resultString+= percent + '\% answered ' + response.data[i].behavior;
                         resultString+= '</div></div>'
+                        resultString+= '<p class=\"statistic-subheader\">' + percent + '\% answered ' + response.data[i].behavior + '<p>';
                     }
                     callback(response.data, resultString);
                 }, function errorCallback(response) {
