@@ -1,15 +1,14 @@
 <link rel="stylesheet" href="components/quiz/quiz.css" />
 
-<div class="answer-popup correctAnswer" ng-if="module.displayQuizAnswer && module.quizResponseCorrect">
+<div class="answer-popup correctAnswer" ng-class="{'answer-popup-show': module.displayQuizAnswer && module.quizResponseCorrect}">
             That's Correct!
 </div>
 
-<div class="answer-popup incorrectAnswer" ng-if="module.displayQuizAnswer && !module.quizResponseCorrect">
+<div class="answer-popup incorrectAnswer" ng-class="{'answer-popup-show': module.displayQuizAnswer && !module.quizResponseCorrect}">
             Not Quite!
 </div>
 
 <div class="quiz-container">
-    <div class="answer-padding" ng-if="module.displayQuizAnswer"></div>
 
     <div class="prompt">
         <div class="row">
