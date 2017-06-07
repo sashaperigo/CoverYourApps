@@ -6,6 +6,7 @@ html {
     overflow-x: hidden;
 }
 
+
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
@@ -36,6 +37,7 @@ md-toolbar:not(.md-menu-toolbar) {
     background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px rgb(211, 211, 211) solid;
     color: #000000;
+    z-index: 1000000000000000000000;
 }
 
 md-toolbar a,
@@ -58,7 +60,7 @@ md-toolbar a:hover {
     top: -20px;
     left: 10%;
     min-height: 50px;
-    min-width: 50px;
+    width: 102.547px;
     height: 105px;
 }
 
@@ -66,6 +68,11 @@ md-toolbar a:hover {
     .logo {
         top: -40px;
     }
+}
+
+.cover-your-apps {
+    font-size: 1.5em;
+    font-weight: 800;
 }
 
 .container {
@@ -111,34 +118,34 @@ a.button {
     margin-bottom: 0;
 }
 
-.emphasize {
+md-toolbar .emphasize {
     border: 2px solid #851e1e;
     background-color: transparent;
     color: #ffffff;
     cursor: pointer;
 }
 
-.emphasize a,
-.emphasize a:visited,
-.emphasize a:active,
-.emphasize a:link {
+md-toolbar .emphasize a,
+md-toolbar .emphasize a:visited,
+md-toolbar .emphasize a:active,
+md-toolbar .emphasize a:link {
     text-transform: uppercase;
     font-weight: 600;
     color: #851e1e;
     text-decoration: none;
 }
 
-.emphasize a:hover {
+md-toolbar .emphasize a:hover {
     color: #ffffff;
     text-decoration: none;
 }
 
-.emphasize:hover{
+md-toolbar .emphasize:hover{
     background-color: #851e1e;
     color: #ffffff;
 }
 
-.emphasize .md {
+md-toolbar .emphasize .md {
     font-size: 1.25em;
 }
 
