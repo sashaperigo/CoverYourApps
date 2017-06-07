@@ -57,3 +57,13 @@ jQuery(document).ready(function ($) {
     $(window).bind("orientationchange", ScaleSlider);
     //responsive code end
 });
+
+function initLanding(){
+    $("#slide-image-overlay").height($("#slider1_container").height() -75);
+    $( window ).resize(function(){
+        $("#slide-image-overlay").height($("#slider1_container").height() -75);
+    });
+}
+
+
+window.onload = initLanding;
