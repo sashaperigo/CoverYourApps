@@ -171,31 +171,27 @@
         "imgSrc": "img/module-img/tk-domain.jpg",
         "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
     }, {
-        "slideType": "sketchyEmail",
-        "name": "sketchy-url",
-        "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link.",
-        "emailData": {
-            "subject": "Canvas: Assignment Graded",
-            "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
-            "to": "me",
-            "text": "You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
-        },
+        "slideType": "fillInQuiz",
+        "name": "examine-url",
+        "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and see if you can collect information about it before actually clicking through it.<br><br> <b>In this excercise, try finding the URL this button links to.</b>",
+        "buttonText": "Check this link out! Nothing suspicious here.",
+        "answer": "https://www.wired.com/2015/08/how-to-use-facebook-privacy-settings-step-by-step/",
         "options": [{
-            "text": "Delete",
+            "text": "Check Your Grade Here",
             "correct": true,
             "header": "Good choice!",
-            "feedback": "Congratulations! You successfully avoided clicking a sketchy link."
+            "feedback": "Congratulations! You successfully examined a link before clicking on it!"
         }, {
             "text": "Check Your Grade Here",
             "correct": false,
-            "header": "Uh oh!",
-            "feedback": "This is an unsafe link! Double check the domain on this... you will see that it is actually .bs for Bahamas.",
-            "link": "http://www.checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs/check_grade/class/bioengineering80/studentname.html"
+            "header": "Incorrect URL, try again!",
+            "feedback": "Here's a hint: select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link.",
+            "link": "https://www.wired.com/2015/08/how-to-use-facebook-privacy-settings-step-by-step/"
         }]
     }, {
         "slideType": "sketchyEmail",
         "title": "Exposing Longer URLs",
-        "text": "Try copying the link to the right and pasting it in the box below before clicking on it. Does the URL look legitimate? <br><br> <textarea rows='6' cols='47'></textarea> If you trust it, click it. Otherwise click the delete email button.",
+        "text": "Try examining the link to the right before clicking it. Does the URL look legitimate? If you trust it, click it. Otherwise click the delete email button.",
         "emailData": {
             "subject": "Canvas: Assignment Graded",
             "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",

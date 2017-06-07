@@ -6,7 +6,7 @@
 </div>
 <div class="interactive">
     <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
-    <sketchy-https ng-if="$ctrl.slide.slideType === 'sketchyHttps'"></sketchy-https>
+    <fill-in-quiz ng-if="$ctrl.slide.slideType === 'fillInQuiz'" slide="$ctrl.slide"></fill-in-quiz>
     <sketchy-email ng-if="$ctrl.slide.slideType === 'sketchyEmail'" slide="$ctrl.slide"></sketchy-email>
     <img ng-if="$ctrl.slide.slideType === 'textImage'" ng-src="{{ $ctrl.slide.imgSrc }}" />
 </div>
