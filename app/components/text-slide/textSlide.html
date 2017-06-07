@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="components/text-slide/textSlide.css" />
 <div class="interactive">
-    <h1 ng-if="$ctrl.slide.title" ng-bind-html="$ctrl.slide.title | html"></h1>
-    <h4 ng-bind-html="$ctrl.slide.text | html"></h4>
+    <div class="content">
+        <h1 ng-if="$ctrl.slide.title" ng-bind-html="$ctrl.slide.title | html"></h1>
+        <br ng-if="$ctrl.slide.title" />
+        <h3 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length < 400"></h3>
+        <h4 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length >= 400"></h4>
+    </div>
 </div>
