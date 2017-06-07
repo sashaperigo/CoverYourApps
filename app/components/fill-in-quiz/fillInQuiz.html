@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="components/fill-in-quiz/fillInQuiz.css" />
+<div class="fill-in-quiz-container">
+  <center>
+    <br><br>
+    <h2>Hey there!</h2>
+    <p ng-if="sketchyUrl != ''">
+      <md-button class="md-raised" ng-href="{{ url }}" ng-click="fillInQuiz.notYet($event)">{{ $ctrl.slide.buttonText }}</md-button>
+    </p>
+    <hr>
+    Enter the retrieved link text in the following box below:
+    <br><br>
+    <input type="text" ng-model="fillInQuiz.submittedUrl" style="width:75%"></input>
+    <br><br>
+    <md-button class="md-raised md-primary" ng-click="fillInQuiz.doNothing($event)">Submit Answer</md-button>
+  </center>
+  </div>
+</div>
