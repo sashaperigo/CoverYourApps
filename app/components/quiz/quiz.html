@@ -13,16 +13,16 @@
     <div class="prompt">
         <div class="row">
             <div class="col-xs-9" ng-if="!$ctrl.slide.imgSrc">
-                <h2 class="question" ng-bind-html="$ctrl.slide.text | html"></h2>
+                <h2>Quiz Time!</h2>
+                <p class="question" ng-bind-html="$ctrl.slide.text | html"><br><br></p>
                 <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
                     <md-button class="submit" ng-if="!module.displayQuizAnswer" ng-click="quiz.submit(currentOption)">{{ currentOption.text }}</md-button>
                 </div>
             </div>
-        
-
 
             <div class="col-xs-3" ng-if="$ctrl.slide.imgSrc">
-                <h2 class="question" ng-bind-html="$ctrl.slide.text | html"></h2>
+                <h2>Quiz Time!</h2>
+                <p class="question" ng-bind-html="$ctrl.slide.text | html"><br><br></p>
                 <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
                     <md-button class="submit" ng-if="!module.displayQuizAnswer" ng-click="quiz.submit(currentOption)">{{ currentOption.text }}</md-button>
                 </div>
@@ -31,13 +31,13 @@
             <div class="col-xs-6" ng-if="$ctrl.slide.imgSrc">
                 <div class="image">
                     <img ng-src="{{ $ctrl.slide.imgSrc }}" />
-                    <p class="img-citation"> Source: 
+                    <p class="img-citation"> Source:
                         <a ng-href="{{ $ctrl.slide.imgCitation }}">{{ $ctrl.slide.imgCitation }}</a>
                     </p>
                 </div>
             </div>
             <div class="col-xs-3" ng-if="! module.displayQuizAnswer">
-                
+
             </div>
             <div class="col-xs-3" ng-if="module.displayQuizAnswer">
                 <br />
@@ -48,6 +48,6 @@
             </div>
 
         </div>
-        
+
     </div>
 </div>
