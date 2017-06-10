@@ -1,5 +1,6 @@
-
 /* jssor slider bullet navigator skin 21 css */
+
+
 /*
 .jssorb21 div           (normal)
 .jssorb21 div:hover     (normal mouseover)
@@ -7,10 +8,14 @@
 .jssorb21 .av:hover     (active mouseover)
 .jssorb21 .dn           (mousedown)
 */
+
 .jssorb21 {
     position: absolute;
 }
-.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+
+.jssorb21 div,
+.jssorb21 div:hover,
+.jssorb21 .av {
     position: absolute;
     /* size of bullet elment */
     width: 19px;
@@ -23,22 +28,30 @@
     overflow: hidden;
     cursor: pointer;
 }
-.jssorb21 div { background-position: -5px -5px; }
-.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-.jssorb21 .av { background-position: -65px -5px; }
-.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-</style>
-<!-- bullet navigator container -->
-<div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
-<!-- bullet navigator item prototype -->
-<div u="prototype"></div>
-</div>
-<!--#endregion Bullet Navigator Skin End -->
 
-<!--#region Arrow Navigator Skin Begin -->
-<!-- Help: https://www.jssor.com/development/slider-with-arrow-navigator.html -->
+.jssorb21 div {
+    background-position: -5px -5px;
+}
+
+.jssorb21 div:hover,
+.jssorb21 .av:hover {
+    background-position: -35px -5px;
+}
+
+.jssorb21 .av {
+    background-position: -65px -5px;
+}
+
+.jssorb21 .dn,
+.jssorb21 .dn:hover {
+    background-position: -95px -5px;
+}
+
+</style> <!-- bullet navigator container --> <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"> <!-- bullet navigator item prototype --> <div u="prototype"></div> </div> <!--#endregion Bullet Navigator Skin End --> <!--#region Arrow Navigator Skin Begin --> <!-- Help: https: //www.jssor.com/development/slider-with-arrow-navigator.html -->
 <style>
 /* jssor slider arrow navigator skin 21 css */
+
+
 /*
 .jssora21l                  (normal)
 .jssora21r                  (normal)
@@ -47,7 +60,9 @@
 .jssora21l.jssora21ldn      (mousedown)
 .jssora21r.jssora21rdn      (mousedown)
 */
-.jssora21l, .jssora21r {
+
+.jssora21l,
+.jssora21r {
     display: block;
     position: absolute;
     /* size of arrow element */
@@ -57,41 +72,69 @@
     background: url(/img/slider-images/a21.png) center center no-repeat;
     overflow: hidden;
 }
-.jssora21l { background-position: -3px -33px; }
-.jssora21r { background-position: -63px -33px; }
-.jssora21l:hover { background-position: -123px -33px; }
-.jssora21r:hover { background-position: -183px -33px; }
-.jssora21l.jssora21ldn { background-position: -243px -33px; }
-.jssora21r.jssora21rdn { background-position: -303px -33px; }
+
+.jssora21l {
+    background-position: -3px -33px;
+}
+
+.jssora21r {
+    background-position: -63px -33px;
+}
+
+.jssora21l:hover {
+    background-position: -123px -33px;
+}
+
+.jssora21r:hover {
+    background-position: -183px -33px;
+}
+
+.jssora21l.jssora21ldn {
+    background-position: -243px -33px;
+}
+
+.jssora21r.jssora21rdn {
+    background-position: -303px -33px;
+}
 
 #slide-image-overlay {
     min-height: 50px;
+    max-height: 243px;
+    width: 100%;
     position: absolute;
     top: 0;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 3em;
+    padding: 3.5rem;
     z-index: 100;
+    text-align: center;
+    overflow-y: hidden;
 }
 
 #slide-image-overlay .button {
-    outline: 2px #851e1e solid;
     background-color: #851e1e;
     color: #ffffff;
-    mid-width: 100px;
+    min-width: 100px;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 0;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-#slide-image-overlay .button a{
+#slide-image-overlay .button a {
     color: #ffffff;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-weight: 800;
+#slide-image-overlay .button:hover {
+    background-color: #b92631;
+    outline-color: #b92631;
 }
 
-h2 {
+#slide-image-overlay h1 {
+    margin: 0;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .emphasize-text {
@@ -99,7 +142,9 @@ h2 {
     font-weight: 800;
 }
 
+
 /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
+
 .navbar-wrapper {
     position: absolute;
     top: 20px;
@@ -107,11 +152,12 @@ h2 {
     width: 100%;
     height: 51px;
 }
+
 .navbar-wrapper > .container {
     padding: 0;
 }
 
-@media all and (max-width: 768px ){
+@media all and (max-width: 768px) {
     .navbar-wrapper {
         position: relative;
         top: 0px;

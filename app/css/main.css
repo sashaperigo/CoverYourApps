@@ -6,7 +6,6 @@ html {
     overflow-x: hidden;
 }
 
-
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
@@ -71,8 +70,11 @@ md-toolbar a:hover {
 }
 
 .cover-your-apps {
+    text-transform: uppercase;
+    font-weight: 600;
     font-size: 1.5em;
-    font-weight: 800;
+    color: grey;
+    opacity: 0.1;
 }
 
 .container {
@@ -119,6 +121,7 @@ a.button {
 }
 
 md-toolbar .emphasize {
+    text-align: center;
     border: 2px solid #851e1e;
     background-color: transparent;
     color: #ffffff;
@@ -140,12 +143,10 @@ md-toolbar .emphasize a:hover {
     text-decoration: none;
 }
 
-md-toolbar .emphasize:hover{
+md-toolbar .emphasize:hover {
     background-color: #851e1e;
-    color: #ffffff;
 }
 
 md-toolbar .emphasize .md {
     font-size: 1.25em;
 }
-
