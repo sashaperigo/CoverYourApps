@@ -95,6 +95,19 @@ app.get('/api/progress/:module', function (req, res) {
     res.json(req.session.progress[module]);
 });
 
+app.post('/api/username/:username', function (req, res) {
+    req.session.username = req.params.username;
+    res.status(200).send('Successfully saved username!');
+});
+
+app.get('/api/username', function (req, res) {
+    if (req.session.username) {
+        res.json({username: req.session.username});
+        return;
+    }
+    res.json({username: null});
+});
+
 var port = process.env.PORT || 8000;
 app.listen(port, function () {
   console.log(`Listening on port ${port}!`)
