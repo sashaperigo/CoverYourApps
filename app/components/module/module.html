@@ -10,9 +10,10 @@
         </div>
     </div>
     <div class="content-grid">
-        <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
+<!--         <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
         <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail' || module.slideType === 'fillInQuiz'" slide="module.slide"></text-image>
-        <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz>
+        <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz> -->
+        <google-login slide="module.slide"></google-login>
         <completion ng-if="module.slide.slideType == 'completion'" slide="module.slide"></completion>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">

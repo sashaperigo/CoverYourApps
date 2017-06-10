@@ -37,6 +37,8 @@ md-toolbar:not(.md-menu-toolbar) {
     border-bottom: 1px rgb(211, 211, 211) solid;
     color: #000000;
     z-index: 1000000000000000000000;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 md-toolbar a,
@@ -95,7 +97,6 @@ md-toolbar a:hover {
 }
 
 .md-subheader {
-    height: 100px;
     height: 100px;
     color: #000000;
     text-align: center;
