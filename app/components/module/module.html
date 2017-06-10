@@ -10,18 +10,24 @@
         </div>
     </div>
     <div class="content-grid">
-        <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
-        <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail'" slide="module.slide"></text-image>
-        <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz>
+<!--         <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
+        <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail' || module.slideType === 'fillInQuiz'" slide="module.slide"></text-image>
+        <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz> -->
+        <google-login slide="module.slide"></google-login>
         <completion ng-if="module.slide.slideType == 'completion'" slide="module.slide"></completion>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
         <span>{{module.name}}</span>
         <span flex></span>
         <md-button ng-show="module.pageNumber === 1 && module.sectionNumber > 1" ng-click="module.prevSection()" class="prev-section">Return to Section {{module.sectionNumber - 1}} of {{module.json.length}}</md-button>
-        <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
+        <md-button ng-show="module.pageNumber > 1" ng-click="module.decrementPage()">Back</md-button>
         <span>{{module.pageNumber}}/{{module.length}}</span>
-        <md-button ng-disabled="module.pageNumber >= module.length || (module.slideType === 'quiz' && !module.displayQuizAnswer) || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)" ng-click="module.incrementPage($event)">Next</md-button>
+        <md-button 
+            ng-disabled="module.pageNumber >= module.length 
+            || (module.slideType === 'quiz' && !module.displayQuizAnswer) 
+            || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)"
+            ng-class="{flash: module.displayQuizAnswer}"
+            ng-click="module.incrementPage($event)">Next</md-button>
         <span flex></span>
         <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Next Section {{module.sectionNumber + 1}} of {{module.json.length}}</md-button>
     </md-toolbar>

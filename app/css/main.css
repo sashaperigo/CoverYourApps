@@ -19,6 +19,8 @@ a,
 a:visited,
 a:active,
 a:link {
+    text-align: center;
+    margin: 0 auto;
     text-decoration: none;
     color: #000000;
 }
@@ -31,8 +33,12 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar),
 md-toolbar:not(.md-menu-toolbar) {
     position: fixed;
     height: 100px;
-    background-color: rgba(211, 211, 211, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px rgb(211, 211, 211) solid;
     color: #000000;
+    z-index: 1000000000000000000000;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 md-toolbar a,
@@ -54,15 +60,23 @@ md-toolbar a:hover {
     position: absolute;
     top: -20px;
     left: 10%;
-    max-height: 80px;
     min-height: 50px;
-    min-width: 50px;
+    width: 102.547px;
+    height: 105px;
 }
 
 @media (min-width: 768px) {
     .logo {
         top: -40px;
     }
+}
+
+.cover-your-apps {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: grey;
+    opacity: 0.1;
 }
 
 .container {
@@ -83,7 +97,6 @@ md-toolbar a:hover {
 }
 
 .md-subheader {
-    height: 100px;
     height: 100px;
     color: #000000;
     text-align: center;
@@ -106,4 +119,35 @@ a.button {
 
 .col-xs-12 p {
     margin-bottom: 0;
+}
+
+md-toolbar .emphasize {
+    text-align: center;
+    border: 2px solid #851e1e;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+md-toolbar .emphasize a,
+md-toolbar .emphasize a:visited,
+md-toolbar .emphasize a:active,
+md-toolbar .emphasize a:link {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #851e1e;
+    text-decoration: none;
+}
+
+md-toolbar .emphasize a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+md-toolbar .emphasize:hover {
+    background-color: #851e1e;
+}
+
+md-toolbar .emphasize .md {
+    font-size: 1.25em;
 }

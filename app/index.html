@@ -18,6 +18,7 @@
     -->
     <script src="/js/jquery-3.2.1.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
     <script src="bower_components/angular-aria/angular-aria.js" type="text/javascript"></script>
@@ -29,13 +30,14 @@
     <script src="components/landing/landingController.js"></script>
     <script src="components/module/moduleController.js"></script>
     <script src="components/module-list/moduleListController.js"></script>
-    <script src="components/sketchy-url/sketchyUrlController.js"></script>
+    <script src="components/fill-in-quiz/fillInQuizController.js"></script>
     <script src="components/sketchy-https/sketchyHttpsController.js"></script>
     <script src="components/sketchy-email/sketchyEmailController.js"></script>
     <script src="components/quiz/quizController.js"></script>
     <script src="components/text-slide/textSlideController.js"></script>
     <script src="components/text-image/textImageController.js"></script>
     <script src="components/completion/completionController.js"></script>
+    <script src="components/google-login/googleLoginController.js"></script>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
@@ -65,15 +67,17 @@
 
 <body>
     <md-toolbar layout="row" layout-align="space-around center" class="nav">
-        <div class="col-sm-3">
-            <a href="#!/"><img src="/img/Logo.png" class="img-responsive logo"></a>
-        </div>
-        <div class="col-sm-6"></div>
         <div class="col-sm-2">
-            <a href="#!/module-list">Learn</a>
+            <a href="#!/"><img src="/img/Logo.png" class="logo"></a>
         </div>
+        <span flex></span>
+        <div class="cover-your-apps">Cover Your Apps</div>
+        <span flex></span>
         <div class="col-sm-2">
             <a href="#!/about-us">About</a>
+        </div>
+        <div class="col-sm-2 emphasize">
+            <a href="#!/module-list">Learn</a>
         </div>
     </md-toolbar>
     <md-subheader>
