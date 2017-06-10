@@ -75,8 +75,6 @@ md-toolbar a:hover {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.5em;
-    color: grey;
-    opacity: 0.1;
 }
 
 .container {

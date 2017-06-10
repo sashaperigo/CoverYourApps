@@ -47,20 +47,6 @@
     background-position: -95px -5px;
 }
 
-</style> <!-- bullet navigator container --> <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"> <!-- bullet navigator item prototype --> <div u="prototype"></div> </div> <!--#endregion Bullet Navigator Skin End --> <!--#region Arrow Navigator Skin Begin --> <!-- Help: https: //www.jssor.com/development/slider-with-arrow-navigator.html -->
-<style>
-/* jssor slider arrow navigator skin 21 css */
-
-
-/*
-.jssora21l                  (normal)
-.jssora21r                  (normal)
-.jssora21l:hover            (normal mouseover)
-.jssora21r:hover            (normal mouseover)
-.jssora21l.jssora21ldn      (mousedown)
-.jssora21r.jssora21rdn      (mousedown)
-*/
-
 .jssora21l,
 .jssora21r {
     display: block;
@@ -99,7 +85,7 @@
 
 #slide-image-overlay {
     min-height: 50px;
-    max-height: 243px;
+    height: 300px;
     width: 100%;
     position: absolute;
     top: 0;
