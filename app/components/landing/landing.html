@@ -4,12 +4,20 @@
 <script type="text/javascript" src="/js/jssor.slider.mini.js"></script>
 <script src="components/landing/landing.js"></script>
 
-
 <body>
-
+    <div id="slide-image-overlay">
+        <div class="slide-image-overlay-text">
+            <h1>Learn Computer Security with 
+            <br />
+            Cover Your Apps</h1>
+            <br />
+            <md-button ng-href="#!/module-list" class="button">
+                Get Started
+            </md-button>
+        </div>
+    </div>
     <div style="min-height: 50px;">
         <!-- Jssor Slider Begin -->
-        
         <!-- ================================================== -->
         <div id="slider1_container" style="visibility: hidden; position: relative; margin: 0;
         top: 0px; left: 0px; width: 1000px; height: 300px; overflow: hidden;">
@@ -18,84 +26,17 @@
             <!-- Slides Container -->
             <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <div>
-                    <img u="image" src2="/img/slider-images/1920/red.jpg" />
+                    <img u="image" class="slide-image" src2="/img/slider-images/1920/red.jpg" />
                 </div>
                 <div>
-                    <img u="image" src2="/img/slider-images/1920/purple.jpg" />
+                    <img u="image" class="slide-image" src2="/img/slider-images/1920/purple.jpg" />
                 </div>
                 <div>
-                    <img u="image" src2="/img/slider-images/1920/blue.jpg" />
+                    <img u="image" class="slide-image" src2="/img/slider-images/1920/blue.jpg" />
                 </div>
             </div>
-            
             <!--#region Bullet Navigator Skin Begin -->
             <!-- Help: https://www.jssor.com/development/slider-with-bullet-navigator.html -->
-            <style>
-                /* jssor slider bullet navigator skin 21 css */
-                /*
-                .jssorb21 div           (normal)
-                .jssorb21 div:hover     (normal mouseover)
-                .jssorb21 .av           (active)
-                .jssorb21 .av:hover     (active mouseover)
-                .jssorb21 .dn           (mousedown)
-                */
-                .jssorb21 {
-                    position: absolute;
-                }
-                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-                    position: absolute;
-                    /* size of bullet elment */
-                    width: 19px;
-                    height: 19px;
-                    text-align: center;
-                    line-height: 19px;
-                    color: white;
-                    font-size: 12px;
-                    background: url(/img/slider-images/b21.png) no-repeat;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-                .jssorb21 div { background-position: -5px -5px; }
-                .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-                .jssorb21 .av { background-position: -65px -5px; }
-                .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-            </style>
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
-                <!-- bullet navigator item prototype -->
-                <div u="prototype"></div>
-            </div>
-            <!--#endregion Bullet Navigator Skin End -->
-            
-            <!--#region Arrow Navigator Skin Begin -->
-            <!-- Help: https://www.jssor.com/development/slider-with-arrow-navigator.html -->
-            <style>
-                /* jssor slider arrow navigator skin 21 css */
-                /*
-                .jssora21l                  (normal)
-                .jssora21r                  (normal)
-                .jssora21l:hover            (normal mouseover)
-                .jssora21r:hover            (normal mouseover)
-                .jssora21l.jssora21ldn      (mousedown)
-                .jssora21r.jssora21rdn      (mousedown)
-                */
-                .jssora21l, .jssora21r {
-                    display: block;
-                    position: absolute;
-                    /* size of arrow element */
-                    width: 55px;
-                    height: 55px;
-                    cursor: pointer;
-                    background: url(/img/slider-images/a21.png) center center no-repeat;
-                    overflow: hidden;
-                }
-                .jssora21l { background-position: -3px -33px; }
-                .jssora21r { background-position: -63px -33px; }
-                .jssora21l:hover { background-position: -123px -33px; }
-                .jssora21r:hover { background-position: -183px -33px; }
-                .jssora21l.jssora21ldn { background-position: -243px -33px; }
-                .jssora21r.jssora21rdn { background-position: -303px -33px; }
-            </style>
             <!-- Arrow Left -->
             <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
             </span>
@@ -108,30 +49,56 @@
         <!-- Jssor Slider End -->
     </div>
     </div>
-	<div class="row row-odd">
-		<div class="col-sm-4">
-			<h3>How can learning internet safety help you?</h3>
-		</div>
-
-		<div class="col-sm-8">
-			Given the prevalence of social engineering attacks, and their heightened status after Hillary Clinton campaign chairman John Podesta succumbed to a Russian-led phishing attempt in the 2016 election, there has truly never been a time that this internet safety education has been needed more. In fact, ninety percent of breaches start out as phishing attempts, in which an attacker impersonates a trustworthy contact to deceive a victim into disclosing information or allowing access into one’s account or computer. Both those who consider themselves technically savvy and those who do not could all stand to gain more information on how to better protect themselves from phishing attempts. 
-		</div>
-	</div>	
-
-	<div class="row row-even">
-		<div class="col-xs-12 text-center">
-			<h3>Our Approach</h3>
-		</div>
-	</div>	
-
-	<div class="row row-odd">
-		<div class="col-xs-12 text-center">
-			<h3>Ready to Cover Your Apps?</h3>
-		</div>
-		<div class="col-xs-12 text-center">
-			<p>Explore our interactive modules to start your learning today</p>
-		</div>
-	</div>	
+    <div class="row row-odd">
+        <div class="col-sm-4 text-right">
+            <h2>Can learning internet safety help you?</h2>
+        </div>
+        <div class="col-sm-8">
+            <h2>Yes!</h2>
+            <p>Learning about internet safety is helpful for absolutely everyone. In fact, most people have almost no formal training in internet safety. However, Cover Your Apps aims to change that!</p>
+            <p>Even the chairman of the Hillary Clinton campagin, John Podesta, could have used some internet safety training. Start our popular <a href="#!/phishing"><span class="emphasize-text">Internet Safety Module</span></a> to learn more about his story and how you can avoid common phishing pitfalls</p>
+        </div>
+    </div>
+    <div class="row row-even text-center">
+        <div class="col-xs-12 text-center">
+            <h2>Our Approach</h2>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-12 text-center">
+                <img src="/img/inform.jpg" class="img-responsive img-circle">
+            </div>
+            <h2>1 | Inform</h2>
+            <div class="col-xs-12 text-left">
+                Learn important internet safety topics and skills
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-12 text-center">
+                <img src="/img/interact.jpg" class="img-responsive img-circle">
+            </div>
+            <h2>2 | Interact</h2>
+            <div class="col-xs-12 text-left">
+                Interact with your new knowledge through quick quizzes with immediate feedback
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-12 text-center">
+                <img src="/img/simulate.jpg" class="img-responsive img-circle">
+            </div>
+            <h2>3 | Simulate</h2>
+            <div class="col-xs-12 text-left">
+                Put your new skills to the ultimate test in realistic simulations
+            </div>
+        </div>
+    </div>
+    <div class="row row-odd">
+        <div class="col-xs-12 text-center">
+            <h2>Ready to Cover Your Apps?</h2>
+        </div>
+        <div class="col-xs-12 text-center">
+            <p><a href="#!/module-list"><span class="emphasize-text">Explore</span> our interactive courses and start learning today.</p>
+        </div>
+    </div>  
 
 
 </body>

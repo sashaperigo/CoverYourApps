@@ -18,7 +18,6 @@ body {
 
 .content-grid {
     width: 100%;
-    background-color: #d3d3d3;
     height: calc(100vh - 75px - 150px);
 }
 
@@ -134,4 +133,17 @@ md-toolbar.footer .prev-section {
 
 md-toolbar.footer .prev-section:hover {
     background-color: #8f0f1c;
+}
+
+.flash {
+    -webkit-animation:colorchange 0.5s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        color: green;
+    }
+    100% {
+        color: greenyellow;
+    }
 }

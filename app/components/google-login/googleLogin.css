@@ -1,0 +1,85 @@
+.content-grid {
+    background-color: #f7f7f7;
+    margin-top: -15px;
+}
+
+.login-container {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    width: 338px;
+    height: 395px;
+    transform: perspective(1px) translateY(-50%);
+}
+
+.login-container p {
+    font-size: 0.9rem;
+    font-width: 500;
+}
+
+.login-box {
+    width: 338px;
+    height: 375px;
+    background-color: white;
+    padding: 2.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-box img {
+    width: 70px;
+}
+
+md-input-container {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+md-input-container label {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #4285f4;
+}
+
+md-input-container .error {
+    color: #d50000;
+}
+
+.login-options a {
+    color: #4285f4;
+}
+
+.login-options .inline-justify {
+    line-height: 48px;
+}
+
+.login-options .inline-justify a {
+    float: left;
+}
+
+.login-options .inline-justify .md-button {
+    float: right;
+    background-color: #4285f4;
+    color: white;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-footer {
+    margin-top: 0.75rem;
+    margin-right: 0.25rem;
+    font-size: 0.9rem;
+    float: right;
+}
+
+.login-footer span {
+    color: #757575;
+    cursor: pointer;
+}
+
+.login-footer span+span {
+    margin-left: 1.25rem;
+}
