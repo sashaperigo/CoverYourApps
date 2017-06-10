@@ -1,6 +1,30 @@
 <link rel="stylesheet" href="components/google-login/googleLogin.css" />
 <div class="container">
-	<p>Google</p>
-	<h2>Sign in</h2>
-	<p>with your Google Account</p>
+    <div class="login-container">
+        <div class="login-box">
+            <p><img src="img/etc/google-logo.png"></p>
+            <h3>Sign in</h3>
+            <p>with your Google Account</p>
+            <md-input-container id="md-input-container">
+                <label>Email or phone</label>
+                <input type="text" ng-model="googleLogin.username">
+                <div ng-messages="error" ng-show="googleLogin.error">
+                    <div ng-message="required" class="error">Enter an email or phone number</div>
+                </div>
+            </md-input-container>
+            <div class="login-options">
+                <p><a href="">Forgot email?</a></p>
+                <p class="inline-justify">
+                    <a href="">More options</a>
+                    <md-button type="submit" ng-click="googleLogin.login()">Next</md-button>
+                </p>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <div class="login-footer">
+            <span>Help</span>
+            <span>Privacy</span>
+            <span>Terms</span>
+        </div>
+    </div>
 </div>
