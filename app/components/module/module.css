@@ -135,15 +135,34 @@ md-toolbar.footer .prev-section:hover {
     background-color: #8f0f1c;
 }
 
-.flash {
-    -webkit-animation:colorchange 0.5s infinite alternate;
+md-toolbar .page-number {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-@-webkit-keyframes colorchange {
+.flash {
+    -webkit-animation: glow 1s infinite alternate;
+}
+
+.flash:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes glow {
     0% {
-        color: green;
+        background-color: rgba(158, 158, 158, 0.2);
+        border-color: white;
+        -webkit-box-shadow: 0 0 10px white;
+        -moz-box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px white;
     }
     100% {
-        color: greenyellow;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
 }
