@@ -113,7 +113,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.quizResponseCorrect = false;
         $scope.module.quizStatistics = "";
 
-        $scope.module.submitQuizResponse = function(clicked) {
+        $scope.module.submitQuizResponse = function(clicked, callback) {
             console.log($scope.module.slide.name);
             $scope.module.displayQuizAnswer = true;
             $scope.module.quizResponseCorrect = clicked.correct;
@@ -121,6 +121,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.main.trackBehavior($scope.module.slide.name, clicked.text,
                     function(data, resultString) {
                 $scope.module.quizStatistics = resultString;
+                if (callback) callback();
             });
         };
 

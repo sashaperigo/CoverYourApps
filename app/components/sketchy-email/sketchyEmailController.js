@@ -1,7 +1,7 @@
 'use strict';
 
-var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope', '$rootScope', '$mdDialog',
-    function($scope, $rootScope, $mdDialog) {
+var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope', '$rootScope', '$mdDialog', '$sce',
+    function($scope, $rootScope, $mdDialog, $sce) {
         var ctrl = this;
         $scope.sketchyEmail = {};
         // Hacky module Controller acces TODO @Sasha can bind??
@@ -11,41 +11,43 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
         // field blank.
         if (ctrl.slide.options[1].link != null) {
           $scope.sketchyUrl = ctrl.slide.options[1].link;
+          console.log($scope.sketchyUrl);
         }
 
         $scope.sketchyEmail.delete = function(ev) {
-            // Appending dialog to document.body to cover sidenav in docs app
-            // Modal dialogs should fully cover application
-            // to prevent interaction outside of dialog
-            $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.querySelector('#popupContainer')))
-                .clickOutsideToClose(true)
-                .title(ctrl.slide.options[0].header)
-                .textContent(ctrl.slide.options[0].feedback)
-                .ariaLabel('Alert Dialog Demo')
-                .ok('Got it!')
-                .targetEvent(ev)
-            );
-            $scope.module.allowNext();
-        };
+            submitEmail(ev, ctrl.slide.options[0]);
+        }
 
         $scope.sketchyEmail.reply = function(ev) {
+            submitEmail(ev, ctrl.slide.options[1]);
+        };
+
+
+        // This code sucks - I'm so sorry.
+        function feedbackHtml() {
+            return $sce.trustAsHtml('<h4 class="answer">' + $scope.module.quizResponse + '</h4>' +
+            '<br />'+
+            '<h3 class="statistics-header">How did you do compared to others?</h3>' +
+            '<div class="statistics">' + $scope.module.quizStatistics + '</div>');
+        }
+
+        function submitEmail(ev, option) {
             // Appending dialog to document.body to cover sidenav in docs app
             // Modal dialogs should fully cover application
             // to prevent interaction outside of dialog
             ev.preventDefault();
-            $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.querySelector('#popupContainer')))
-                .clickOutsideToClose(true)
-                .title(ctrl.slide.options[1].header)
-                .textContent(ctrl.slide.options[1].feedback)
-                .ariaLabel('Alert Dialog Demo')
-                .ok('Got it!')
-                .targetEvent(ev)
-            );
-            $scope.module.allowNext();
+            $scope.module.submitQuizResponse(option, function() {
+                $mdDialog.show(
+                    $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('#popupContainer')))
+                    .clickOutsideToClose(true)
+                    .title(option.header)
+                    .htmlContent(feedbackHtml())
+                    .ariaLabel('Alert Dialog Demo')
+                    .ok('Got it!')
+                    .targetEvent(ev)
+                );
+            });
         };
     }
 ]);
