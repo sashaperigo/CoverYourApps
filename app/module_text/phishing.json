@@ -2,24 +2,24 @@
     "sectionName": "Introduction",
     "slides": [{
         "slideType": "textImage",
-        "text": "On May 3, 2017, you may have received an email from a friend that said \"[friend’s name] has shared a document on Google Docs with you.\" Inside, you would have seen an email like the one on the right. It looks legitimate, including to the blue button used across multiple Google apps.",
+        "text": "On May 3, 2017, you may have received an email from a friend that said \"[friend’s name] has shared a document on Google Docs with you.\" Inside, you would have seen an email like the one on the right. It looks legitimate! It even includes the blue button used across multiple Google apps.",
         "imgSrc": "img/module-img/google-docs-screenshot.jpg",
         "imgCitation": "https://twitter.com/zeynep/status/859840026082988038"
     }, {
         "slideType": "textImage",
-        "text": "Perhaps you clicked the \"Open in Docs\" button. If you did, were brought to this Google authentication page.",
+        "text": "Perhaps you clicked the \"Open in Docs\" button. If you did, you were brought to this Google authentication page.",
         "imgSrc": "img/module-img/google-docs-hack.gif",
         "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/"
     },{
         "slideType": "quiz",
         "name": "docs-hack",
-        "text": "Should you grant authentication to this \"Google Docs\" application?",
+        "text": "Should you authenticate this \"Google Docs\" application?",
         "imgSrc": "img/module-img/google-docs-hack.gif",
         "imgCitation": "https://twitter.com/zachlatta/status/859843151757955072/",
         "options": [{
             "text": "Yes",
             "correct": false,
-            "feedback": "You and 1 million other Google users fell for this sophisticated phishing attack, which granted this adversary the ability to email from your Gmail account--and disseminate this illegitimate Google Docs email further!"
+            "feedback": "You and 1 million other Google users fell for this sophisticated phishing attack, which granted this adversary the ability to send emails from your Gmail account and disseminate this illegitimate Google Docs email further!"
         }, {
             "text": "No",
             "correct": true,

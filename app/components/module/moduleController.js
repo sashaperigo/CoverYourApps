@@ -18,6 +18,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
+        $scope.module.username = "";
 
         $scope.$on('$viewContentLoaded', function() {
             // Select module from URL path
@@ -149,6 +150,34 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     console.error(response.data || 'Error saving progress');
                 });
         };
+        
+        // Saves username
+        $scope.module.loadUsername = function() {
+            $http.get('/api/username/')
+                .then(function successCallback(response) {
+                    if (response.data.username) {
+                        $scope.module.username = response.data.username;    
+                    }
+                    else {
+                        $scope.module.saveUsername();
+                    }
+                    console.log($scope.module.username);
+                }, function errorCallback(response) {
+                    // If there's an error, load the first page of the first section
+                    console.error(response.data || 'Error loading username');
+                });
+        };
+        
+        // Loads saved username
+        $scope.module.saveUsername = function() {
+            $scope.module.username = prompt('What is your name?');
+            $http.post('/api/username/' + $scope.module.username)
+                .then(function successCallback(response) {}, function errrorCallback(response) {
+                    console.error(response.data || 'Error saving username');
+                });
+        };
+        
+        $scope.module.loadUsername();
     }
 ]);
 
