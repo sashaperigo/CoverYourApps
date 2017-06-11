@@ -96,7 +96,7 @@
     overflow-y: hidden;
 }
 
-#slide-image-overlay .button {
+.call-to-action .button {
     background-color: #851e1e;
     color: #ffffff;
     min-width: 100px;
@@ -107,16 +107,16 @@
     padding-left: 15px;
 }
 
-#slide-image-overlay .button a {
+.call-to-action .button a {
     color: #ffffff;
 }
 
-#slide-image-overlay .button:hover {
+.call-to-action .button:hover {
     background-color: #b92631;
     outline-color: #b92631;
 }
 
-#slide-image-overlay h1 {
+.call-to-action h1 {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
