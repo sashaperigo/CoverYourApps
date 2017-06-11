@@ -5,7 +5,13 @@ var CompletionController = myApp.controller('CompletionController', ['$scope', '
         $scope.completion = {};
         $scope.module = $scope.$parent.module;
 
-        // TODO (Alec): Write me!
+        $scope.completion.isVowel = function(x) {
+            x = x.toUpperCase();
+            var result = (x == "A" || x == "E" || x == "I" || x == "O" || x == "U");
+            return result;
+        };
+
+
         $scope.completion.startOver = function() {
             $scope.module.sectionNumber = 1;
             $scope.module.pageNumber = 1;

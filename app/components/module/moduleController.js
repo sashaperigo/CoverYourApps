@@ -24,10 +24,10 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             // Select module from URL path
             var jsonSrc = "";
             if ($location.path().includes('auth')) {
-                $scope.module.name = "Authentication";
+                $scope.module.name = "Passwords";
                 jsonSrc = "/module_text/auth.json";
             } else if ($location.path().includes('phishing')) {
-                $scope.module.name = "Phishing";
+                $scope.module.name = "Email and Link Safety";
                 jsonSrc = "/module_text/phishing.json";
             }
 
