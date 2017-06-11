@@ -149,3 +149,20 @@ md-toolbar .emphasize:hover {
 md-toolbar .emphasize .md {
     font-size: 1.25em;
 }
+
+#landscape-plase {
+    display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  #container-for-forcing-landscape {
+      display: none;
+  }
+
+  #landscape-please {
+      display: block;
+      font-size: 500%;
+      width: 50%;
+      margin: 0 auto;
+  }
+}
