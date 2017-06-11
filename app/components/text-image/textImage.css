@@ -1,3 +1,7 @@
+.module-container {
+    background-color: black;
+}
+
 .text {
     position: absolute;
     width: 33.3333333333334%;
@@ -30,7 +34,7 @@ h4#text-header {
 
 .interactive {
     position: absolute;
-    background-color: #d3d3d3;
+    background-color: #f7f7f7;/*#d3d3d3;*/
     max-height: calc(100vh - 75px - 150px);
     height: 100%;
     /* Leave 2 percent margin between sections */
