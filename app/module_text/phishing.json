@@ -44,7 +44,7 @@
         "slideType": "sketchyEmail",
         "name": "bizarre-bccs-and-ccs",
         "title": "Bizarre BCCs and CCs",
-        "text": "Let’s start with the massive Google Doc phish in May 2017, an example we referenced in the introduction. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics purposes in phishing attacks. For instance, this address received an email every time the Google Doc phish was propagated!",
+        "text": "Let’s start with the massive Google Doc phish from May 2017, the example we referenced in the introduction. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics purposes in phishing attacks. For instance, this address received an email every time the Google Doc phish was propagated!",
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
@@ -126,7 +126,7 @@
             "text": "Delete",
             "correct": true,
             "header": "Good eye!",
-            "feedback": "You avoided a phishing attempt! \"Google-mail\" is not \"gmail\" nor \"googlemail\", the two domains for google’s email service."
+            "feedback": "You avoided a phishing attempt! \"Google-mail\" is not \"gmail\" nor \"googlemail\", the two domains for Google’s email service."
         }, {
             "text": "Update Profile Information",
             "correct": false,
@@ -155,7 +155,7 @@
     "sectionName": "Scrutinizing Links",
     "slides": [{
         "slideType": "text",
-        "text": "A phishing email is typically never just an email. Phishing emails often include links to other websites that raise red flags. This section will introduce you to basic rules for rooting out suspicious links."
+        "text": "Phishing emails often include links to other websites that raise red flags. This section will introduce you to basic rules for rooting out suspicious links."
     }, {
         "slideType": "text",
         "title": "Top level domains are your friend",
@@ -272,7 +272,7 @@
         "options": [{
             "text": "Yes",
             "correct": false,
-            "feedback": "You just trusted a phishing site. Yes, it has a certificate and https connection, but, in this case, these are tools that are used to make a misleading URL more convincing. When looking for suspicious URLs, remember that it doesn’t matter if .com shows up somewhere in a URL. What matters is how the URL ends (before any slashes) with a familiar domain such as .com: this one actually belongs to \"secure-alert\".net"
+            "feedback": "You just trusted a phishing site. Yes, it has a certificate and https connection, but, in this case, these are tools that are used to make a misleading URL more convincing. When looking for suspicious URLs, remember that it doesn’t matter if .com shows up somewhere in a URL. What matters is how the URL ends (before any slashes): this one actually belongs to \"secure-alert\".net"
         }, {
             "text": "No",
             "correct": true,
