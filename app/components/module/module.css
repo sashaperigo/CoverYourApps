@@ -166,3 +166,21 @@ md-toolbar .page-number {
         box-shadow: none;
     }
 }
+
+/* Force landscape on mobile */
+
+#landscape-plase {
+    display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  .module-container {
+      display: none;
+  }
+
+  #landscape-please {
+      display: block;
+      width: 80%;
+      margin: 5em auto;
+  }
+}
