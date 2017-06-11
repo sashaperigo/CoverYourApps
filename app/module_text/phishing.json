@@ -19,37 +19,32 @@
         "options": [{
             "text": "Yes",
             "correct": false,
-            "feedback": "You and 1 million other Google users fell for this sophisticated phishing attack, which granted this adversary the ability to send emails from your Gmail account and disseminate this illegitimate Google Docs email further!"
+            "feedback": "You and 1 million other Google users fell for this sophisticated phishing attack, which granted this adversary the ability to not only further disseminate this dangerous email to more users, but to send other emails from your Gmail account in your name."
         }, {
             "text": "No",
             "correct": true,
-            "feedback": "You evaded this phishing attack! If you had fallen for it, this adversary would have gained access to your Gmail account--and disseminate this illegitimate Google Docs email further! There are even more complex phishing attacks out there."
+            "feedback": "You evaded this phishing attack! If you had fallen for it, this adversary would have gained access to your Gmail account, giving them the ability to disseminate this dangerous email further! Although this may seem sophisticated, there are even more complex phishing attacks out there."
         }]
     }, {
-        "slideType": "textImage",
-        "text": "Clearly, phishers online have moved far beyond the days of Nigerian Prince Scams.",
-        "imgSrc": "img/module-img/nigerian-scam.jpg",
-        "imgCitation": "https://commons.wikimedia.org/wiki/File:NigerianScam.jpg"
+        "slideType": "text",
+        "text": "This module will help you detect phishing attacks and defend yourself against digital snoops. <u><a href=\"https://www.verizon.com/about/news/verizons-2016-data-breach-investigations-report-finds-cybercriminals-are-exploiting-human\">Ninety percent of data breaches start with phishing attacks</a></u>, so it is important to protect yourself online."
     }, {
         "slideType": "text",
-        "text": "This module will help you detect phishing attacks and defend yourself from digital snoops. <a href=\"https://www.verizon.com/about/news/verizons-2016-data-breach-investigations-report-finds-cybercriminals-are-exploiting-human\">Ninety percent of data breaches start with phishing attacks</a>, so it is imperative to protect yourself from being deceived online."
+        "text": "<p>This module is divided into three sections.</p><p>First, you’ll learn about subtle typos and errors in emails that can indicate the presence of phishing.</p><p>Second, you will learn how to scrutinize links in suspicious emails. Phishing attacks are often excellent at making dangerous websites look trustworthy.</p><p>Finally, we will show you how your browswer URL bar can help you differentiate between websites that look legitimate and websites that are legitimate. For instance, it can help you identify fraudulent websites pretending to be the websites of banks, hospitals, and other organizations that you would otherwise trust with your personal information.</p>"
     }, {
         "slideType": "text",
-        "text": "<p>This module is divided into three sections.</p><p>First, you’ll learn about subtle typos and errors in emails that can indicate you’re talking to a phisher.</p><p>Second, you’ll get a chance to learn about scrutinizing links in suspicious emails. Phishing attacks are often excellent at obfuscating sites that are clearly circumspect.</p><p>Finally, we’ll cover the utility of your browser URL bar in differentiating legitimate-looking sites from actually legitimate sites. That bar can help you detect fraudulent websites masquerading as those of banks, hospitals, and other organizations you’d usually trust with your personal information.</p>"
-    }, {
-        "slideType": "text",
-        "text": "Each section will involve an introduction of crucial web security skills, followed by interactive tests to see if you can identify phishing content. At the end of this module, you’ll get to play a political operative in a high-stakes Presidential election--one marked by increased hacking attempts on campaigns."
+        "text": "Each section will introduce you to crucial web security skills and will include interactive tests that will guage your ability to identify phishing content. At the end of this module, you will have the opportunity to play a political operative in a simulation of a high-stakes Presidential election that is marked by increased hacking attempts on campaigns."
     }]
 }, {
     "sectionName": "Taking Typos and Names",
     "slides": [{
         "slideType": "text",
-        "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some are clear, some are extremely subtle. We’ll start out with more recognizable issues in phishing emails before moving onto more inconspicuous ones."
+        "text": "Phishing emails, though increasingly convincing, can still contain red flags in their bodies and email headers. Some of these flags are clear whereas others are extremely subtle. We will start by examining more recognizable issues in phishing emails before moving onto more inconspicuous ones."
     }, {
         "slideType": "sketchyEmail",
         "name": "bizarre-bccs-and-ccs",
         "title": "Bizarre BCCs and CCs",
-        "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated!",
+        "text": "Let’s start with the massive Google Doc phish in May 2017, an example we referenced in the introduction. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics purposes in phishing attacks. For instance, this address received an email every time the Google Doc phish was propagated!",
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
@@ -65,16 +60,16 @@
             "text": "Open in Google Docs",
             "correct": false,
             "header": "Uh oh!",
-            "feedback": "You fell for an email with a suspicious bcc/cc field, suggesting foul play."
+            "feedback": "You fell for an email with a suspicious bcc/cc field."
         }]
     }, {
         "slideType": "text",
         "title": "Have you <i>actually</i> looked at who an email came from?",
-        "text": "This next suggestion may sound silly and unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like head.of.philippines@gmail.com to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
+        "text": "TODO: This next suggestion may sound unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like 'head.of.philippines@gmail.com' to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-russia",
-        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p>",
+        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate and that emails from head of state follow the format 'head.of.[country_name]@gmail.com'.</p><p>You are representing Russia at an important conference as part of the Russian delegation. You get this email. Do you trust it and respond to it?</p>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Russian Federation</b> &lt;head.of.russianfederation@gmail.com&gt;",
@@ -84,13 +79,13 @@
         "options": [{
             "text": "Delete",
             "correct": false,
-            "header": "You just deleted an email from your head of state...",
+            "header": "Uh oh! You just deleted an email from your head of state...",
             "feedback": "It's important to be cautious of sending any sensitive information over email, and this caution can include scrutinizing email addresses that have contacted you. Everything in this email address was spelled correctly and should be responded to, but it never hurts to exercise caution and request additional proof of identity from a person online."
         }, {
             "text": "Reply",
             "correct": true,
             "header": "Great!",
-            "feedback": "Everything is spelled correctly in this email address, suggesting that this should be an email from a legitimate source."
+            "feedback": "Everything is spelled correctly in this email address, suggesting that this is an email from a legitimate source."
         }]
     }, {
         "slideType": "sketchyEmail",
@@ -106,7 +101,7 @@
             "text": "Delete",
             "correct": true,
             "header": "Great!",
-            "feedback": "Good job sniffing out this slight typo! You'd like to make sure that if you're talking to the Filipino head of state, that head of state could spell their country correctly in their email address..."
+            "feedback": "Good job noticing that 'Phillippines' was misspelled! You'd like to make sure that if you're talking to the Filipino head of state, that head of state could spell their country correctly in their email address..."
         }, {
             "text": "Reply",
             "correct": false,
@@ -116,7 +111,7 @@
     }, {
         "slideType": "text",
         "title": "Be wary of corporate account spoofs",
-        "text": "This next example isn’t related to typos, but still highlights the importance of scrutinizing the email addresses of people asking you for sensitive information."
+        "text": "The following example isn’t related to typos, but still highlights the importance of scrutinizing the email addresses of people asking you for sensitive information."
     }, {
         "slideType": "sketchyEmail",
         "name": "google-email",
@@ -136,12 +131,12 @@
             "text": "Update Profile Information",
             "correct": false,
             "header": "Uh oh!",
-            "feedback": "You just got phished. Google-email doesn’t exist, but gmail does."
+            "feedback": "You just got phished. \"Google-mail\" is not \"gmail\" nor \"googlemail\", the two domains for google’s email service."
         }]
     }, {
         "slideType": "text",
         "title": "Be wary of corporate account spoofs",
-        "text": "Spoofs of corporate accounts are often very realistic and difficult to detect. A casual look through your inbox would typically not halt at the sight of \"googlemail.\" But it’s still crucial to be extremely critical when an email account asks you for personal information; make sure to verify that those addresses actually correspond to email service names."
+        "text": "Spoofs of corporate accounts are often very realistic and difficult to detect. While casually glancing through your email, you may not be alarmed at the sight of \"Googlemail.\" However, it is still crucial to be extremely critical when an email account asks you for personal information; make sure to verify that those addresses actually correspond to email service names."
     }, {
         "slideType": "text",
         "title": "Introducing a new problem",
@@ -154,27 +149,27 @@
         "imgCitation": "https://www.linkedin.com/pulse/how-much-trust-do-you-put-your-gmail-inbox-messages-renato-marinho"
     }, {
         "slideType": "text",
-        "text": "Knowing how to detect illegitimate or spoofed email addresses is a crucial first line of defense against phishing. Unfortunately, there are a plethora of other ways to phish people--and these approaches are more imperceptible than faked email addresses."
+        "text": "Knowing how to detect illegitimate or spoofed email addresses is a crucial first line of defense against phishing. Unfortunately, there are a plethora of other ways to phish people. Some of these approaches are more imperceptible than faked email addresses."
     }]
 }, {
     "sectionName": "Scrutinizing Links",
     "slides": [{
         "slideType": "text",
-        "text": "A phishing email is typically never an email alone; they often include links to other sites. Even if the email address of a phisher looks legitimate, sometimes links in their emails may raise a red flag. This section will introduce you to basic rules for rooting out suspicious links."
+        "text": "A phishing email is typically never just an email. Phishing emails often include links to other websites that raise red flags. This section will introduce you to basic rules for rooting out suspicious links."
     }, {
         "slideType": "text",
         "title": "Top level domains are your friend",
-        "text": "Oftentimes, an easy way to tell if a link is legit before clicking it is to hover your mouse above the link. A yellow box will appear at bottom left and show a preview of the URL of that link. Try doing this to the button on the right! Sometimes sketchy links are hidden behind realistic-looking buttons corresponding to official google emails, like those from Google Docs. If it looks obviously misleading (\"sketchywebsite.net\") don’t click it!"
+        "text": "TODO: Often, an easy way to tell if a link is legitimate before clicking on it is to hover your mouse above the link. As you do, a yellow box will appear at the bottom left corner and show a preview of the URL corresponding to that link. Try this with the button on the right! Sometimes, sketchy links are hidden behind realistic-looking buttons disguised as those belonging to official google emails, like those from Google Docs. If it looks obviously misleading (\"sketchywebsite.net\"), then don’t click it!"
     }, {
         "slideType": "textImage",
         "title": "Link appearances can be deceiving...",
-        "text": "But suspicious links are often not obvious. They can take the form of long links that look legitimate when truncated in a preview. For example, the link on the right, when truncated for a preview, looks like \"http://myaccount.google.com-securitysetting...\" but is actually registered as a \".tk\" website (as opposed to the more conventional \".com\"). Any usage of random domains that aren’t the likes of .com, .org, .gov, or .mil should trigger suspicion about a website and its authenticity.",
+        "text": "However, suspicious links are not always obvious. For instance, they can be long links that look legitimate when truncated in a preview. The link on the right, when truncated, looks like \"http://myaccount.google.com-securitysetting...\" but is actually registered as a \".tk\" website (as opposed to the more conventional \".com\"). Any domain that is unfamiliar, such as .com, .org, .gov, , .edu, or .mil, should trigger suspicion about a website and its authenticity.",
         "imgSrc": "img/module-img/tk-domain.jpg",
         "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
     }, {
         "slideType": "fillInQuiz",
         "name": "examine-url",
-        "text": "To peek at a potentially suspicious link without clicking on it, you can also right click on a link and see if you can collect information about it before actually clicking through it.<br><br> <b>In this excercise, try finding the URL this button links to.</b>",
+        "text": "You can also right-click on a link in order to see if you can collect any information about it before actually clicking on it. This can help you identifiy suspicious links without accessing the potentially dangerous content that the links correspond to.<br><br> <b>In this excercise, try finding the URL this button links to.</b>",
         "buttonText": "Check this link out! Nothing suspicious here.",
         "answer": "https://www.wired.com/2015/08/how-to-use-facebook-privacy-settings-step-by-step/",
         "options": [{
@@ -193,12 +188,12 @@
         "slideType": "sketchyEmail",
         "name": "exposing-longer-urls",
         "title": "Exposing Longer URLs",
-        "text": "Try examining the link to the right before clicking it. Does the URL look legitimate? If you trust it, click it. Otherwise click the delete email button.",
+        "text": "Try examining the link to the right before clicking on it. Does the URL look legitimate? If you trust it, click on it. Otherwise, click the delete email button.",
         "emailData": {
             "subject": "Canvas: Assignment Graded",
             "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
             "to": "me",
-            "text": "You're signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
+            "text": "You have signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
         },
         "options": [{
             "text": "Delete",
@@ -217,7 +212,7 @@
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br><br>...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",
-        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with HTTP or https. HTTPS represents a secure connection that encrypts the contents of the information you share with a website. Trusted websites tend to use HTTPS."
+        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with http or https. https represents a secure connection that encrypts the information that you share with a website. Trusted websites tend to use https."
     }, {
         "slideType": "quiz",
         "name": "bank-of-the-vvest",
@@ -235,32 +230,32 @@
         }]
     }, {
         "slideType": "text",
-        "text": "While HTTPS usage can be an indicator of a site's security and trustworthiness, online adversaries have begun to exploit HTTPS use to trick everyday internet users into trusting malicious sites. The next module will teach you to discern and avoid decieving HTTPS websites."
+        "text": "While https usage can indicate a site's security and trustworthiness, online adversaries have begun to exploit https use to trick everyday internet users into trusting malicious sites. The next module will teach you to identify and avoid decieving https websites."
     }]
 }, {
     "sectionName": "Examining URL Authenticity",
     "slides": [{
         "slideType": "textImage",
-        "title": "Knowing when you are on an HTTPS connection",
-        "text": "Google Chrome does an especially good job of <a href=\"https://support.google.com/chrome/answer/95617\">showing when you are on a secure HTTPS connection</a>. Take a look at your URL bar: if there’s a green lock saying that you have a \"Secure\" connection, you’re on HTTPS! Otherwise, if you see a red cross or grey \"i\" you are on an insecure connection and should be careful about sharing your personal information.",
+        "title": "Knowing when you are on an https connection",
+        "text": "Google Chrome does an exceptionally good job of <u><a href=\"https://support.google.com/chrome/answer/95617\"></u>showing you when you are on a secure https connection</a>. Take a look at your URL bar: if there is a green lock saying that you have a \"Secure\" connection, you’re on https! If you see a red cross or grey \"i\", then you are on an insecure connection and should be careful about sharing your personal information.",
         "imgSrc": "img/module-img/chrome-https.png",
         "imgCitation": "https://support.google.com/chrome/answer/95617"
     }, {
         "slideType": "textImage",
         "title": "Intro to certs",
-        "text": "HTTPS sites use something called certificates to demonstrate a website’s identity; when sharing data with a website, certificates help prove that you’re talking to the party you expect. (In this case: the actual twitter.com and not some attacker impersonating twitter.com)",
+        "text": "TODO: https websites use certificates to demonstrate a website’s identity; when sharing data with a website, certificates help prove that you are communicating with the party you expect. (In this case: the actual twitter.com as opposed to an attacker impersonating twitter.com)",
         "imgSrc": "img/module-img/twitter-cert.png",
         "imgCitation": "https://twitter.com"
     }, {
         "slideType": "text",
-        "text": "Certificates are a crucial part of https and are worth examining. More and more websites are beginning to use certs and establish secure HTTPS connections by default. Projects like <a href=\"https://letsencrypt.org/\">Let’s Encrypt</a> issue certificates to any website in an attempt to encourage more people to use secure connections by default."
+        "text": "Certificates are a crucial part of https and are worth examining. More and more websites are beginning to use certificatess to establish secure https connections by default. Projects like <u><a href=\"https://letsencrypt.org/\">Let’s Encrypt</a></u> issue certificates to any legitimate-seeming website in an attempt to encourage more people to use secure connections by default."
     }, {
         "slideType": "text",
-        "text": "As good as the intentions of Let’s Encrypt are, however, phishers use this service to issue certificates for deceiving websites. In fact, their use of certificates makes their sites look extremely trustworthy! In March 2017, <a href=\"https://www.thesslstore.com/blog/lets-encrypt-phishing/\">security researchers found that Let’s Encrypt issued 14,000 certificates to PayPal phishing sites</a>. Even if a site looks legitimate and has a certificate, ensure that its URL is legitimate and not a clever trick!"
+        "text": "Unfortunately, phishers use this service to issue certificates to deceiving websites. In fact, their use of certificates makes their sites look extremely trustworthy! In March 2017, <u><a href=\"https://www.thesslstore.com/blog/lets-encrypt-phishing/\">security researchers found that Let’s Encrypt issued 14,000 certificates to PayPal phishing sites</a></u>. Even if a website looks legitimate and has a certificate, check that its URL is also legitimate!"
     }, {
         "slideType": "quiz",
         "name": "shopping.paypal",
-        "text": "Do you trust the following site? (Assume it has a valid certificate: i.e. green lock) <h3>https://shopping.paypal.com/index</h3>",
+        "text": "Do you trust the following website? (Assume it has a valid certificate: i.e. green lock) <h3>https://shopping.paypal.com/index</h3>",
         "options": [{
             "text": "Yes",
             "correct": true,
@@ -277,7 +272,7 @@
         "options": [{
             "text": "Yes",
             "correct": false,
-            "feedback": "You just trusted a phishing site. Yes, it has a certificate and HTTPS connection, but these are used to make a misleading URL more convincing. When looking for suspicious URLs, remember that it doesn’t matter if .com shows up somewhere in a URL. What matters is how the URL ends (before any slashes): this one actually belongs to \"secure-alert\".net"
+            "feedback": "You just trusted a phishing site. Yes, it has a certificate and https connection, but, in this case, these are tools that are used to make a misleading URL more convincing. When looking for suspicious URLs, remember that it doesn’t matter if .com shows up somewhere in a URL. What matters is how the URL ends (before any slashes) with a familiar domain such as .com: this one actually belongs to \"secure-alert\".net"
         }, {
             "text": "No",
             "correct": true,
@@ -285,21 +280,21 @@
         }]
     }, {
         "slideType": "text",
-        "text": "Knowing when you’re on an HTTPS connection can help you identify whether you’re talking to a trustworthy website or not. Even then, adversaries can use https to trick you into a false sense of security—so watch out!"
+        "text": "Knowing when you are on a https connection can help you identify whether you are communicating with a trustworthy website or not. Even then, adversaries can use https to trick you into a false sense of security. Be careful!"
     }]
 }, {
     "sectionName": "Final Simulation",
     "slides": [{
         "slideType": "text",
-        "text": "Now let's put your skills to the test."
+        "text": "Now, let's put your skills to the test."
     }, {
         "slideType": "text",
-        "text": "We’ll put you into the shoes of a high-level member of a Presidential Campaign. Your name is Jon Podesta. Your email address is john.podesta@gmail.com, and your password is \"cleft cam synod lacy\". Take note of this password!"
+        "text": "Pretend that you are a high-level member of a Presidential Campaign. Your name is Jon Podesta. Your email address is john.podesta@gmail.com, and your password is \"cleft cam synod lacy\". Take note of this password!"
     }, {
         "slideType": "text",
         "text": "You’ll be working your way through a scenario in Jon’s inbox. If you think you’re being phished, you can delete the email at any time."
     }, {
-        "slideType": "emailSimulation"
+        "slideType": "TODO: emailSimulation"
     }, {
         "slideType": "completion"
     }]
