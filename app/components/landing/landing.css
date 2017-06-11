@@ -85,12 +85,12 @@
 
 #slide-image-overlay {
     min-height: 50px;
-    height: 300px;
     width: 100%;
+    vertical-align: middle;
     position: absolute;
     top: 0;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 3.5rem;
+    padding: 3rem;
     z-index: 100;
     text-align: center;
     overflow-y: hidden;
@@ -101,7 +101,7 @@
     color: #ffffff;
     min-width: 100px;
     font-size: 1.5rem;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 0 1.5rem;
     border-radius: 0;
     padding-right: 15px;
     padding-left: 15px;

@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="components/completion/completion.css" />
 <div id="content-container">
     <div class="content">
-        <h1>You're a master at {{module.name.toLowerCase()}}!</h1>
+        <h1>You're a<span ng-if="completion.isVowel(module.name[0])">n</span> {{module.name.substr(module.name.length - 1) !== 's' ? module.name.toLowerCase() : module.name.substring(0, module.name.length - 1).toLowerCase()}} master!</h1>
         <br />
         <h4>Congratulations on completing this course. <span ng-if="module.name === 'Phishing'">We're confident that you won't be falling for any "phish-y" emails.</span></h4>
         <br />
         <h4><b>Want to keep learning?</b></h4>
-        <md-button ng-href="#!/module-list">Course list</md-button><md-button ng-click="completion.startOver()">Start over</md-button>
+        <md-button ng-href="#!/module-list">Course list</md-button>
+        <md-button ng-click="completion.startOver()">Start over</md-button>
     </div>
 </div>
 <canvas id="canvas"></canvas>
