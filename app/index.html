@@ -7,7 +7,6 @@
 <!--<![endif]-->
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cover Your Apps</title>
@@ -39,6 +38,7 @@
     <script src="components/text-image/textImageController.js"></script>
     <script src="components/completion/completionController.js"></script>
     <script src="components/google-login/googleLoginController.js"></script>
+    <script src="components/password-list/passwordListController.js"></script>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
@@ -72,12 +72,12 @@
             <a href="#!/"><img src="/img/Logo.png" class="logo"></a>
         </div>
         <span flex></span>
-        <div class="cover-your-apps">Cover Your Apps</div>
+        <div class="cover-your-apps hidden-xs">Cover Your Apps</div>
         <span flex></span>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-3">
             <a href="#!/about-us">About</a>
         </div>
-        <div class="col-sm-2 emphasize">
+        <div class="col-sm-2 col-xs-3 emphasize">
             <a href="#!/module-list">Learn</a>
         </div>
     </md-toolbar>
@@ -98,5 +98,6 @@
         </div>
     </div>
 </body>
+
 
 </html>

@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+    console.log('hi');
 
     var options = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0

@@ -47,20 +47,6 @@
     background-position: -95px -5px;
 }
 
-</style> <!-- bullet navigator container --> <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"> <!-- bullet navigator item prototype --> <div u="prototype"></div> </div> <!--#endregion Bullet Navigator Skin End --> <!--#region Arrow Navigator Skin Begin --> <!-- Help: https: //www.jssor.com/development/slider-with-arrow-navigator.html -->
-<style>
-/* jssor slider arrow navigator skin 21 css */
-
-
-/*
-.jssora21l                  (normal)
-.jssora21r                  (normal)
-.jssora21l:hover            (normal mouseover)
-.jssora21r:hover            (normal mouseover)
-.jssora21l.jssora21ldn      (mousedown)
-.jssora21r.jssora21rdn      (mousedown)
-*/
-
 .jssora21l,
 .jssora21r {
     display: block;
@@ -99,38 +85,38 @@
 
 #slide-image-overlay {
     min-height: 50px;
-    max-height: 243px;
     width: 100%;
+    vertical-align: middle;
     position: absolute;
     top: 0;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 3.5rem;
+    padding: 3rem;
     z-index: 100;
     text-align: center;
     overflow-y: hidden;
 }
 
-#slide-image-overlay .button {
+.call-to-action .button {
     background-color: #851e1e;
     color: #ffffff;
     min-width: 100px;
     font-size: 1.5rem;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 0 1.5rem;
     border-radius: 0;
     padding-right: 15px;
     padding-left: 15px;
 }
 
-#slide-image-overlay .button a {
+.call-to-action .button a {
     color: #ffffff;
 }
 
-#slide-image-overlay .button:hover {
+.call-to-action .button:hover {
     background-color: #b92631;
     outline-color: #b92631;
 }
 
-#slide-image-overlay h1 {
+.call-to-action h1 {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;

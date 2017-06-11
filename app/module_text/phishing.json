@@ -30,7 +30,7 @@
         "text": "This module will help you detect phishing attacks and defend yourself against digital snoops. <u><a href=\"https://www.verizon.com/about/news/verizons-2016-data-breach-investigations-report-finds-cybercriminals-are-exploiting-human\">Ninety percent of data breaches start with phishing attacks</a></u>, so it is important to protect yourself online."
     }, {
         "slideType": "text",
-        "text": "<p>This module is divided into three sections.</p><p>First, you’ll learn about subtle typos and errors in emails that can indicate the presence of phishing.</p><p>Second, you will learn how to scrutinize links in suspicious emails. Phishing attacks are often excellent at making dangerous websites look trustworthy.</p><p>Finally, we will show you how your browswer URL bar can help you differentiate between websites that look legitimate and websites that are legitimate. For instance, it can help you identify fraudulent websites pretending to be the websites of banks, hospitals, and other organizations that you would otherwise trust with your personal information.</p>"
+        "text": "<p>This module is divided into three sections.</p><p><b>First</b>, you’ll learn about subtle typos and errors in emails that can indicate the presence of phishing.</p><p><b>Second</b>, you will learn how to scrutinize links in suspicious emails. Phishing attacks are often excellent at making dangerous websites look trustworthy.</p><p><b>Finally</b>, we will show you how your browswer URL bar can help you differentiate between websites that look legitimate and websites that are legitimate. For instance, it can help you identify fraudulent websites pretending to be the websites of banks, hospitals, and other organizations that you would otherwise trust with your personal information.</p>"
     }, {
         "slideType": "text",
         "text": "Each section will introduce you to crucial web security skills and will include interactive tests that will guage your ability to identify phishing content. At the end of this module, you will have the opportunity to play a political operative in a simulation of a high-stakes Presidential election that is marked by increased hacking attempts on campaigns."
@@ -158,7 +158,7 @@
         "text": "Phishing emails often include links to other websites that raise red flags. This section will introduce you to basic rules for rooting out suspicious links."
     }, {
         "slideType": "text",
-        "title": "Top level domains are your friend",
+        "title": ".com, .org, .gov are your friend",
         "text": "TODO: Often, an easy way to tell if a link is legitimate before clicking on it is to hover your mouse above the link. As you do, a yellow box will appear at the bottom left corner and show a preview of the URL corresponding to that link. Try this with the button on the right! Sometimes, sketchy links are hidden behind realistic-looking buttons disguised as those belonging to official google emails, like those from Google Docs. If it looks obviously misleading (\"sketchywebsite.net\"), then don’t click it!"
     }, {
         "slideType": "textImage",

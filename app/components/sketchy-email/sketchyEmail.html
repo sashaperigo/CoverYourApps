@@ -11,14 +11,14 @@
     <img src="/img/etc/email-reply-img.png" width="100px"/>
   </div>
   <div class="delete-email">
-    <md-button class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)">{{ $ctrl.slide.options[0].text }}</md-button>
+    <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)" ng-disabled="true == buttonDisabled">{{ $ctrl.slide.options[0].text }}</md-button>
   </div>
   <br><br>
   <div class="faked-email-content"><br><br>
     <span ng-bind-html="$ctrl.slide.emailData.text | html"></span>
     <br><br>
     <p>
-      <md-button class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="sketchyEmail.reply($event)">{{ $ctrl.slide.options[1].text }}</md-button>
+      <md-button name="respond-email" class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="sketchyEmail.reply($event)" ng-disabled="true == buttonDisabled">{{ $ctrl.slide.options[1].text }}</md-button>
     </p>
   </div>
 </div>

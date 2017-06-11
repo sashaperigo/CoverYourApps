@@ -1,5 +1,6 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="components/module-list/moduleList.css" />
-<div class="container">
+<div class="hidden-xs container">
     <div class="header">
         <h1>Start Learning</h1>
         <br />
@@ -15,5 +16,35 @@
             <p>{{module.description}}</p>
         </div>
         <div style="clear: both;"></div>
+    </div>
+</div>
+
+<div class="visible-xs">
+    <div class="header">
+        <h1>Start Learning</h1>
+        <br />
+        <p>Basic online safety skills can go a long way towards protecting your online identity. Select from one of the following courses to start learning today!
+        </p>
+    </div>
+    <div ng-repeat="module in moduleList.modules" class="module-listing">
+
+        <div class="col-xs-2">
+            <a ng-href="{{module.path}}" class="module-button">
+                <i class="{{module.icon}}"></i>
+            </a>
+        </div>
+
+        <div class="col-xs-10">
+            <div class="module-description">
+                <h4 class="module-name"><a ng-href="{{module.path}}">{{module.name}}</a></h4>
+                <p>{{module.description}}</p>
+            </div>
+        </div>
+
+
+
+        <div style="clear: both;"></div>
+
+
     </div>
 </div>
