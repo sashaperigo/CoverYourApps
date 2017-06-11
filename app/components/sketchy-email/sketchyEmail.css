@@ -1,55 +1,56 @@
 .sketchy-email-container {
-	padding: 1rem;
-	height: 100%;
-	width: 100%;
-	background-color: white;
+    padding: 1rem;
+    height: 100%;
+    max-height: calc(100vh - 75px - 150px);
+    /*width: 100%;*/
+    background-color: white;
 }
 
 .faked-email-content {
-	position: relative;
-	width: 80%;
-	top: -125px;
-	padding-left: 100px;
-	text-align: left;
-	font-size: 14px;
+    position: relative;
+    width: 80%;
+    top: -125px;
+    padding-left: 100px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .faked-email-header {
-	font-size: 13px;
-	width: 450px;
-	text-align: left;
-	margin-left: 10px;
+    font-size: 13px;
+    width: 450px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .delete-email {
-	position: relative;
-	margin-right: 95px;
-	top: -95px;
-	height:50px;
-	font-size: 12px;
-	text-align: right;
+    position: relative;
+    margin-right: 95px;
+    top: -95px;
+    height: 50px;
+    font-size: 12px;
+    text-align: right;
 }
 
 .faked-email-reply {
-	position: relative;
-	right:-140px;
-	height:50px;
-	top: -45px;
-	font-size: 12px;
-	text-align: right;
+    position: relative;
+    right: -140px;
+    height: 50px;
+    top: -45px;
+    font-size: 12px;
+    text-align: right;
 }
 
 .sketchy-url-container a {
-	color: blue;
+    color: blue;
 }
 
 .sketchy-url-container h2 {
-	font-size: 18px;
-	margin-left: 10px;
+    font-size: 18px;
+    margin-left: 10px;
 }
 
 .sketchy-url-container hr {
-	margin-top: -0px;
-	margin-bottom: 5px;
-	margin-left: 10px;
+    margin-top: -0px;
+    margin-bottom: 5px;
+    margin-left: 10px;
 }

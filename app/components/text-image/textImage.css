@@ -41,6 +41,7 @@ h4#text-header {
     width: 64.66666666666%;
     right: 0;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .interactive img {
