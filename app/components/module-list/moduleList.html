@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="components/module-list/moduleList.css" />
 <div class="hidden-xs container">
     <div class="header">
@@ -26,7 +27,7 @@
         </p>
     </div>
     <div ng-repeat="module in moduleList.modules" class="module-listing">
-        
+
         <div class="col-xs-2">
             <a ng-href="{{module.path}}" class="module-button">
                 <i class="{{module.icon}}"></i>
@@ -37,11 +38,11 @@
             <div class="module-description">
                 <h4 class="module-name"><a ng-href="{{module.path}}">{{module.name}}</a></h4>
                 <p>{{module.description}}</p>
-            </div>  
+            </div>
         </div>
 
-        
-        
+
+
         <div style="clear: both;"></div>
 
 
