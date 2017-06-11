@@ -32,7 +32,7 @@
 
 .faked-email-reply {
 	position: relative;
-	margin-right:100px;
+	right:-140px;
 	height:50px;
 	top: -45px;
 	font-size: 12px;

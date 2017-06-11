@@ -31,7 +31,7 @@
             ng-class="{flash: module.displayQuizAnswer}"
             ng-click="module.incrementPage($event)">Next</md-button>
         <span flex></span>
-        <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Next Section {{module.sectionNumber + 1}} of {{module.json.length}}</md-button>
+        <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Next Section {{parseInt(module.sectionNumber) + 1}} of {{module.json.length}}</md-button>
     </md-toolbar>
 </div>
 <div id="landscape-please">Your window is too narrow. Please widen it, or if you're viewing on your phone, please rotate to use landscape mode.</div>
