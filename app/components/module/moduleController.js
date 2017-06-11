@@ -16,6 +16,8 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.slideType = "";
         $scope.module.slide = {};
 
+        $scope.module.buttonGlow = false;
+
         $scope.module.moduleComponent = null;
         $scope.module.moduleImage = null;
         $scope.module.username = "";
@@ -42,12 +44,19 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             });
         });
 
+
         // Change slide number and content
         $scope.module.displayPageContent = function() {
             var section = $scope.module.json[$scope.module.sectionNumber - 1];
             var slide = section.slides[$scope.module.pageNumber - 1];
             $scope.module.slide = slide;
             $scope.module.slideType = slide.slideType;
+
+            // Next button should glows after two seconds!
+            setTimeout(function() {
+                $scope.module.buttonGlow = true;
+                $scope.safeApply();
+            }, 2000);
 
             $scope.safeApply();
             $scope.module.saveProgress();
@@ -57,6 +66,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.decrementPage = function() {
             console.assert($scope.module.pageNumber !== 1,
                 "Error: user is on the first slide of the section!");
+            $scope.module.buttonGlow = false;
             $scope.module.pageNumber--;
             $scope.module.displayQuizAnswer = false;
             $scope.module.displayPageContent();
@@ -68,15 +78,16 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                 "Error: user is on the last slide in the section!");
             console.assert(!($scope.module.slideType === "quiz" && $scope.module.displayQuizAnswer === false),
                 "Error: user should not proceed without answering quiz question!");
+            $scope.module.buttonGlow = false;
+
             $scope.module.pageNumber++;
             $scope.module.displayQuizAnswer = false;
             $scope.module.displayPageContent();
         };
 
         $scope.module.allowNext = function() {
-          console.log('allownext');
-          $scope.module.displayQuizAnswer = true;
-        }
+            $scope.module.displayQuizAnswer = true;
+        };
 
         // Advance to the next section
         $scope.module.nextSection = function() {
@@ -85,6 +96,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
             $scope.module.section = $scope.module.json[$scope.module.sectionNumber].sectionName;
             $scope.module.length = $scope.module.json[$scope.module.sectionNumber].slides.length;
             $scope.module.pageNumber = 1;
+            $scope.module.buttonGlow = false;
             $scope.module.sectionNumber++;
             $scope.module.displayPageContent();
         };
@@ -93,6 +105,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.prevSection = function() {
             $scope.module.section = $scope.module.json[$scope.module.sectionNumber - 2].sectionName;
             $scope.module.length = $scope.module.json[$scope.module.sectionNumber - 2].slides.length;
+            $scope.module.buttonGlow = false;
             $scope.module.pageNumber = 1;
             $scope.module.sectionNumber--;
             $scope.module.displayPageContent();
@@ -115,15 +128,15 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.quizStatistics = "";
 
         $scope.module.submitQuizResponse = function(clicked, callback) {
-            console.log($scope.module.slide.name);
             $scope.module.displayQuizAnswer = true;
             $scope.module.quizResponseCorrect = clicked.correct;
             $scope.module.quizResponse = clicked.feedback;
             $scope.main.trackBehavior($scope.module.slide.name, clicked.text,
-                    function(data, resultString) {
-                $scope.module.quizStatistics = resultString;
-                if (callback) callback();
-            });
+                function(data, resultString) {
+                    $scope.module.quizStatistics = resultString;
+                    if (callback) callback();
+                });
+            $scope.module.buttonGlow = true;
         };
 
         // Saves current section number and page number to session
@@ -150,15 +163,14 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     console.error(response.data || 'Error saving progress');
                 });
         };
-        
+
         // Saves username
         $scope.module.loadUsername = function() {
             $http.get('/api/username/')
                 .then(function successCallback(response) {
                     if (response.data.username) {
-                        $scope.module.username = response.data.username;    
-                    }
-                    else {
+                        $scope.module.username = response.data.username;
+                    } else {
                         $scope.module.saveUsername();
                     }
                     console.log($scope.module.username);
@@ -167,7 +179,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     console.error(response.data || 'Error loading username');
                 });
         };
-        
+
         // Loads saved username
         $scope.module.saveUsername = function() {
             $scope.module.username = prompt('What is your name?');
@@ -176,7 +188,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
                     console.error(response.data || 'Error saving username');
                 });
         };
-        
+
         $scope.module.loadUsername();
     }
 ]);

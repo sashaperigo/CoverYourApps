@@ -24,12 +24,11 @@
         <md-button ng-show="module.pageNumber === 1 && module.sectionNumber > 1" ng-click="module.prevSection()" class="prev-section">Return to Section {{module.sectionNumber - 1}} of {{module.json.length}}</md-button>
         <md-button ng-show="module.pageNumber > 1" ng-click="module.decrementPage()">Back</md-button>
         <span class="page-number">{{module.pageNumber}}/{{module.length}}</span>
-        <md-button
-            ng-disabled="module.pageNumber >= module.length
+        <md-button ng-disabled="module.pageNumber >= module.length
             || (module.slideType === 'quiz' && !module.displayQuizAnswer)
-            || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)"
-            ng-class="{flash: module.displayQuizAnswer}"
-            ng-click="module.incrementPage($event)">Next</md-button>
+            || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)" ng-class="{flash: !(module.pageNumber >= module.length
+            || (module.slideType === 'quiz' && !module.displayQuizAnswer)
+            || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)) && module.buttonGlow }" ng-click="module.incrementPage($event)">Next</md-button>
         <span flex></span>
         <md-button ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Next Section {{parseInt(module.sectionNumber) + 1}} of {{module.json.length}}</md-button>
     </md-toolbar>
