@@ -3,6 +3,7 @@
 var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope', '$rootScope', '$mdDialog', '$sce',
     function($scope, $rootScope, $mdDialog, $sce) {
         var ctrl = this;
+        $scope.buttonDisabled = false;
         $scope.sketchyEmail = {};
         // Hacky module Controller acces TODO @Sasha can bind??
         $scope.module = $scope.$parent.$parent.$parent.$parent.module;
@@ -48,6 +49,7 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
                     .targetEvent(ev)
                 );
             });
+            $scope.buttonDisabled = true;
         };
     }
 ]);

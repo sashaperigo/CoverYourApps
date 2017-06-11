@@ -3,6 +3,7 @@
 var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '$rootScope', '$mdDialog',
     function($scope, $rootScope, $mdDialog) {
         var ctrl = this;
+        $scope.buttonDisabled = false;
         $scope.fillInQuiz = {};
         // Hacky module Controller access TODO @Sasha can bind??
         $scope.module = $scope.$parent.$parent.$parent.$parent.module;
@@ -28,6 +29,7 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
                 .ok('Got it!')
                 .targetEvent(ev)
             );
+            $scope.buttonDisabled = true;
         };
 
         $scope.fillInQuiz.doNothing = function(ev) {
@@ -35,8 +37,6 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
             // Modal dialogs should fully cover application
             // to prevent interaction outside of dialog
             // If correct
-            console.log($scope.fillInQuiz.submittedUrl)
-            console.log(ctrl.slide.answer)
             if ($scope.fillInQuiz.submittedUrl === ctrl.slide.answer){
               $mdDialog.show(
                   $mdDialog.alert()
@@ -62,6 +62,7 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
                   .targetEvent(ev)
               );
             }
+            $scope.buttonDisabled = true;
         };
     }
 ]);
