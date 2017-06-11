@@ -10,13 +10,12 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
         // Add URL for sketchyUrl simulation if necessary, otherwise leave link
         // field blank.
         if (ctrl.slide.options[1].link != null) {
-          $scope.sketchyUrl = ctrl.slide.options[1].link;
-          console.log($scope.sketchyUrl);
+            $scope.sketchyUrl = ctrl.slide.options[1].link;
         }
 
         $scope.sketchyEmail.delete = function(ev) {
             submitEmail(ev, ctrl.slide.options[0]);
-        }
+        };
 
         $scope.sketchyEmail.reply = function(ev) {
             submitEmail(ev, ctrl.slide.options[1]);
@@ -25,10 +24,14 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
 
         // This code sucks - I'm so sorry.
         function feedbackHtml() {
-            return $sce.trustAsHtml('<h4 class="answer">' + $scope.module.quizResponse + '</h4>' +
-            '<br />'+
-            '<h3 class="statistics-header">How did you do compared to others?</h3>' +
-            '<div class="statistics">' + $scope.module.quizStatistics + '</div>');
+            var response = '<h4 class="answer">' + $scope.module.quizResponse + '</h4>' +
+                '<br />';
+
+            if ($scope.module.quizStatistics) {
+                response += '<h3 class="statistics-header" ng-if="$scope.module.quizStatistics">How did you do compared to others?</h3>' +
+                    '<div class="statistics">' + $scope.module.quizStatistics + '</div>';
+            }
+            return $sce.trustAsHtml(response);
         }
 
         function submitEmail(ev, option) {
