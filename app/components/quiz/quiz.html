@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="components/quiz/quiz.css" />
-<div class="quiz-container">
-    <div id="quiz-flex">
-        <div class="question-container">
+<div ng-cloak class="quiz-container">
+    <div ng-cloak id="quiz-flex">
+        <div ng-cloak class="question-container">
             <h1>Quiz Time!</h1>
             <h3 class="question" ng-bind-html="$ctrl.slide.text | html">
             </h3>
             <br />
             <br />
-            <div class="answers" ng-repeat="currentOption in $ctrl.slide.options.slice(0, 2)">
+            <div ng-cloak class="answers" ng-repeat="currentOption in $ctrl.slide.options.slice(0, 2)">
                 <md-button class="md-raised md-primary" ng-bind-html="currentOption.text | html" ng-disabled="module.displayQuizAnswer" ng-click="quiz.submit($event, currentOption)"></md-button>
             </div>
             <br />
-            <div class="answers" ng-if="$ctrl.slide.options.length === 4" ng-repeat="currentOption in $ctrl.slide.options.slice(2, 4)">
+            <div ng-cloak class="answers" ng-if="$ctrl.slide.options.length === 4" ng-repeat="currentOption in $ctrl.slide.options.slice(2, 4)">
                 <md-button class="md-raised md-primary" ng-bind-html="currentOption.text | html" ng-disabled="module.displayQuizAnswer" ng-click="quiz.submit($event, currentOption)"></md-button>
             </div>
         </div>
         <span flex ng-if="$ctrl.slide.imgSrc"></span>
-        <div class="image" ng-if="$ctrl.slide.imgSrc">
+        <div ng-cloak class="image" ng-if="$ctrl.slide.imgSrc">
             <img ng-src=" {{ $ctrl.slide.imgSrc }} " />
             <p class="img-citation "> Source:
                 <a ng-href="{{ $ctrl.slide.imgCitation }} ">{{ $ctrl.slide.imgCitation }}</a>

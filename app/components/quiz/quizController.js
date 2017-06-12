@@ -37,7 +37,7 @@ var QuizController = myApp.controller('QuizController', ['$scope', '$rootScope',
 
             if ($scope.module.quizStatistics) {
                 response += '<h3 class="statistics-header">How did you do compared to others?</h3>' +
-                    '<div class="statistics">' + $scope.module.quizStatistics + '</div>';
+                    '<div ng-cloak class="statistics">' + $scope.module.quizStatistics + '</div>';
             }
             return $sce.trustAsHtml(response);
         }

@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="components/text-slide/textSlide.css" />
-<div class="interactive">
-    <div class="content">
-    	<div class="title" ng-if="$ctrl.slide.title">
+<div ng-cloak class="interactive">
+    <div ng-cloak class="content">
+    	<div ng-cloak class="title" ng-if="$ctrl.slide.title">
 	        <h1 ng-bind-html="$ctrl.slide.title | html"></h1>
 	        <br/>
 	    </div>
-        <div class="text">
+        <div ng-cloak class="text">
 	        <h2 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length < 200"></h2>
 	        <h3 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length >= 200 && $ctrl.slide.text.length < 500"></h3>
 	        <h4 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length >= 500"></h4>

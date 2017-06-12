@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="components/reply/reply.css" />
 
 <md-toolbar style="min-height:35px; max-height:35px;">
-  <div class="md-toolbar-tools">
+  <div ng-cloak class="md-toolbar-tools">
     <h4 md-truncate flex>Re: {{email.emailData.subject}}</h4>
     <md-button class="md-icon-button" ng-click="close()">
       <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -11,19 +11,19 @@
   </div>
 </md-toolbar>
 
-<div class="container">
-    <div class="login-container">
-        <div class="login-box">
+<div ng-cloak class="container">
+    <div ng-cloak class="login-container">
+        <div ng-cloak class="login-box">
             <p>From: <strong>Jon Podesta</strong></p>
             <p>To: <span ng-bind-html="email.emailData.from | html"></span></p>
             <md-input-container class="md-block">
               <textarea md-autofocus rows="5" md-select-on-focus>{{ phone }}</textarea>
             </md-input-container>
-            <div class="login-options">
+            <div ng-cloak class="login-options">
                 <p class="inline-justify">
                     <md-button type="submit" ng-click="sendEmail()">Send</md-button>
                 </p>
-                <div style="clear: both;"></div>
+                <div ng-cloak style="clear: both;"></div>
             </div>
         </div>
     </div>

@@ -32,7 +32,7 @@ var SketchyEmailFullController = myApp.controller('SketchyEmailFullController', 
 
             if ($scope.module.quizStatistics) {
                 response += '<h3 class="statistics-header" ng-if="$scope.module.quizStatistics">How did you do compared to others?</h3>' +
-                    '<div class="statistics">' + $scope.module.quizStatistics + '</div>';
+                    '<div ng-cloak class="statistics">' + $scope.module.quizStatistics + '</div>';
             }
             return $sce.trustAsHtml(response);
         }

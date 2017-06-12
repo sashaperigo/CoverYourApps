@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="components/text-image/textImage.css" />
-<div class="text">
+<div ng-cloak class="text">
     <h4 id="text-header" ng-if="$ctrl.slide.title" ng-bind-html="$ctrl.slide.title | html"></h4>
     <h4 id="text-content" ng-bind-html="$ctrl.slide.text | html">
     </h4>
 </div>
-<div class="interactive">
+<div ng-cloak class="interactive">
     <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
     <fill-in-quiz ng-if="$ctrl.slide.slideType === 'fillInQuiz'" slide="$ctrl.slide"></fill-in-quiz>
     <sketchy-email ng-if="$ctrl.slide.slideType === 'sketchyEmail'" slide="$ctrl.slide"></sketchy-email>

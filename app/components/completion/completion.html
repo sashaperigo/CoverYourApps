@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="components/completion/completion.css" />
-<div id="content-container">
-    <div class="content">
+<div ng-cloak id="content-container">
+    <div ng-cloak class="content">
         <h1>You're a<span ng-if="completion.isVowel(module.name[0])">n</span> {{module.name.substr(module.name.length - 1) !== 's' ? module.name.toLowerCase() : module.name.substring(0, module.name.length - 1).toLowerCase()}} master!</h1>
         <br />
         <h4>Congratulations on completing this course. <span ng-if="module.name === 'Phishing'">We're confident that you won't be falling for any "phish-y" emails.</span></h4>

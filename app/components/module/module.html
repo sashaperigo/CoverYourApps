@@ -1,16 +1,16 @@
 <meta name="viewport" content="width=1200">
 <link rel="stylesheet" href="components/module/module.css" />
-<div class="module-container">
-    <div class="section-label">
+<div ng-cloak class="module-container">
+    <div ng-cloak class="section-label">
         <h4 style="float: left;"><md-icon ng-click="module.sectionDropdown()" md-svg-icon="img/icons/menu.svg" class="svg" role="img" aria-hidden="true"></md-icon> Section {{module.sectionNumber}}: {{module.section}}</h4><h4 style="float: right;">{{module.name}}</h4>
         <br />
-        <div class="dropdown-content">
+        <div ng-cloak class="dropdown-content">
             <ul>
                 <li ng-repeat="name in module.sectionNames" ng-click="module.setSection($index, name)">{{name}}</li>
             </ul>
         </div>
     </div>
-    <div class="content-grid">
+    <div ng-cloak class="content-grid">
         <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
         <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail' || module.slideType === 'fillInQuiz' || module.slideType === 'passwordManagers'" slide="module.slide"></text-image>
         <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz>
@@ -36,4 +36,4 @@
         <md-button style="float:right;" ng-click="module.nextSection()" class="next-section" ng-class="{'section-change-hidden': !(module.pageNumber === module.length && module.sectionNumber < module.json.length)}">Next Section {{1 + (+module.sectionNumber)}} of {{module.json.length}}</md-button>
     </md-toolbar>
 </div>
-<div id="landscape-please">Your window is too narrow. Please widen it, or if you're viewing on your phone, please rotate to use landscape mode.</div>
+<div ng-cloak id="landscape-please">Your window is too narrow. Please widen it, or if you're viewing on your phone, please rotate to use landscape mode.</div>
