@@ -65,11 +65,11 @@
     }, {
         "slideType": "text",
         "title": "Have you <i>actually</i> looked at who an email came from?",
-        "text": "TODO: This next suggestion may sound unnecessary, but it is also easy to fall prey to phishing attempts that spoof an email address. In one political science class at Stanford, an international crisis simulation used email addresses like 'head.of.philippines@gmail.com' to represent mock heads of state. The simulation was thrown off the rails when delegates responded to emails from addresses that looked a lot like head of state addresses."
+        "text": "<p>It is also easy to fall prey to phishing attempts that spoof an email address. In a simulation in a political science class at Stanford this year, students were assigned to teams representing countries and used emails like <span style=\"font-family: Consolas, monaco, monospace;\">&lt;head.of.philipines@gmail.com&gt;</span> to represent their mock heads of state.</p><p>The winning team actually won the simulation by creating fake email accounts to impersonate other heads of state and tricking participants into sharing confidential information with them!</p>"
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-russia",
-        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p> <br /><br /><b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
+        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format <span style=\"font-family: Consolas, monaco, monospace;\">&lt;head.of.[country_name]@gmail.com&gt;</span>.<p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p><b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Russian Federation</b> &lt;head.of.russianfederation@gmail.com&gt;",
