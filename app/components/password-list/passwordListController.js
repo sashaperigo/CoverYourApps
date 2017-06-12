@@ -1,9 +1,9 @@
 var PasswordListController = myApp.controller('PasswordListController', ['$scope', '$rootScope', '$location', '$http',
     function($scope, $rootScope, $location, $http) {
-    	$scope.passwordList = {};
+        $scope.passwordList = {};
 
-    	$scope.passwordList.list = [
-    		"123456",
+        $scope.passwordList.list = [
+            "123456",
             "123456789",
             "qwerty",
             "12345678",
@@ -17,7 +17,7 @@ var PasswordListController = myApp.controller('PasswordListController', ['$scope
             "mynoob",
             "123321",
             "666666"
-    	];
+        ];
     }
 ]);
 

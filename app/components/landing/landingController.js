@@ -6,9 +6,7 @@ myApp.controller('landingController', ['$scope', '$rootScope',
 
         $scope.landing.resizeSlideImageOverlay = function() {
             var sliderHeight = $("#slider1_container").height();
-            console.log(sliderHeight);
             $("#slide-image-overlay").height(sliderHeight);
-            console.log($("#slide-image-overlay").height());
         };
 
         /* Lay image overlay on top of slider */
