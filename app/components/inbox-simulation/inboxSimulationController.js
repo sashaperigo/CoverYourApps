@@ -18,6 +18,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
         };
 
         $scope.action = function(ev) {
+          ev.preventDefault();
           $mdDialog.show({
             controller: "GoogleLoginController",
             templateUrl: '/components/google-login/googleLogin.html',

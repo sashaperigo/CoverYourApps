@@ -220,12 +220,12 @@
     }, {
         "slideType": "textImage",
         "title": "Shortened links can be deceiving...",
-        "text": "Now, look. the link on the right. It ends with a .com, so that test of legitimacy checks out.",
+        "text": "Now, look. the link on the right. It doesn't look absurdly long and bizarre, right?.",
         "imgSrc": "img/module-img/shortened-link.jpg"
     }, {
         "slideType": "textImage",
         "title": "Shortened links can be deceiving...",
-        "text": "What if we told you that innocent link, <b>http://bit.ly/2riL83e</b>, brought you to this sketchy link on the right we've already seen?",
+        "text": "What if we told you that innocent-looking link, <b>http://bit.ly/2riL83e</b>, brought you to this sketchy link on the right we've already seen?",
         "imgSrc": "img/module-img/tk-domain.jpg"
     }, {
         "slideType": "textImage",

@@ -1,3 +1,13 @@
+<md-toolbar style="min-height:20px; max-height:20px;">
+  <div class="md-toolbar-tools">
+    <h4 md-truncate flex>http://myaccount.google.com-securitysettings-transportlayersecurity.initiatesecuresocketlayer.tk</h4>
+    <!-- <span flex></span>
+    <md-button class="md-icon-button" ng-click="cancel()">
+      <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+    </md-button> -->
+  </div>
+</md-toolbar>
+
 <link rel="stylesheet" href="components/google-login/googleLogin.css" />
 <div class="container">
     <div class="login-container">
@@ -38,9 +48,9 @@
               <br><br>
             </div>
             <div class="login-options">
-                <p><a href="">Forgot email?</a></p>
+                <!-- <p><a href="">Forgot email?</a></p> -->
                 <p class="inline-justify">
-                    <a href="">More options</a>
+                    <!-- <a href="">More options</a> -->
                     <md-button ng-if="index == 0" type="submit" ng-click="googleLogin.enterOld()">Reset Password</md-button>
                     <md-button ng-if="index == 1" type="submit" ng-click="googleLogin.enterNew()">Reset Password</md-button>
                 </p>
