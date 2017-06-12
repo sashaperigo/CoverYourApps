@@ -72,9 +72,12 @@ md-toolbar a:hover {
 }
 
 .cover-your-apps {
+    position: relative;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.5em;
+    /*margin-right: 40px;*/
+    /*float: center;*/
 }
 
 .container {
