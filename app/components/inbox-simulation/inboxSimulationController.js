@@ -1,7 +1,7 @@
 'use strict';
 
-myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
-    function($scope, $http, $mdDialog) {
+myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog', '$sce',
+    function($scope, $http, $mdDialog, $sce) {
         $scope.module = $scope.$parent.module;
         $scope.main = $scope.$parent.main;
         console.log($scope.module);
@@ -54,7 +54,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
             for (var i = 0; i < $scope.emails.length; i++) {
                 var email = $scope.emails[i];
                 if (!email.deleted && !email.actioned) {
-                    var msg = 'Make sure to take care of the email with the subject"' + email.emailData.subject + '" - either follow the instructions in it or delete it';
+                    var msg = 'Make sure to take care of the email with the subject "' + email.emailData.subject + '" - either follow the instructions in it or delete it';
                     $mdDialog.show(
                         $mdDialog.alert()
                         .parent(angular.element(document.querySelector('#popupContainer')))
@@ -66,9 +66,35 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
                     );
                     return;
                 }
+            }
                 // If we get here that means we've taken care of all emails!
                 $scope.module.displayQuizAnswer = true;
+                $scope.disableDone = true;
+                $mdDialog.show(
+                    $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('#popupContainer')))
+                    .clickOutsideToClose(true)
+                    .htmlContent(feedbackHtml())
+                    .ariaLabel('Alert Dialog Demo')
+                    .ok('Got it!')
+                    .targetEvent(ev)
+                );
+        }
+
+        function feedbackHtml() {
+            var msg = '<h1>How did you do?</h1>';
+            for (var i = 0; i < $scope.emails.length; i++) {
+                var email = $scope.emails[i];
+                msg += '<h3>"' + email.emailData.subject + '"</h3><p>';
+                if (email.actioned) {
+                    msg += email.options[1].feedback;
+                }
+                else if (email.deleted) {
+                    msg += email.options[0].feedback;
+                }
+                msg += '</p>';
             }
+            return $sce.trustAsHtml(msg);
         }
     }
 ]);

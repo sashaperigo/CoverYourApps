@@ -12,12 +12,12 @@
         "text": "Delete",
         "correct": true,
         "header": "",
-        "feedback": ""
+        "feedback": "You deleted the email. This was a real request from Hillary Clinton! Now she won't get her fish. :("
     }, {
         "text": "Purchase on Amazon",
         "correct": false,
         "header": "",
-        "feedback": "",
+        "feedback": "You bought the fish! Good job spotting that this was real. Yum! Secretary Clinton will enjoy a delicious meal.",
         "link": "https://www.amazon.com/Manischewitz-Premium-Gold-Gefilte-14-50-Ounce/dp/B004DNESJO"
     }]
 }, {
@@ -34,12 +34,12 @@
         "text": "Delete",
         "correct": true,
         "header": "",
-        "feedback": ""
+        "feedback": "You deleted the email. This was a real, important email and you deleted it! Glad you are being cautious, but it wasn't even asking for sensitive information."
     }, {
         "text": "Reply \"Yes, I love it.\"",
         "correct": false,
         "header": "",
-        "feedback": "",
+        "feedback": "You replied to the email. Good job! It's probably safe to respond to emails like this, especially when they aren't requesting any sensitive information.",
         "link": ""
     }]
 }, {
@@ -56,12 +56,12 @@
         "text": "Delete",
         "correct": true,
         "header": "",
-        "feedback": ""
+        "feedback": "You deleted the email. Uh-oh! you might not get that endorsement now. It's understandable that you wanted to be careful personal phone number, but in this case there were no flags that it was a fraud."
     }, {
         "text": "Reply with phone number",
         "correct": false,
         "header": "",
-        "feedback": "",
+        "feedback": "You replied to the email. Hooray! Now you can hash out deatils with the Senator.",
         "link": ""
     }]
 }, {
@@ -78,12 +78,12 @@
         "text": "Delete",
         "correct": true,
         "header": "",
-        "feedback": ""
+        "feedback": "You deleted the email. Good job! This was a very dangerous phishing email - if you had given up your information, that could be bad."
     }, {
         "text": "Change Password",
         "correct": false,
         "header": "",
-        "feedback": "",
+        "feedback": "You gave the website your password! Oh no! Russian hackers are going to have access to all your emails. :(",
         "link": "http://myaccount.google.com-securitysettings-transportlayersecurity.initiatesecuresocketlayer.tk"
     }]
 }]}
