@@ -15,7 +15,12 @@ myApp.controller('inboxSimulationController', ['$scope','$http',
             email.seen = true;
             $scope.rhs = email;
             console.log($scope.rhs);
-        }
+        };
+
+        $scope.deleteEmail = function() {
+            $scope.rhs.deleted = true;
+            $scope.rhs = null;
+        };
     }
 ]);
 

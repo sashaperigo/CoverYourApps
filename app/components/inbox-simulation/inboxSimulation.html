@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="components/inbox-simulation/inboxSimulation.css" />
 <div class="text">
     <md-list>
-      <md-list-item class="md-2-line" ng-repeat="email in emails">
+      <md-list-item class="md-2-line" ng-repeat="email in emails" ng-if="!email.deleted">
         <div class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
-             ng-class="{seen: email.seen, selected: email === rhs}">
+             ng-class="{seen: email.seen, selected: email === rhs}" >
           <h3>{{email.emailData.subject}}</h3>
           <p ng-bind-html="email.emailData.from | html"></p>
         </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="delete-email">
             <img src="/img/etc/email-reply-img.png" width="100px" />
-            <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)" ng-disabled="module.displayQuizAnswer">{{ rhs.options[0].text }}</md-button>
+            <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="deleteEmail()">{{ rhs.options[0].text }}</md-button>
         </div>
         <br />
         <br />
