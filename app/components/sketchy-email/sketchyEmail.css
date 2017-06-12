@@ -22,21 +22,23 @@
 }
 
 .delete-email {
-    position: relative;
-    margin-right: 95px;
-    top: -95px;
-    height: 50px;
-    font-size: 12px;
-    text-align: right;
+	position: relative;
+	right: 10px;
+	top: -95px;
+	height:50px;
+	width:315px;
+	font-size: 12px;
+	text-align: right;
+	float:right;
 }
 
 .faked-email-reply {
-    position: relative;
-    right: -140px;
-    height: 50px;
-    top: -45px;
-    font-size: 12px;
-    text-align: right;
+	position: relative;
+	height:50px;
+	right: 60px;
+	top: -45px;
+	font-size: 12px;
+	text-align: right;
 }
 
 .sketchy-url-container a {

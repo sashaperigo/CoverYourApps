@@ -122,11 +122,14 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         // Quiz variables need to be in the moduleController because they have
         // to be accessible in both module.html and quiz.html!
+        // These are all used in sketchyEmail as well as quiz!
+        // displayQuizAnswer is used to tell us if we can go to the next slide (ng-disabled stuff)
         $scope.module.displayQuizAnswer = false;
         $scope.module.quizResponse = "";
         $scope.module.quizResponseCorrect = false;
         $scope.module.quizStatistics = "";
 
+        // Used for submit quiz and for sumbit email
         $scope.module.submitQuizResponse = function(clicked, callback) {
             $scope.module.displayQuizAnswer = true;
             $scope.module.quizResponseCorrect = clicked.correct;

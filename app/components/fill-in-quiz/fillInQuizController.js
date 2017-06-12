@@ -29,7 +29,6 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
                 .ok('Got it!')
                 .targetEvent(ev)
             );
-            $scope.buttonDisabled = true;
         };
 
         $scope.fillInQuiz.doNothing = function(ev) {
@@ -48,6 +47,7 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
                   .ok('Got it!')
                   .targetEvent(ev)
               );
+              $scope.buttonDisabled = true;
               $scope.module.allowNext();
             }
             else{ // If incorrect
@@ -62,7 +62,6 @@ var fillInQuizController = myApp.controller('fillInQuizController', ['$scope', '
                   .targetEvent(ev)
               );
             }
-            $scope.buttonDisabled = true;
         };
     }
 ]);
