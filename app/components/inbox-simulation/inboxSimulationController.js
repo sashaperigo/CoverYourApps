@@ -2,6 +2,11 @@
 
 myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
     function($scope, $http, $mdDialog) {
+        $scope.module = $scope.$parent.module;
+        $scope.main = $scope.$parent.main;
+        console.log($scope.module);
+        console.log($scope.main);
+
         $scope.allSeen = false;
 
         $http.get('/module_text/inbox.json')
@@ -44,6 +49,27 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
             $scope.rhs.deleted = true;
             $scope.rhs = null;
         };
+
+        $scope.allDone = function(ev) {
+            for (var i = 0; i < $scope.emails.length; i++) {
+                var email = $scope.emails[i];
+                if (!email.deleted && !email.actioned) {
+                    var msg = 'Make sure to take care of the email with the subject"' + email.emailData.subject + '" - either follow the instructions in it or delete it';
+                    $mdDialog.show(
+                        $mdDialog.alert()
+                        .parent(angular.element(document.querySelector('#popupContainer')))
+                        .clickOutsideToClose(true)
+                        .textContent(msg)
+                        .ariaLabel('Alert Dialog Demo')
+                        .ok('Got it!')
+                        .targetEvent(ev)
+                    );
+                    return;
+                }
+                // If we get here that means we've taken care of all emails!
+                $scope.module.displayQuizAnswer = true;
+            }
+        }
     }
 ]);
 

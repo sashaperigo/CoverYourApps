@@ -28,10 +28,12 @@
         <md-button ng-disabled="module.pageNumber >= module.length
             || (module.slideType === 'quiz' && !module.displayQuizAnswer)
             || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)
-            || (module.slideType === 'fillInQuiz' && !module.displayQuizAnswer)" ng-class="{flash: !(module.pageNumber >= module.length
+            || (module.slideType === 'fillInQuiz' && !module.displayQuizAnswer)
+            || (module.slideType === 'inboxSimulation' && !module.displayQuizAnswer)" ng-class="{flash: !(module.pageNumber >= module.length
             || (module.slideType === 'quiz' && !module.displayQuizAnswer)
             || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)
-            || (module.slideType === 'fillInQuiz' && !module.displayQuizAnswer)) && module.buttonGlow }" ng-click="module.incrementPage($event)">Next</md-button>
+            || (module.slideType === 'fillInQuiz' && !module.displayQuizAnswer)
+            || (module.slideType === 'inboxSimulation' && !module.displayQuizAnswer)) && module.buttonGlow }" ng-click="module.incrementPage($event)">Next</md-button>
         <span flex></span>
         <md-button style="float:right;" ng-click="module.nextSection()" class="next-section" ng-class="{'section-change-hidden': !(module.pageNumber === module.length && module.sectionNumber < module.json.length)}">Next Section {{1 + (+module.sectionNumber)}} of {{module.json.length}}</md-button>
     </md-toolbar>
