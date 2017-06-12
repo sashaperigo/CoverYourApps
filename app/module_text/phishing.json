@@ -69,12 +69,12 @@
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-russia",
-        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p> <b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
+        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p> <br><br><b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Russian Federation</b> &lt;head.of.russianfederation@gmail.com&gt;",
             "to": "Delegation of Russian Federation",
-            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br>"
+            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering."
         },
         "options": [{
             "text": "Delete",
@@ -90,7 +90,7 @@
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-philippines",
-        "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com? <b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
+        "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com? <br><br><b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Phillippines</b> &lt;head.of.philippines@gmail.com&gt;",
@@ -120,7 +120,7 @@
             "subject": "It's Time to Update Your Google Profile!",
             "from": "<b>Google Account Services</b> &lt;no-reply@accounts.google-email.com&gt;",
             "to": "me",
-            "text": "It's been a while since you've last updated information about your Google Account. Please update your information through the following link. <br><br>"
+            "text": "It's been a while since you've last updated information about your Google Account. Please update your information through the following link."
         },
         "options": [{
             "text": "Delete",
@@ -193,7 +193,7 @@
             "subject": "Canvas: Assignment Graded",
             "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
             "to": "me",
-            "text": "You have signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME HERE for Problem Set 1."
+            "text": "You have signed up to receive a daily report of some notifications from your Canvas account. Below is the report for May 24:<br><br> <b>Submission Comment: USERNAME_HERE, Problem Set 1, Introduction to Bioengineering (Engineering Living Matter, BIOE 80)</b><br><br> TA Gabbi Fisher just made a new comment on the submission for USERNAME_HERE for Problem Set 1."
         },
         "options": [{
             "text": "Delete",

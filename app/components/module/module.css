@@ -136,8 +136,7 @@ md-toolbar.footer .prev-section:hover {
 }
 
 md-toolbar .page-number {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  position: relative;
 }
 
 .flash {

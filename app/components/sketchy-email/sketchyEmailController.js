@@ -5,8 +5,11 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
         var ctrl = this;
         $scope.buttonDisabled = false;
         $scope.sketchyEmail = {};
-        // Hacky module Controller acces TODO @Sasha can bind??
+
+        // replace USERNAME_HERE with name of user in simulation.
         $scope.module = $scope.$parent.$parent.$parent.$parent.module;
+        ctrl.slide.emailData.to = ctrl.slide.emailData.to.replace("USERNAME_HERE", $scope.module.username);
+        ctrl.slide.emailData.text = ctrl.slide.emailData.text.replace("USERNAME_HERE", $scope.module.username);
 
         // Add URL for sketchyUrl simulation if necessary, otherwise leave link
         // field blank.

@@ -8,14 +8,15 @@
     to: <span ng-bind-html="$ctrl.slide.emailData.to | html"></span>
   </div>
   <div class="faked-email-reply">
-    <!-- <img src="/img/etc/email-reply-img.png" width="100px"/> -->
   </div>
   <div class="delete-email">
     <img src="/img/etc/email-reply-img.png" width="100px"/>
     <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)" ng-disabled="module.displayQuizAnswer">{{ $ctrl.slide.options[0].text }}</md-button>
   </div>
   <br><br>
-  <div class="faked-email-content"><br><br>
+  <br><br>
+  <div class="faked-email-content">
+    <br><br>
     <span ng-bind-html="$ctrl.slide.emailData.text | html"></span>
     <br><br>
     <p>
