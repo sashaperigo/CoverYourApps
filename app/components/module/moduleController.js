@@ -87,6 +87,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         $scope.module.allowNext = function() {
             $scope.module.displayQuizAnswer = true;
+            $scope.module.buttonGlow = true;
         };
 
         // Advance to the next section

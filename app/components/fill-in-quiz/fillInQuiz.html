@@ -5,7 +5,7 @@
         <br />
         <h2>Hey there!</h2>
         <p ng-if="sketchyUrl != ''">
-            <md-button class="md-raised" ng-href="{{ url }}" ng-click="fillInQuiz.notYet($event)" ng-disabled="true == buttonDisabled">{{ $ctrl.slide.buttonText }}</md-button>
+            <md-button class="md-raised" ng-href="{{ url }}" ng-click="fillInQuiz.notYet($event)" ng-disabled="module.displayQuizAnswer">{{ $ctrl.slide.buttonText }}</md-button>
         </p>
         <hr> Enter the retrieved link text in the following box below:
         <br />
@@ -13,7 +13,7 @@
         <input type="text" ng-model="fillInQuiz.submittedUrl" style="width:75%"></input>
         <br />
         <br />
-        <md-button class="md-raised md-primary" ng-click="fillInQuiz.doNothing($event)" ng-disabled="true == buttonDisabled">Submit Answer</md-button>
+        <md-button class="md-raised md-primary" ng-click="fillInQuiz.doNothing($event)" ng-disabled="module.displayQuizAnswer">Submit Answer</md-button>
     </center>
 </div>
 </div>
