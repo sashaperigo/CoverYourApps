@@ -19,7 +19,7 @@
     line-height: 30px;
     font-weight: 700;
     padding: 0.25rem 0 0.25rem 1rem;
-    background-color: #d3d3d3;
+    background-color: #f7f7f7;
 }
 
 h4#text-header {
@@ -39,12 +39,12 @@ h4#text-header {
 
 
 .interactive {
+    border-left: 10px solid #d3d3d3;
     position: absolute;
-    background-color: #ffffff;/*#d3d3d3;*/
+    background-color: #ffffff;
     max-height: calc(100vh - 75px - 150px);
     height: 100%;
-    /* Leave 2 percent margin between sections */
-    width: 64.66666666666%;
+    width: 66.66666666666%;
     right: 0;
     overflow-y: hidden;
     overflow-x: hidden;
