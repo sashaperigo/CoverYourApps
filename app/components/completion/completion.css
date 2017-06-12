@@ -25,3 +25,7 @@ canvas {
 #content-container h4 {
     line-height: 1.5;
 }
+
+.md-button+.md-button {
+    margin-left: 3rem;
+}

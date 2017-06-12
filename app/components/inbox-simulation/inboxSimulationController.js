@@ -2,10 +2,12 @@
 
 myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
     function($scope, $http, $mdDialog) {
+        $scope.allSeen = false;
+
         $http.get('/module_text/inbox.json')
             .then(function successCallback(response){
                 $scope.emails = response.data.slides;
-                // May it's biased, but IT'S GOOD ENOUGH https://www.w3schools.com/js/js_array_sort.asp
+                // Maybe it's biased, but IT'S GOOD ENOUGH https://www.w3schools.com/js/js_array_sort.asp
                 $scope.emails.sort(function(a, b){return 0.5 - Math.random()});
             }, function errorCallback(response) {
                 console.error(response.data || 'Error loading inbox simulation');
@@ -13,6 +15,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
 
         $scope.chooseEmail = function (email) {
             email.seen = true;
+            $scope.allSeen = $scope.emails.every(function (e) { return e.seen });
             $scope.rhs = email;
             console.log($scope.rhs);
         };
