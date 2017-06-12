@@ -5,7 +5,7 @@ INSERT INTO test(name) VALUES ('Alec'),('Shirin'),('Sasha'),('Emily'),('Gabbi');
 SELECT * FROM test;
 
 DROP TABLE IF EXISTS track;
-CREATE TABLE track(sessionID TEXT, resource TEXT, behavior TEXT);
+CREATE TABLE track(resource TEXT, behavior TEXT);
 
 DROP TABLE IF EXISTS session;
 CREATE TABLE "session" (
