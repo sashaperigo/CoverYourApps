@@ -22,17 +22,20 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
         $scope.action = function(ev) {
           ev.preventDefault();
           $mdDialog.show({
-            controller: "GoogleLoginController",
-            templateUrl: '/components/google-login/googleLogin.html',
+            controller: $scope.rhs.controller,
+            templateUrl: $scope.rhs.templateUrl,
             parent: angular.element(document.body),
             targetEvent: ev,
-            clickOutsideToClose:true,
+            clickOutsideToClose: false,
+            escapeToClose: false,
+            ariaLabel: "Tiny version of a webpage",
             fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
           })
-          .then(function(answer) {
-            $scope.status = 'You said the information was "' + answer + '".';
+          .then(function() {
+            console.log('action done');
+            $scope.rhs.actioned = true;
           }, function() {
-            $scope.status = 'You cancelled the dialog.';
+            console.log('action cancelled');
           })};
 
         $scope.deleteEmail = function() {

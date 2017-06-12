@@ -1,5 +1,7 @@
 {"slides": [{
     "slideType": "sketchyEmail",
+    "controller": "AmazonController",
+    "templateUrl": "/components/amazon/amazon.html",
     "emailData": {
         "subject": "Gefilte Fish",
         "from": "<b>Hillary Clinton</b> &lt;hrod17@clintonemail.com&gt;",
@@ -60,6 +62,8 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "controller": "GoogleLoginController",
+    "templateUrl": "/components/google-login/googleLogin.html",
     "emailData": {
         "subject": "Someone has your password",
         "from": "<b>Gmail Alerts</b> &lt;no-reply@accounts.googIemail.com&gt;",

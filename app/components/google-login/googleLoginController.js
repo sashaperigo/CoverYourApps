@@ -1,7 +1,7 @@
 'use strict';
 
-var GoogleLogin = myApp.controller('GoogleLoginController', ['$scope', '$rootScope',
-    function($scope, $rootScope) {
+var GoogleLogin = myApp.controller('GoogleLoginController', ['$scope', '$rootScope', '$mdDialog',
+    function($scope, $rootScope, $mdDialog) {
         $scope.googleLogin = {};
         $scope.googleLogin.oldPW = "chillary";
         $scope.googleLogin.newPW = "";
@@ -32,6 +32,15 @@ var GoogleLogin = myApp.controller('GoogleLoginController', ['$scope', '$rootSco
                 $scope.googleLogin.error = true;
             } else {
                 $scope.googleLogin.error = true;
+            }
+        };
+
+        $scope.googleLogin.close = function() {
+            if ($scope.index === 0) {
+                $mdDialog.cancel();
+            }
+            else {
+                $mdDialog.hide();
             }
         };
     }

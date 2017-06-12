@@ -5,7 +5,7 @@
     <md-list>
       <md-list-item class="md-2-line" ng-repeat="email in emails" ng-if="!email.deleted">
         <div class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
-             ng-class="{seen: email.seen, selected: email === rhs}" >
+             ng-class="{seen: email.seen, selected: email === rhs, actioned: email.actioned}" >
           <h3>{{email.emailData.subject}}</h3>
           <p ng-bind-html="email.emailData.from | html"></p>
         </div>
