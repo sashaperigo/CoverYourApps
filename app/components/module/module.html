@@ -16,6 +16,7 @@
         <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz>
         <google-login ng-if="module.slideType === 'googleLogin'" slide="module.slide"></google-login>
         <password-list ng-if="module.slide.slideType == 'passwordList'" slide="module.slide"></password-list>
+        <inbox-simulation ng-if="module.slide.slideType == 'inboxSimulation'"></inbox-simulation>
         <completion ng-if="module.slide.slideType == 'completion'" slide="module.slide"></completion>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
