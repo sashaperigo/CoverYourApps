@@ -49,7 +49,7 @@
         "slideType": "sketchyEmail",
         "name": "bizarre-bccs-and-ccs",
         "title": "Bizarre BCCs and CCs",
-        "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated!",
+        "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. <b>If you trust the link to this document, click the \"Open in Google Docs\" button. Otherwise delete the email.</b>",
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
@@ -65,7 +65,7 @@
             "text": "Open in Google Docs",
             "correct": false,
             "header": "Uh oh!",
-            "feedback": "You fell for an email with a suspicious bcc/cc field, suggesting foul play."
+            "feedback": "You fell for an email with a suspicious bcc/cc field, suggesting foul play. Did you notice the cc: to hhhhhhhhhhh@malinator.com? Bizarre CCs like this may be used for analytics of a phishing attack--this address received an email every time the Google Doc phish was propagated."
         }]
     }, {
         "slideType": "text",
@@ -74,7 +74,7 @@
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-russia",
-        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p>",
+        "text": "<p>Let's do a mini-quiz based on this simulation. Assume that all correctly-spelled email accounts are legitimate, and that emails from head of state are of the format 'head.of.[country_name]@gmail.com'.</p><p>You're representing Russia at this conference as part of its delegation. You get this email. Do you trust it and respond to it?</p> <b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Russian Federation</b> &lt;head.of.russianfederation@gmail.com&gt;",
@@ -95,12 +95,12 @@
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-philippines",
-        "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com?",
+        "text": "Now you’re part of a Southeast Asian delegation. Do you respond to head.of.phillippines@gmail.com? <b>If you trust it, click \"Reply\". Otherwise click the delete email button to safely delete the email.</b>",
         "emailData": {
             "subject": "Urgent Message from Head of State",
             "from": "<b>Head of Phillippines</b> &lt;head.of.philippines@gmail.com&gt;",
             "to": "Delegation of the Phillippines",
-            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br>"
+            "text": "Please send me an overview of all of your delegations members' intentions today, ASAP. We need to sync on strategies. Please also inform me of politically sensitive actions you are considering.<br><br> <b>In this excercise, click delete or reply to react to the email on the right.</b>"
         },
         "options": [{
             "text": "Delete",
@@ -120,7 +120,7 @@
     }, {
         "slideType": "sketchyEmail",
         "name": "google-email",
-        "text": "If you got an email from no-reply@accounts.google-email.com asking you to update personal profile information, would you trust it and click its embedded link to update your information?",
+        "text": "If you got an email from no-reply@accounts.google-email.com asking you to update personal profile information, would you trust it and click its embedded link to update your information?<br><br><b>In this excercise, click delete or \"Update Profile Information\" to react to the email on the right.</b>",
         "emailData": {
             "subject": "It's Time to Update Your Google Profile!",
             "from": "<b>Google Account Services</b> &lt;no-reply@accounts.google-email.com&gt;",
@@ -193,7 +193,7 @@
         "slideType": "sketchyEmail",
         "name": "exposing-longer-urls",
         "title": "Exposing Longer URLs",
-        "text": "Try examining the link to the right before clicking it. Does the URL look legitimate? If you trust it, click it. Otherwise click the delete email button.",
+        "text": "Try examining the \"Check Your Grade\" button to the right before clicking it. Does its link look legitimate? <br><br><b>If you trust it, click the \"Check Grade\" button. Otherwise click the delete email button to safely dispose of this email.</b>",
         "emailData": {
             "subject": "Canvas: Assignment Graded",
             "from": "<b>Stanford Canvas</b> &lt;notifications@instructure.com&gt;",
