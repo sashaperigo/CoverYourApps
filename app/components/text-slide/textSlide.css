@@ -22,3 +22,11 @@
 h4 {
     line-height: 1.5;
 }
+
+.content .text {
+    text-align: left;
+}
+
+.content .title h1 {
+    font-weight: 700;
+}
