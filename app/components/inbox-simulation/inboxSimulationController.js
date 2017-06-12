@@ -68,17 +68,42 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog', '$
                 }
             }
                 // If we get here that means we've taken care of all emails!
-                $scope.module.displayQuizAnswer = true;
                 $scope.disableDone = true;
-                $mdDialog.show(
-                    $mdDialog.alert()
-                    .parent(angular.element(document.querySelector('#popupContainer')))
-                    .clickOutsideToClose(true)
-                    .htmlContent(feedbackHtml())
-                    .ariaLabel('Alert Dialog Demo')
-                    .ok('Got it!')
-                    .targetEvent(ev)
-                );
+                var currentEmail = $scope.emails[0];
+                var currentResource = currentEmail.name;
+                var currentBehavior = currentEmail.actioned ? 'trusted' : 'deleted';
+                $scope.main.trackBehavior(currentResource, currentBehavior, function(data, resultString) {
+                    currentEmail.stats = resultString;
+                    currentEmail = $scope.emails[1];
+                    currentResource = currentEmail.name;
+                    currentBehavior = currentEmail.actioned ? 'trusted' : 'deleted';
+                    $scope.main.trackBehavior(currentResource, currentBehavior, function(data, resultString) {
+                        currentEmail.stats = resultString;
+                        currentEmail = $scope.emails[2];
+                        currentResource = currentEmail.name;
+                        currentBehavior = currentEmail.actioned ? 'trusted' : 'deleted';
+                        $scope.main.trackBehavior(currentResource, currentBehavior, function(data, resultString) {
+                            currentEmail.stats = resultString;
+                            currentEmail = $scope.emails[3];
+                            currentResource = currentEmail.name;
+                            currentBehavior = currentEmail.actioned ? 'trusted' : 'deleted';
+                            $scope.main.trackBehavior(currentResource, currentBehavior, function(data, resultString) {
+                                currentEmail.stats = resultString;
+                                $scope.module.displayQuizAnswer = true;
+                                $mdDialog.show(
+                                    $mdDialog.alert()
+                                    .parent(angular.element(document.querySelector('#popupContainer')))
+                                    .clickOutsideToClose(true)
+                                    .htmlContent(feedbackHtml())
+                                    .ariaLabel('Alert Dialog Demo')
+                                    .ok('Got it!')
+                                    .targetEvent(ev)
+                                );
+                            });
+                        });
+                    });
+                });
+
         }
 
         function feedbackHtml() {
@@ -92,7 +117,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog', '$
                 else if (email.deleted) {
                     msg += email.options[0].feedback;
                 }
-                msg += '</p>';
+                msg += '</p>' + email.stats;
             }
             return $sce.trustAsHtml(msg);
         }

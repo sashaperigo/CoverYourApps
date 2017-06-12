@@ -1,5 +1,6 @@
 {"slides": [{
     "slideType": "sketchyEmail",
+    "name": "amazon-fish",
     "controller": "AmazonController",
     "templateUrl": "/components/amazon/amazon.html",
     "emailData": {
@@ -22,6 +23,7 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "name": "huma-reply",
     "controller": "ReplyController",
     "templateUrl": "/components/reply/reply.html",
     "emailData": {
@@ -44,6 +46,7 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "name": "reply-senator",
     "controller": "ReplyController",
     "templateUrl": "/components/reply/reply.html",
     "emailData": {
@@ -66,6 +69,7 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "name": "google-login",
     "controller": "GoogleLoginController",
     "templateUrl": "/components/google-login/googleLogin.html",
     "emailData": {
