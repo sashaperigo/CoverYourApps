@@ -347,6 +347,24 @@
     }, {
         "slideType": "inboxSimulation"
     }, {
+        "slideType": "textImage",
+        "title": "Suspicious Marker One",
+        "text": "A couple of things may have alerted you to this phishing email that actually ended up in Podesta's inbox. First, \"google--email.com\" is an email domain not actually owned by Google.",
+        "imgSrc": "img/module-img/debrief-img-one.jpg"
+    }, {
+        "slideType": "textImage",
+        "title": "Suspicious Marker Two",
+        "text": "Second, this link preview suggests that the button is leading to a long, sketchy address, with a .tk suffix no less!",
+        "imgSrc": "img/module-img/debrief-img-two.jpg"
+    }, {
+        "slideType": "textImage",
+        "title": "Suspicious Marker Three",
+        "text": "Finally, this website you're giving your sensitive password information to doesn't even use secure https, it only uses insecure http!",
+        "imgSrc": "img/module-img/debrief-img-three.jpg"
+    }, {
+        "slideType": "text",
+        "text": "This simulation gave you an opportunity to try and test your newly developed phishing detection skills. Feel free to navigate back to parts of this module if you'd like further review or practice!"
+    },{
         "slideType": "completion"
     }]
 }]
