@@ -289,22 +289,22 @@
         "text": "Now, let's put your skills to the test."
     }, {
         "slideType": "text",
-        "text": "It's 2016. You're a chairman of a high-profile American presidential campaign. Your name is Jon Podesta. Your email address is john.podesta@hillaryclinton.com, and your password is \"chillary\". Take note of this password!"
+        "text": "It's 2016. You're a chairman of a high-profile American presidential campaign. Your name is Jon Podesta. Your personal email address--which you also are using for some campaign work--is <b>john.podesta@gmail.com</b>."
     }, {
         "slideType": "text",
-        "text": "You’ll be working your way through a scenario in Jon’s inbox. If an email is reasonable, you can click the link included in the email. If you think you’re being phished, you can delete the email at any time."
+        "text": "You’ll be working your way through a scenario in Jon’s inbox. If an email is reasonable, you can <b>click the link included in the email</b>. If you think you’re being phished, you can <b>delete the email</b> at any time."
     }, {
         "slideType": "text",
         "text": "Now, step into Jon Podesta's shoes. It's another typical morning, and you've got to catch up on your inbox."
     }, {
         "slideType": "text",
-        "text": "In this simlation, you will respond to or delete the emails in your inbox. At the end, you will learn if you fell for a phishing attempt or not."
+        "text": "In this simlation, you will not recieve immediate feedback after performing an action on an email. <b>At the end, you will learn if you fell for a phishing attempt or not.</b>"
     }, {
         "slideType": "sketchyEmail",
         "emailData": {
             "subject": "Gefilte Fish",
             "from": "<b>Hillary Clinton</b> &lt;hrod17@clintonemail.com&gt;",
-            "to": "vermarr@state.gov, sullivanj@state.gov, bcc: USERNAME_HERE",
+            "to": "vermarr@state.gov, sullivanj@state.gov, you",
             "text": "Where are we on this? Looking to purchase some for a family event. Can you order some on Amazon?"
         },
         "options": [{
@@ -324,7 +324,7 @@
         "emailData": {
             "subject": "Jacob K. Javits Center",
             "from": "<b>Huma Abedin</b> &lt;habedin@hillaryclinton.com&gt;",
-            "to": "hrod17@clintonemail.com, bcc: USERNAME_HERE",
+            "to": "hrod17@clintonemail.com, you",
             "text": "I'm thinking that the Javits Convention Center in NYC is perfect for our election night rally and celebration. Its location in New York is a testament to your service to this state, and the glass ceiling is evocative of some clear symbolism in your campaign. What do you think of this location?"
         },
         "options": [{
@@ -339,7 +339,47 @@
             "feedback": "",
             "link": ""
         }]
-    },{
+    }, {
+        "slideType": "sketchyEmail",
+        "emailData": {
+            "subject": "Larry Pressler",
+            "from": "<b>Adrienne Elrod</b> &lt;aelrod@hillaryclinton.com&gt;",
+            "to": "slatham@hillaryclinton.com, you",
+            "text": "John -<br>I wanted to let you know what Senator Pressler and I finally connected. <br><br> He is going to draft an op-ed endorsing Hillary and send me a draft version in the next two weeks. He will focus his endorsement on her long time work helping our veterans, as well as her foreign policy background. Ben on the surrogates team will help him refine his op-ed, and we will place it on his behalf. <br><br> Very good discussion. Also says post endorsement, he's happy to help with any \"Republicans for Hillary\" organizing activities, and also happy to help us in the Mormon community. <br><br> He's also requesting your personal phone number for future communication about Republican backing of our campaign--mind sending that over? <br><br> Thanks! <br>Adrienne"
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "",
+            "feedback": ""
+        }, {
+            "text": "Reply with phone number",
+            "correct": false,
+            "header": "",
+            "feedback": "",
+            "link": ""
+        }]
+    }, {
+        "slideType": "sketchyEmail",
+        "emailData": {
+            "subject": "Someone has your password",
+            "from": "<b>Gmail Alerts</b> &lt;no-reply@accounts.googIemail.com&gt;",
+            "to": "slatham@hillaryclinton.com, you",
+            "text": "Hi John, <br><br> Someone just used your password to try to sign in to your Google Account john.podesta@gmail.com. <br><br> Details:<br>&emsp;Saturday, 19 March, 8:34:30 UTC<br>&emsp;IP Address: 134.249.139.239<br>&emsp;Location: Ukraine<br><br>Google stopped this sign-in attempt. You should change your password immediately. <br><br> Best, The Gmail Team"
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "",
+            "feedback": ""
+        }, {
+            "text": "Change Password",
+            "correct": false,
+            "header": "",
+            "feedback": "",
+            "link": ""
+        }]
+    }, {
         "slideType": "completion"
     }]
 }]
