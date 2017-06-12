@@ -20,7 +20,7 @@
         <completion ng-if="module.slide.slideType == 'completion'" slide="module.slide"></completion>
     </div>
     <md-toolbar layout-align="space-around center" class="footer">
-        <md-button style="float:left;" ng-show="module.pageNumber === 1 && module.sectionNumber > 1" ng-click="module.prevSection()" class="prev-section">Return to Section {{module.sectionNumber - 1}} of {{module.json.length}}</md-button>
+        <md-button style="float:left;" ng-class="{'section-change-show': (module.pageNumber === 1 && module.sectionNumber > 1)}" ng-click="module.prevSection()" class="prev-section section-change-hidden">Return to Section {{module.sectionNumber - 1}} of {{module.json.length}}</md-button>
         <span flex></span>
         <md-button ng-disabled="module.pageNumber < 2" ng-click="module.decrementPage()">Back</md-button>
         <span class="page-number">{{module.pageNumber}}/{{module.length}}</span>
@@ -32,7 +32,7 @@
             || (module.slideType === 'sketchyEmail' && !module.displayQuizAnswer)
             || (module.slideType === 'fillInQuiz' && !module.displayQuizAnswer)) && module.buttonGlow }" ng-click="module.incrementPage($event)">Next</md-button>
         <span flex></span>
-        <md-button style="float:right;" ng-show="module.pageNumber === module.length && module.sectionNumber < module.json.length" ng-click="module.nextSection()" class="next-section">Next Section {{1 + (+module.sectionNumber)}} of {{module.json.length}}</md-button>
+        <md-button style="float:right;" ng-class="{'section-change-show': (module.pageNumber === module.length && module.sectionNumber < module.json.length)}" ng-click="module.nextSection()" class="next-section section-change-hidden">Next Section {{1 + (+module.sectionNumber)}} of {{module.json.length}}</md-button>
     </md-toolbar>
 </div>
 <div id="landscape-please">Your window is too narrow. Please widen it, or if you're viewing on your phone, please rotate to use landscape mode.</div>

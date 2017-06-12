@@ -114,6 +114,14 @@ md-toolbar.footer {
     clear: both;
 }
 
+.section-change-hidden {
+    visibility: hidden;
+}
+
+.section-change-show {
+    visibility: visible;
+}
+
 md-toolbar.footer .next-section {
     background-color: #b92631;
     color: white;
