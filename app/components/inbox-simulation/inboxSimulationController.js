@@ -14,6 +14,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http',
         $scope.chooseEmail = function (email) {
             email.seen = true;
             $scope.rhs = email;
+            console.log($scope.rhs);
         }
     }
 ]);

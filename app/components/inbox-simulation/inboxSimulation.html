@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="components/sketchy-email/sketchyEmail.css" />
 <link rel="stylesheet" href="components/inbox-simulation/inboxSimulation.css" />
 <div class="text">
     <md-list>
@@ -12,5 +13,32 @@
 </div>
 <div class="interactive">
     <div id="start-inbox" ng-if="!rhs">Select an email from the left to begin.</div>
-    <sketchy-email ng-if="rhs" slide="rhs"></sketchy-email>
+    <div class="sketchy-email-container" ng-if="rhs">
+        <h2>{{ rhs.emailData.subject }}</h2>
+        <hr>
+        <div class="faked-email-header">
+            <span ng-bind-html="rhs.emailData.from | html"></span>
+            <br /> to: <span ng-bind-html="rhs.emailData.to | html"></span>
+        </div>
+        <div class="faked-email-reply">
+        </div>
+        <div class="delete-email">
+            <img src="/img/etc/email-reply-img.png" width="100px" />
+            <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)" ng-disabled="module.displayQuizAnswer">{{ rhs.options[0].text }}</md-button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="faked-email-content">
+            <br />
+            <br />
+            <span ng-bind-html="rhs.emailData.text | html"></span>
+            <br />
+            <br />
+            <p>
+                <md-button name="respond-email" class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="sketchyEmail.reply($event)" ng-disabled="module.displayQuizAnswer">{{ rhs.options[1].text }}</md-button>
+            </p>
+        </div>
+    </div>
 </div>
