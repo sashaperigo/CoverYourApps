@@ -12,6 +12,13 @@
 
 .question-container {
     margin: auto;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.question-container h1 {
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .question {
@@ -20,6 +27,7 @@
 
 .answers {
     display: inline-block;
+    margin: 0.5rem;
 }
 
 .answers+.answers {

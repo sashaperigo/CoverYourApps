@@ -3,7 +3,7 @@
     <div class="content">
         <h1 ng-if="$ctrl.slide.title" ng-bind-html="$ctrl.slide.title | html"></h1>
         <br ng-if="$ctrl.slide.title" />
-        <h3 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length < 400"></h3>
-        <h4 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length >= 400"></h4>
+        <h3 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length < 500"></h3>
+        <h4 ng-bind-html="$ctrl.slide.text | html" ng-if="$ctrl.slide.text.length >= 500"></h4>
     </div>
 </div>
