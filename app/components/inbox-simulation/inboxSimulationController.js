@@ -1,7 +1,7 @@
 'use strict';
 
-myApp.controller('inboxSimulationController', ['$scope','$http',
-    function($scope, $http) {
+myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
+    function($scope, $http, $mdDialog) {
         $http.get('/module_text/inbox.json')
             .then(function successCallback(response){
                 $scope.emails = response.data.slides;
@@ -16,6 +16,22 @@ myApp.controller('inboxSimulationController', ['$scope','$http',
             $scope.rhs = email;
             console.log($scope.rhs);
         }
+
+        $scope.action = function(ev) {
+          $mdDialog.show({
+            controller: "GoogleLoginController",
+            templateUrl: '/components/google-login/googleLogin.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+            fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+          })
+          .then(function(answer) {
+            $scope.status = 'You said the information was "' + answer + '".';
+          }, function() {
+            $scope.status = 'You cancelled the dialog.';
+          });
+        };
     }
 ]);
 

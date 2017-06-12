@@ -8,8 +8,7 @@
     position: relative;
     top: 50%;
     width: 338px;
-    height: 395px;
-    transform: perspective(1px) translateY(-50%);
+    height: 595px;
 }
 
 .login-container p {
@@ -19,7 +18,7 @@
 
 .login-box {
     width: 338px;
-    height: 375px;
+    min-height: 375px;
     background-color: white;
     padding: 2.5rem;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);

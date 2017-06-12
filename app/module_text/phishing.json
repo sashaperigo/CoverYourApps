@@ -238,9 +238,6 @@
         "text": "Luckily, there are websites like <a href='http://wheredoesthislinkgo.com/'>wheredoesthislinkgo.com</a> that you can use to check what a shortened link actually leads to. For example, we can see that the shortened link <b>http://bit.ly/2k3rNkd</b> leads to <b>http://survey-winner.com/</b>, a website that could prey on people who think they really have won prizes through random online surveys.",
         "imgSrc": "img/module-img/example-expander.jpg"
     }, {
-        "slideType": "text",
-        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with http or https. https represents a secure connection that encrypts the information that you share with a website. Trusted websites tend to use https."
-    }, {
         "slideType": "fillInQuiz",
         "name": "examine-url",
         "text": "Now, try using <a href='http://wheredoesthislinkgo.com/'>wheredoesthislinkgo.com</a> to learn where the link to the right actually goes! Keep \"http\" in your answer.",
@@ -258,6 +255,9 @@
             "feedback": "Here's a hint: select \"Copy Link Address\" to copy the link and then paste it to wheredoesthislinkgo.com to examine the full link.",
             "link": "http://bit.ly/1DCsMsx"
         }]
+    }, {
+        "slideType": "text",
+        "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with http or https. https represents a secure connection that encrypts the information that you share with a website. Trusted websites tend to use https."
     }, {
         "slideType": "quiz",
         "name": "bank-of-the-vvest",
