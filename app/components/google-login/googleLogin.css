@@ -12,6 +12,7 @@
 }
 
 .login-container p {
+    padding-top: 30px;
     font-size: 0.9rem;
     font-width: 500;
 }
