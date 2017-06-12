@@ -1,12 +1,17 @@
 .quiz-container {
     padding: 1rem 1rem 1rem 1rem;
     text-align: center;
-    width: 75%;
     margin: auto;
+    width: 75%;
+}
+
+#quiz-flex {
+    display: inline-flex;
+    width: 100%;
 }
 
 .question-container {
-    float: left;
+    margin: auto;
 }
 
 .question {
@@ -24,7 +29,6 @@
 .image {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    float: right;
 }
 
 .image img {
