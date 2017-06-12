@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="components/text-image/textImage.css" />
 <div class="text">
     <h4 id="text-header" ng-if="$ctrl.slide.title" ng-bind-html="$ctrl.slide.title | html"></h4>
-    <div id="text-content" ng-bind-html="$ctrl.slide.text | html">
-    </div>
+    <h4 id="text-content" ng-bind-html="$ctrl.slide.text | html">
+    </h4>
 </div>
 <div class="interactive">
     <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
