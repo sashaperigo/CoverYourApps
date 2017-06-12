@@ -3,7 +3,6 @@
 var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope', '$rootScope', '$mdDialog', '$sce',
     function($scope, $rootScope, $mdDialog, $sce) {
         var ctrl = this;
-        $scope.buttonDisabled = false;
         $scope.sketchyEmail = {};
 
         // replace USERNAME_HERE with name of user in simulation.
@@ -55,8 +54,7 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
                     .targetEvent(ev)
                 );
             });
-            $scope.buttonDisabled = true;
-        }
+        };
     }
 ]);
 

@@ -1,7 +1,7 @@
 'use strict';
 
-var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootScope', '$location', '$http',
-    function($scope, $rootScope, $location, $http) {
+var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootScope', '$location', '$http', '$mdDialog',
+    function($scope, $rootScope, $location, $http, $mdDialog) {
         $scope.module = {};
         $scope.module.name = "";
         $scope.module.pageNumber = 1;
@@ -185,13 +185,27 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
 
         // Loads saved username
         $scope.module.saveUsername = function() {
-            $scope.module.username = prompt('What is your name?');
-            $http.post('/api/username/' + $scope.module.username)
-                .then(function successCallback(response) {}, function errrorCallback(response) {
-                    console.error(response.data || 'Error saving username');
-                });
-        };
+            $mdDialog.show(
+                $mdDialog.prompt()
+                .title('What\'s your name?')
+                .textContent('Before we get started, please let us know what we should call you so we can personalize our demos and games for you.')
+                .ariaLabel('Dialog asking for your name')
+                .ok('Submit')
+            ).then(function (userInput) {
+                if (userInput){
+                    $scope.module.username = userInput;
+                    $http.post('/api/username/' + $scope.module.username)
+                        .then(function(response) {}, function(response) {
+                            console.error(response.data || 'Error saving username');
+                        });
+                } else { // You have to save a username!!!
+                    $scope.module.saveUsername();
+                }
+            }, function errrorCallback(){
 
+            });
+
+        };
         $scope.module.loadUsername();
     }
 ]);
