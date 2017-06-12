@@ -8,5 +8,6 @@
     <sketchy-url ng-if="$ctrl.slide.slideType === 'sketchyUrl'"></sketchy-url>
     <fill-in-quiz ng-if="$ctrl.slide.slideType === 'fillInQuiz'" slide="$ctrl.slide"></fill-in-quiz>
     <sketchy-email ng-if="$ctrl.slide.slideType === 'sketchyEmail'" slide="$ctrl.slide"></sketchy-email>
+    <password-managers ng-if="$ctrl.slide.slideType === 'passwordManagers'" slide="$ctrl.slide"></password-managers>
     <img ng-if="$ctrl.slide.slideType === 'textImage'" ng-src="{{ $ctrl.slide.imgSrc }}" />
 </div>

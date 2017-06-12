@@ -15,7 +15,7 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
             email.seen = true;
             $scope.rhs = email;
             console.log($scope.rhs);
-        }
+        };
 
         $scope.action = function(ev) {
           $mdDialog.show({
@@ -30,7 +30,11 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
             $scope.status = 'You said the information was "' + answer + '".';
           }, function() {
             $scope.status = 'You cancelled the dialog.';
-          });
+          })};
+
+        $scope.deleteEmail = function() {
+            $scope.rhs.deleted = true;
+            $scope.rhs = null;
         };
     }
 ]);
