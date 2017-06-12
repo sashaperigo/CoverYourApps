@@ -7,6 +7,7 @@
     max-height: calc(100vh - 75px - 150px);
     background-color: white;
     overflow-x: wrap;
+    overflow-y: scroll;
     padding: 0 0 0 0rem;
 }
 

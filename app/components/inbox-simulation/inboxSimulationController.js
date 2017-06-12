@@ -17,7 +17,6 @@ myApp.controller('inboxSimulationController', ['$scope','$http', '$mdDialog',
             email.seen = true;
             $scope.allSeen = $scope.emails.every(function (e) { return e.seen });
             $scope.rhs = email;
-            console.log($scope.rhs);
         };
 
         $scope.action = function(ev) {
