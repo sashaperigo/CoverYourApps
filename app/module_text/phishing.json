@@ -23,7 +23,7 @@
         }, {
             "text": "No",
             "correct": true,
-            "feedback": "You evaded this phishing attack. If you had fallen for it, this adversary would have gained access to your Gmail account, giving them the ability to disseminate this dangerous email further. Although this may seem sophisticated, there are even more complex phishing attacks out there."
+            "feedback": "You evaded this phishing attack! If you had fallen for it, this adversary would have gained access to your Gmail account, giving them the ability to disseminate this dangerous email further! Although this may seem sophisticated, there are even more complex phishing attacks out there."
         }]
     }, {
         "slideType": "text",
@@ -44,11 +44,11 @@
         "slideType": "sketchyEmail",
         "name": "bizarre-bccs-and-ccs",
         "title": "Bizarre BCCs and CCs",
-        "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. <b>If you trust the link to this document, click the \"Open in Google Docs\" button. Otherwise delete the email.</b>",
+        "text": "Let’s start out with an example already familiar to us--the massive Google Doc phish in May 2017. <br><br><b>If you trust the link to this document, click the \"Open in Google Docs\" button. Otherwise delete the email.</b>",
         "emailData": {
             "subject": "Sasha Perigo has shared a document on Google Docs with you",
             "from": "<b>Sasha Perigo</b> &lt;sperigo@stanford.edu&gt;",
-            "to": "hhhhhhhhhhhhhh., bcc: USERNAME_HERE",
+            "to": "hhhhhhhhhhhhhh@mailinator.com, bcc: USERNAME_HERE",
             "text": "Sasha Perigo has invited you to view the following document:"
         },
         "options": [{
@@ -289,13 +289,57 @@
         "text": "Now, let's put your skills to the test."
     }, {
         "slideType": "text",
-        "text": "Pretend that you are a high-level member of a Presidential Campaign. Your name is Jon Podesta. Your email address is john.podesta@gmail.com, and your password is \"cleft cam synod lacy\". Take note of this password!"
+        "text": "It's 2016. You're a chairman of a high-profile American presidential campaign. Your name is Jon Podesta. Your email address is john.podesta@hillaryclinton.com, and your password is \"chillary\". Take note of this password!"
     }, {
         "slideType": "text",
-        "text": "You’ll be working your way through a scenario in Jon’s inbox. If you think you’re being phished, you can delete the email at any time."
+        "text": "You’ll be working your way through a scenario in Jon’s inbox. If an email is reasonable, you can click the link included in the email. If you think you’re being phished, you can delete the email at any time."
     }, {
-        "slideType": "TODO: emailSimulation"
+        "slideType": "text",
+        "text": "Now, step into Jon Podesta's shoes. It's another typical morning, and you've got to catch up on your inbox."
     }, {
+        "slideType": "text",
+        "text": "In this simlation, you will respond to or delete the emails in your inbox. At the end, you will learn if you fell for a phishing attempt or not."
+    }, {
+        "slideType": "sketchyEmail",
+        "emailData": {
+            "subject": "Gefilte Fish",
+            "from": "<b>Hillary Clinton</b> &lt;hrod17@clintonemail.com&gt;",
+            "to": "vermarr@state.gov, sullivanj@state.gov, bcc: USERNAME_HERE",
+            "text": "Where are we on this? Looking to purchase some for a family event. Can you order some on Amazon?"
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "",
+            "feedback": ""
+        }, {
+            "text": "Purchase on Amazon",
+            "correct": false,
+            "header": "",
+            "feedback": "",
+            "link": "https://www.amazon.com/Manischewitz-Premium-Gold-Gefilte-14-50-Ounce/dp/B004DNESJO"
+        }]
+    }, {
+        "slideType": "sketchyEmail",
+        "emailData": {
+            "subject": "Jacob K. Javits Center",
+            "from": "<b>Huma Abedin</b> &lt;habedin@hillaryclinton.com&gt;",
+            "to": "hrod17@clintonemail.com, bcc: USERNAME_HERE",
+            "text": "I'm thinking that the Javits Convention Center in NYC is perfect for our election night rally and celebration. Its location in New York is a testament to your service to this state, and the glass ceiling is evocative of some clear symbolism in your campaign. What do you think of this location?"
+        },
+        "options": [{
+            "text": "Delete",
+            "correct": true,
+            "header": "",
+            "feedback": ""
+        }, {
+            "text": "Reply \"Yes, I love it.\"",
+            "correct": false,
+            "header": "",
+            "feedback": "",
+            "link": ""
+        }]
+    },{
         "slideType": "completion"
     }]
 }]
