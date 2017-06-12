@@ -12,7 +12,7 @@
     </div>
     <div class="content-grid">
         <text-slide ng-if="module.slideType === 'text'" slide="module.slide"></text-slide>
-        <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail' || module.slideType === 'fillInQuiz'" slide="module.slide"></text-image>
+        <text-image ng-if="module.slideType === 'textImage' || module.slideType === 'sketchyUrl' || module.slideType === 'sketchyHttps' || module.slideType === 'sketchyEmail' || module.slideType === 'fillInQuiz' || module.slideType === 'passwordManagers'" slide="module.slide"></text-image>
         <quiz ng-if="module.slideType === 'quiz'" slide="module.slide"></quiz>
         <google-login ng-if="module.slideType === 'googleLogin'" slide="module.slide"></google-login>
         <password-list ng-if="module.slide.slideType == 'passwordList'" slide="module.slide"></password-list>

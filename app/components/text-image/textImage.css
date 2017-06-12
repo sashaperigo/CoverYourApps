@@ -31,6 +31,13 @@ h4#text-header {
     line-height: 1.5;
 }
 
+/* Links within the text should be super obvious. */
+.text #text-content a {
+    text-decoration: underline;
+    color: #0074d9;
+}
+
+
 .interactive {
     position: absolute;
     background-color: #ffffff;/*#d3d3d3;*/
