@@ -1,39 +1,39 @@
 <link rel="stylesheet" href="components/sketchy-email/sketchyEmail.css" />
 <link rel="stylesheet" href="components/inbox-simulation/inboxSimulation.css" />
-<div ng-cloak class="text">
+<div  class="text">
     <h4 id="text-header">Inbox</h4>
     <md-list>
       <md-list-item class="md-2-line" ng-repeat="email in emails" ng-if="!email.deleted">
-        <div ng-cloak class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
+        <div  class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
              ng-class="{seen: email.seen, selected: email === rhs, actioned: email.actioned}" >
           <h3>{{email.emailData.subject}}</h3>
           <p ng-bind-html="email.emailData.from | html"></p>
         </div>
       </md-list-item>
     </md-list>
-    <div ng-cloak ng-if="!allSeen" class="instructions">
+    <div  ng-if="!allSeen" class="instructions">
         <p>Go through your whole inbox and take care of each email.</p>
         <p>We'll auto fill in any of Jon's personal information that you might not know (phone numbers, adderesses, usernames and passwords, etc.). For everything else, you can respond with whatever you think is appropriate.</p>
     </div>
-    <div ng-cloak ng-if="allSeen" class="instructions">
+    <div  ng-if="allSeen" class="instructions">
         <p>Done checking your email? Make sure you handle all the business you need to, then click the button below.</p>
         <md-button class="md-raised" ng-click="allDone()">
             I'm done!
         </button>
     </div>
 </div>
-<div ng-cloak class="interactive">
-    <div ng-cloak id="start-inbox" ng-if="!rhs">Select an email from your inbox on the left.</div>
-    <div ng-cloak class="sketchy-email-container" ng-if="rhs">
+<div  class="interactive">
+    <div  id="start-inbox" ng-if="!rhs">Select an email from your inbox on the left.</div>
+    <div  class="sketchy-email-container" ng-if="rhs">
         <h2>{{ rhs.emailData.subject }}</h2>
         <hr>
-        <div ng-cloak class="faked-email-header">
+        <div  class="faked-email-header">
             <span ng-bind-html="rhs.emailData.from | html"></span>
             <br /> to: <span ng-bind-html="rhs.emailData.to | html"></span>
         </div>
-        <div ng-cloak class="faked-email-reply">
+        <div  class="faked-email-reply">
         </div>
-        <div ng-cloak class="delete-email">
+        <div  class="delete-email">
             <img src="/img/etc/email-reply-img.png" width="100px" />
             <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="deleteEmail()">{{ rhs.options[0].text }}</md-button>
         </div>
@@ -41,7 +41,7 @@
         <br />
         <br />
         <br />
-        <div ng-cloak class="faked-email-content">
+        <div  class="faked-email-content">
             <br />
             <br />
             <span ng-bind-html="rhs.emailData.text | html"></span>

@@ -88,8 +88,8 @@ myApp.controller('MainController', ['$scope', '$http',
          * resultString is a string that summarizes stuff
          * e.g. "70% of people selected no. 30% of people selected yes"
 
-<div ng-cloak class="progress">
-  <div ng-cloak class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+<div  class="progress">
+  <div  class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
   aria-valuemin="0" aria-valuemax="100" style="width:50%">
     50% Complete (info)
   </div>
@@ -112,7 +112,7 @@ myApp.controller('MainController', ['$scope', '$http',
                     var resultString = '';
                     for (var i = 0; i < response.data.length; i++) {
                         var percent = Math.round(100 * response.data[i].count / total).toString();
-                        resultString += '<div ng-cloak class=\"progress\"> <div ng-cloak class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"';
+                        resultString += '<div  class=\"progress\"> <div  class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"';
                         resultString += percent;
                         resultString += ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent + '%\">';
                         resultString += '</div></div>';

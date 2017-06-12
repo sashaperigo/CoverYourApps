@@ -1,41 +1,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="components/module-list/moduleList.css" />
-<div ng-cloak class="hidden-xs container">
-    <div ng-cloak class="header">
+<div  class="hidden-xs container">
+    <div  class="header">
         <h1>Start Learning</h1>
         <br />
         <p>Basic online safety skills can go a long way towards protecting your online identity. Select from one of the following courses to start learning today!
         </p>
     </div>
-    <div ng-cloak ng-repeat="module in moduleList.modules" class="module-listing">
+    <div  ng-repeat="module in moduleList.modules" class="module-listing">
         <a ng-href="{{module.path}}" class="module-button">
             <i class="{{module.icon}}"></i>
         </a>
-        <div ng-cloak class="module-description">
+        <div  class="module-description">
             <h4 class="module-name"><a ng-href="{{module.path}}">{{module.name}}</a></h4>
             <p>{{module.description}}</p>
         </div>
-        <div ng-cloak style="clear: both;"></div>
+        <div  style="clear: both;"></div>
     </div>
 </div>
 
-<div ng-cloak class="visible-xs">
-    <div ng-cloak class="header">
+<div  class="visible-xs">
+    <div  class="header">
         <h1>Start Learning</h1>
         <br />
         <p>Basic online safety skills can go a long way towards protecting your online identity. Select from one of the following courses to start learning today!
         </p>
     </div>
-    <div ng-cloak ng-repeat="module in moduleList.modules" class="module-listing">
+    <div  ng-repeat="module in moduleList.modules" class="module-listing">
 
-        <div ng-cloak class="col-xs-2">
+        <div  class="col-xs-2">
             <a ng-href="{{module.path}}" class="module-button">
                 <i class="{{module.icon}}"></i>
             </a>
         </div>
 
-        <div ng-cloak class="col-xs-10">
-            <div ng-cloak class="module-description">
+        <div  class="col-xs-10">
+            <div  class="module-description">
                 <h4 class="module-name"><a ng-href="{{module.path}}">{{module.name}}</a></h4>
                 <p>{{module.description}}</p>
             </div>
@@ -43,7 +43,7 @@
 
 
 
-        <div ng-cloak style="clear: both;"></div>
+        <div  style="clear: both;"></div>
 
 
     </div>

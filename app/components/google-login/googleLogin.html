@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="components/google-login/googleLogin.css" />
 
 <md-toolbar style="min-height:35px; max-height:35px;">
-  <div ng-cloak class="md-toolbar-tools">
+  <div  class="md-toolbar-tools">
     <h4 md-truncate flex>http://myaccount.google.com-securitysettings-transportlayersecurity.initiatesecuresocketlayer.tk</h4>
     <md-button class="md-icon-button" ng-click="googleLogin.close()">
       <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -12,55 +12,55 @@
 <br>
 <br>
 
-<div ng-cloak class="container">
-    <div ng-cloak class="login-container">
-        <div ng-cloak class="login-box">
+<div  class="container">
+    <div  class="login-container">
+        <div  class="login-box">
             <p><img src="img/etc/google-logo.png"></p>
             <h3>Reset Your Password</h3>
             <p>Changing password for john.podesta@gmail.com.</p>
-            <div ng-cloak class="enterOld" ng-if="index == 0">
+            <div  class="enterOld" ng-if="index == 0">
               <md-input-container id="md-input-container">
                   <label>Enter your old password.</label>
                   <input type="password" ng-model="googleLogin.oldPW">
-                  <div ng-cloak ng-messages="error" ng-show="googleLogin.error">
-                      <div ng-cloak ng-message="required" class="error">Enter your old password.</div>
+                  <div  ng-messages="error" ng-show="googleLogin.error">
+                      <div  ng-message="required" class="error">Enter your old password.</div>
                   </div>
               </md-input-container>
             </div>
-            <div ng-cloak class="enterOld" ng-if="index == 1">
+            <div  class="enterOld" ng-if="index == 1">
               <md-input-container id="md-input-container">
                   <label>Enter your new password.</label>
                   <input type="password" ng-model="googleLogin.newPW">
-                  <div ng-cloak ng-messages="error" ng-show="googleLogin.error">
-                      <div ng-cloak ng-message="required" class="error"></div>
+                  <div  ng-messages="error" ng-show="googleLogin.error">
+                      <div  ng-message="required" class="error"></div>
                   </div>
               </md-input-container>
 
               <md-input-container id="md-input-container">
                   <label>Confirm new password.</label>
                   <input type="password" ng-model="googleLogin.confirmNewPW">
-                  <div ng-cloak ng-messages="error" ng-show="googleLogin.error">
-                      <div ng-cloak ng-message="required" class="error">Password does not match entry above.</div>
+                  <div  ng-messages="error" ng-show="googleLogin.error">
+                      <div  ng-message="required" class="error">Password does not match entry above.</div>
                   </div>
               </md-input-container>
             </div>
-            <div ng-cloak class="enterOld" ng-if="index == 2">
+            <div  class="enterOld" ng-if="index == 2">
               <br><br>
               Password successfully changed.
               <br><br>
               <br><br>
             </div>
-            <div ng-cloak class="login-options">
+            <div  class="login-options">
                 <!-- <p><a href="">Forgot email?</a></p> -->
                 <p class="inline-justify">
                     <!-- <a href="">More options</a> -->
                     <md-button ng-if="index == 0" type="submit" ng-click="googleLogin.enterOld()">Reset Password</md-button>
                     <md-button ng-if="index == 1" type="submit" ng-click="googleLogin.enterNew()">Reset Password</md-button>
                 </p>
-                <div ng-cloak style="clear: both;"></div>
+                <div  style="clear: both;"></div>
             </div>
         </div>
-        <div ng-cloak class="login-footer">
+        <div  class="login-footer">
             <span>Help</span>
             <span>Privacy</span>
             <span>Terms</span>

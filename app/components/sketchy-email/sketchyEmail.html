@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="components/sketchy-email/sketchyEmail.css" />
-<div ng-cloak class="sketchy-email-container">
+<div  class="sketchy-email-container">
     <h2>{{ $ctrl.slide.emailData.subject }}</h2>
     <hr>
-    <div ng-cloak class="faked-email-header">
+    <div  class="faked-email-header">
         <span ng-bind-html="$ctrl.slide.emailData.from | html"></span>
         <br /> to: <span ng-bind-html="$ctrl.slide.emailData.to | html"></span>
     </div>
-    <div ng-cloak class="faked-email-reply">
+    <div  class="faked-email-reply">
     </div>
-    <div ng-cloak class="delete-email">
+    <div  class="delete-email">
         <img src="/img/etc/email-reply-img.png" width="100px" />
         <md-button name="delete" class="md-warn md-raised md-hue-2" ng-click="sketchyEmail.delete($event)" ng-disabled="module.displayQuizAnswer">{{ $ctrl.slide.options[0].text }}</md-button>
     </div>
@@ -16,7 +16,7 @@
     <br />
     <br />
     <br />
-    <div ng-cloak class="faked-email-content">
+    <div  class="faked-email-content">
         <br />
         <br />
         <span ng-bind-html="$ctrl.slide.emailData.text | html"></span>
