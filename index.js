@@ -47,25 +47,41 @@ app.get('/api/dbtest', function (req, res) {
 // which represents how many people (not including current user) clicked each option
 // Also saves the current user's choice into tracking db and into their session
 app.post('/api/track/:resource/:behavior', function (req, res) {
-  // Save to user's session
+  // Make behavior store in session, if doesn't exist
   if (!req.session.behaviors) req.session.behaviors = {};
-  req.session.behaviors[req.params.resource] = req.params.behavior;
 
-  // Save to db and get statistics
-  var newRow = [req.params.resource, req.params.behavior];
-  db.task(t => {
-    return t.batch([
-        t.any('SELECT behavior, COUNT(*) AS count FROM track WHERE resource = $1 GROUP BY behavior', req.params.resource),
-        t.none('INSERT INTO track(resource, behavior) values($1, $2)', newRow)
-    ]);
-  })
-    .then(data => {
-      res.json(data[0]);
-    })
-    .catch(err => {
-      console.error('Problem tracking resource/behavior:', newRow, '\n', err)
-      res.status(500).send(err);
-    });
+  var selectStatement = 'SELECT behavior, COUNT(*) AS count FROM track WHERE resource = $1 GROUP BY behavior';
+  // If we have already saved a behavior for this session, only get statistics
+  if (req.session.behaviors.hasOwnProperty(req.params.resource)) {
+      db.any(selectStatement, req.params.resource)
+          .then(data => {
+            res.json(data);
+          })
+          .catch(err => {
+            console.error('Problem getting statistics on resource:', req.params.resource, '\n', err)
+            res.status(500).send(err);
+          });
+  }
+  // If we haven't previously saved the behavior, track it + get statistics
+  else {
+      // Save behiavor to session
+      req.session.behaviors[req.params.resource] = req.params.behavior;
+      // Save behavior to db and get statistics
+      var newRow = [req.params.resource, req.params.behavior];
+      db.task(t => {
+        return t.batch([
+            t.any(selectStatement, req.params.resource),
+            t.none('INSERT INTO track(resource, behavior) values($1, $2)', newRow)
+        ]);
+      })
+        .then(data => {
+          res.json(data[0]);
+        })
+        .catch(err => {
+          console.error('Problem tracking resource/behavior:', newRow, '\n', err)
+          res.status(500).send(err);
+        });
+  }
 });
 
 app.get('/api/test-session/', function (req, res) {
