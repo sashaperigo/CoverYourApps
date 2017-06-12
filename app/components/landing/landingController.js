@@ -2,18 +2,21 @@
 
 myApp.controller('landingController', ['$scope', '$rootScope',
     function($scope, $rootScope) {
-        var resizeSlideImageOverlay = function() {
+        $scope.landing = {};
+
+        $scope.landing.resizeSlideImageOverlay = function() {
             var sliderHeight = $("#slider1_container").height();
             console.log(sliderHeight);
             $("#slide-image-overlay").height(sliderHeight);
+            console.log($("#slide-image-overlay").height());
         };
 
         /* Lay image overlay on top of slider */
         $scope.$on("$viewContentLoaded", function() {
-            console.log("Aloha?");
-            resizeSlideImageOverlay();
+            // Set timeout so we allow the image to load before resizing
+            window.setTimeout($scope.landing.resizeSlideImageOverlay, 30);
             $(window).resize(function() {
-                resizeSlideImageOverlay();
+                $scope.landing.resizeSlideImageOverlay();
             });
         });
 

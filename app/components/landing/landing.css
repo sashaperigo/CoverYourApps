@@ -90,10 +90,18 @@
     position: absolute;
     top: 0;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 3rem;
     z-index: 100;
     text-align: center;
     overflow-y: hidden;
+}
+
+#slide-image-overlay-text {
+    /*height: inherit;*/
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50%));
+    left: 12.5%;
 }
 
 .call-to-action .button {
