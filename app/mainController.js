@@ -96,6 +96,14 @@ myApp.controller('MainController', ['$scope', '$http',
 </div>
          */
         $scope.main.trackBehavior = function(resource, behavior, callback) {
+            // Some of the quiz answers in the authentication module contain
+            // HTML. This parses incorrectly and throws an error when
+            // concatenated into an API endpoint. To avoid this error, I'm
+            // snipping off all text in parenthesis from the behavior string
+            // which takes care of all of the HTML.
+            if (behavior.indexOf("(") !== -1) {
+                behavior = behavior.substring(0, behavior.indexOf("("));
+            }
             $http.post('api/track/' + resource + '/' + behavior)
                 .then(function successCallback(response) {
                     var total = response.data.reduce(function(soFar, entry) {
@@ -104,10 +112,10 @@ myApp.controller('MainController', ['$scope', '$http',
                     var resultString = '';
                     for (var i = 0; i < response.data.length; i++) {
                         var percent = Math.round(100 * response.data[i].count / total).toString();
-                        resultString += '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"'
+                        resultString += '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"';
                         resultString += percent;
-                        resultString += ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent + '%\">'
-                        resultString += '</div></div>'
+                        resultString += ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent + '%\">';
+                        resultString += '</div></div>';
                         resultString += '<p class=\"statistic-subheader\">' + percent + '\% answered ' + response.data[i].behavior + '<p>';
                     }
                     callback(response.data, resultString);
