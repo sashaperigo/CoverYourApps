@@ -17,11 +17,15 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
         }
 
         $scope.sketchyEmail.delete = function(ev) {
-            submitEmail(ev, ctrl.slide.options[0]);
+          if (ctrl.slide.options[0].feedback != ""){
+              submitEmail(ev, ctrl.slide.options[0]);
+          }
         };
 
         $scope.sketchyEmail.reply = function(ev) {
-            submitEmail(ev, ctrl.slide.options[1]);
+          if (ctrl.slide.options[1].feedback != ""){
+              submitEmail(ev, ctrl.slide.options[1]);
+          }
         };
 
 

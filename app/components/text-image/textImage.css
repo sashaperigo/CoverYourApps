@@ -34,7 +34,7 @@ h4#text-header {
 
 .interactive {
     position: absolute;
-    background-color: #f7f7f7;/*#d3d3d3;*/
+    background-color: #ffffff;/*#d3d3d3;*/
     max-height: calc(100vh - 75px - 150px);
     height: 100%;
     /* Leave 2 percent margin between sections */

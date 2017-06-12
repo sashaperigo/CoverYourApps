@@ -158,14 +158,12 @@
         "text": "Phishing emails often include links to other websites that raise red flags. This section will introduce you to basic rules for rooting out suspicious links."
     }, {
         "slideType": "text",
-        "title": ".com, .org, .gov are your friend",
-        "text": "TODO: Often, an easy way to tell if a link is legitimate before clicking on it is to hover your mouse above the link. As you do, a yellow box will appear at the bottom left corner and show a preview of the URL corresponding to that link. Try this with the button on the right! Sometimes, sketchy links are hidden behind realistic-looking buttons disguised as those belonging to official google emails, like those from Google Docs. If it looks obviously misleading (\"sketchywebsite.net\"), then don’t click it!"
+        "title": ".com, .org, .gov, .edu are your friends!",
+        "text": "Most legitimate websites end with the following patterns above; there are few people who sell domain names that end with these suffixes, and these vendors often try to verify the legitimacy of the person buying this domain."
     }, {
-        "slideType": "textImage",
-        "title": "Link appearances can be deceiving...",
-        "text": "However, suspicious links are not always obvious. For instance, they can be long links that look legitimate when truncated in a preview. The link on the right, when truncated, looks like \"http://myaccount.google.com-securitysetting...\" but is actually registered as a \".tk\" website (as opposed to the more conventional \".com\"). Any domain that is unfamiliar, such as .com, .org, .gov, , .edu, or .mil, should trigger suspicion about a website and its authenticity.",
-        "imgSrc": "img/module-img/tk-domain.jpg",
-        "imgCitation": "https://motherboard.vice.com/en_us/article/how-hackers-broke-into-john-podesta-and-colin-powells-gmail-accounts"
+        "slideType": "text",
+        "title": "Peek before you click!",
+        "text": "Often, an easy way to tell if a link is legitimate before clicking on it is to hover your mouse above the link. As you do, a yellow box will appear at the bottom left corner and show a preview of the URL corresponding to that link. Try this with the button on the right! Sometimes, sketchy links are hidden behind realistic-looking buttons disguised as those belonging to official google emails, like those from Google Docs. If it looks obviously misleading (\"sketchywebsite.net\"), then don’t click it!"
     }, {
         "slideType": "fillInQuiz",
         "name": "examine-url",
@@ -173,17 +171,22 @@
         "buttonText": "Check this link out! Nothing suspicious here.",
         "answer": "https://www.wired.com/2015/08/how-to-use-facebook-privacy-settings-step-by-step/",
         "options": [{
-            "text": "Check Your Grade Here",
+            "text": "NONE",
             "correct": true,
             "header": "Good choice!",
             "feedback": "Congratulations! You successfully examined a link before clicking on it!"
         }, {
-            "text": "Check Your Grade Here",
+            "text": "NONE",
             "correct": false,
             "header": "Incorrect URL, try again!",
             "feedback": "Here's a hint: select \"Copy Link Address\" to copy the link and then paste it elsewhere to examine the full link.",
             "link": "https://www.wired.com/2015/08/how-to-use-facebook-privacy-settings-step-by-step/"
         }]
+    }, {
+        "slideType": "textImage",
+        "title": "Link appearances can be deceiving...",
+        "text": "However, suspicious links are not always obvious. For instance, they can be long links that look legitimate when truncated in a preview. The link on the right, when truncated, looks like <b>\"http://myaccount.google.com-securitysetting...\"</b> but is actually registered as a <b>\".tk\"</b> website (as opposed to the more conventional \".com\"). Any domain that is unfamiliar (and not .com, .org, .gov, .edu or .mil,) should trigger suspicion about a website and its authenticity.",
+        "imgSrc": "img/module-img/tk-domain.jpg"
     }, {
         "slideType": "sketchyEmail",
         "name": "exposing-longer-urls",
@@ -212,7 +215,49 @@
         "text": "Despite having stanford.edu in it, this link is illegitimate! Notice that it is not actually a .com website, but a convoluted URL for a .bs website.<br /><br />...<b>checkgrade.secure.actions.canvas.stanford.edu-html-stanford.bs</b>..."
     }, {
         "slideType": "text",
+        "title": "Now, beware sketchy link shorteners...",
+        "text": "Long and suspicious links like the one you just learned about can sometimes be obfuscated behind link shorteners, like bit.ly. These services allow long links to be represented in a short form."
+    }, {
+        "slideType": "textImage",
+        "title": "Shortened links can be deceiving...",
+        "text": "Now, look. the link on the right. It ends with a .com, so that test of legitimacy checks out.",
+        "imgSrc": "img/module-img/shortened-link.jpg"
+    }, {
+        "slideType": "textImage",
+        "title": "Shortened links can be deceiving...",
+        "text": "What if we told you that innocent link, <b>http://bit.ly/2riL83e</b>, brought you to this sketchy link on the right we've already seen?",
+        "imgSrc": "img/module-img/tk-domain.jpg"
+    }, {
+        "slideType": "textImage",
+        "title": "Shortened links can be deceiving...",
+        "text": "As you can see to the right, useful link-shortening services like bit.ly can be used to also hide malicious site links. Someone used bit.ly to represent <b>scammerwebsite.com</b> as <b>bit.ly/2s1eCme</b>.",
+        "imgSrc": "img/module-img/bitly.jpg"
+    }, {
+        "slideType": "textImage",
+        "title": "Examine shortened links!",
+        "text": "Luckily, there are websites like <a href='http://wheredoesthislinkgo.com/'>wheredoesthislinkgo.com</a> that you can use to check what a shortened link actually leads to. For example, we can see that the shortened link <b>http://bit.ly/2k3rNkd</b> leads to <b>http://survey-winner.com/</b>, a website that could prey on people who think they really have won prizes through random online surveys.",
+        "imgSrc": "img/module-img/example-expander.jpg"
+    }, {
+        "slideType": "text",
         "text": "Another useful tool for evaluating the legitimacy of a URL is to see whether it starts with http or https. https represents a secure connection that encrypts the information that you share with a website. Trusted websites tend to use https."
+    }, {
+        "slideType": "fillInQuiz",
+        "name": "examine-url",
+        "text": "Now, try using <a href='http://wheredoesthislinkgo.com/'>wheredoesthislinkgo.com</a> to learn where the link to the right actually goes! Keep \"http\" in your answer.",
+        "buttonText": "Check this link out! Nothing suspicious here.",
+        "answer": "http://badwebsite.com/",
+        "options": [{
+            "text": "NONE",
+            "correct": true,
+            "header": "Good choice!",
+            "feedback": "Congratulations! You thoroughly examined an obfuscated link before clicking on it!"
+        }, {
+            "text": "NONE",
+            "correct": false,
+            "header": "Incorrect URL, try again!",
+            "feedback": "Here's a hint: select \"Copy Link Address\" to copy the link and then paste it to wheredoesthislinkgo.com to examine the full link.",
+            "link": "http://bit.ly/1DCsMsx"
+        }]
     }, {
         "slideType": "quiz",
         "name": "bank-of-the-vvest",
@@ -226,7 +271,7 @@
         }, {
             "text": "No",
             "correct": true,
-            "feedback": "You avoided a sophisticated phishing attack. Congrats!"
+            "feedback": "You noticed that the \"w\" in this website was actually two \"v\"s and avoided a sophisticated phishing attack. Congrats!"
         }]
     }, {
         "slideType": "text",
