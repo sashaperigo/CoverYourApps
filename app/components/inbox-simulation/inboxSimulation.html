@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="components/inbox-simulation/inboxSimulation.css" />
+<div class="text">
+    <md-list>
+      <md-list-item class="md-2-line" ng-repeat="email in emails">
+        <div class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
+             ng-class="{seen: email.seen, selected: email === rhs}">
+          <h3>{{email.emailData.subject}}</h3>
+          <p ng-bind-html="email.emailData.from | html"></p>
+        </div>
+      </md-list-item>
+    </md-list>
+</div>
+<div class="interactive">
+    <div id="start-inbox" ng-if="!rhs">Select an email from the left to begin.</div>
+    <sketchy-email ng-if="rhs" slide="rhs"></sketchy-email>
+</div>
