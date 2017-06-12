@@ -22,6 +22,8 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "controller": "ReplyController",
+    "templateUrl": "/components/reply/reply.html",
     "emailData": {
         "subject": "Jacob K. Javits Center",
         "from": "<b>Huma Abedin</b> &lt;habedin@hillaryclinton.com&gt;",
@@ -42,6 +44,8 @@
     }]
 }, {
     "slideType": "sketchyEmail",
+    "controller": "ReplyController",
+    "templateUrl": "/components/reply/reply.html",
     "emailData": {
         "subject": "Larry Pressler",
         "from": "<b>Adrienne Elrod</b> &lt;aelrod@hillaryclinton.com&gt;",
