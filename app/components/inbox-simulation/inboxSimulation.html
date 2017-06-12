@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="components/sketchy-email/sketchyEmail.css" />
 <link rel="stylesheet" href="components/inbox-simulation/inboxSimulation.css" />
 <div class="text">
+    <h4 id="text-header">Inbox</h4>
     <md-list>
       <md-list-item class="md-2-line" ng-repeat="email in emails" ng-if="!email.deleted">
         <div class="md-list-item-text" layout="column" ng-click="chooseEmail(email)"
@@ -10,9 +11,19 @@
         </div>
       </md-list-item>
     </md-list>
+    <div ng-if="!allSeen" class="instructions">
+        <p>Go through your whole inbox and take care of each email.</p>
+        <p>If you need to provide any sensitive information, we'll auto fill that in for you. For other stuff, you can respond with whatever you think is appropriate.</p>
+    </div>
+    <div ng-if="allSeen" class="instructions">
+        <p>Done checking your email? Make sure you handle all the business you need to, then click the button below.</p>
+        <md-button class="md-raised" ng-click="allDone()">
+            I'm done!
+        </button>
+    </div>
 </div>
 <div class="interactive">
-    <div id="start-inbox" ng-if="!rhs">Select an email from the left to begin.</div>
+    <div id="start-inbox" ng-if="!rhs">Select an email from your inbox on the left.</div>
     <div class="sketchy-email-container" ng-if="rhs">
         <h2>{{ rhs.emailData.subject }}</h2>
         <hr>
@@ -37,7 +48,7 @@
             <br />
             <br />
             <p>
-                <md-button name="respond-email" class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="action($event)" ng-disabled="module.displayQuizAnswer">{{ rhs.options[1].text }}</md-button>
+                <md-button name="respond-email" class="md-raised md-primary" ng-href="{{ sketchyUrl }}" ng-click="sketchyEmail.reply($event)" ng-disabled="module.displayQuizAnswer">{{ rhs.options[1].text }}</md-button>
             </p>
         </div>
     </div>

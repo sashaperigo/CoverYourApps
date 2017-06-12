@@ -74,3 +74,9 @@ h4#text-header {
 .md-list-item-text.seen.selected p {
     opacity: 1;
 }
+
+.instructions {
+    padding: 1em;
+    border-top: 1px dotted grey;
+    font-weight: bold;
+}
