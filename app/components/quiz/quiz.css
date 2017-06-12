@@ -1,63 +1,38 @@
-.content-grid {
-    overflow-y: scroll;
-}
-
 .quiz-container {
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-align: center;
+    width: 75%;
+    margin: auto;
 }
 
-.prompt {
-    display: block;
+.question-container {
+    float: left;
 }
 
-.prompt .question {
+.question {
     padding-top: 1rem;
-    text-align: left;
 }
 
-.prompt .image {
+.answers {
+    display: inline-block;
+}
+
+.answers+.answers {
+    padding-left: 4rem;
+}
+
+.image {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    float: right;
+}
+
+.image img {
+    max-width: 500px;
 }
 
 .img-citation {
     font-size: .5em;
-}
-
-.prompt .image img {
-    max-width: 500px;
-}
-
-.prompt .answers {
-    display: inline-block;
-}
-
-.prompt .answers+.answers {
-    padding-left: 4rem;
-}
-
-.prompt .answers .md-button.submit {
-    background-color: gray;
-    color: white;
-}
-
-.feedback {
-    display: block;
-    position: absolute;
-    background: white;
-    opacity: 0.98;
-    border-radius: 2rem;
-    padding: 2rem;
-    z-index: 1;
-    top: calc(50px + 2%);
-    height: calc((100vh - 75px - 150px) * 0.90);
-    width: 95%;
-    box-shadow: -1px 1px 10px 0 gray;
-}
-
-.feedback h4 {
-    line-height: 1.2;
 }
 
 .correctAnswer {
@@ -68,38 +43,20 @@
     background-color: #851e1e;
 }
 
-.answer-bar {
-    background-color: #851e1e;
-}
-
-.statistic-subheader {
-    margin: 0;
-    text-align: left;
-    position: relative;
-    top: -1em;
-}
-
-.statistics-header{
+.statistics-header {
     text-align: left;
 }
 
-.answer-popup {
-    color: #ffffff;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    width: 100%;
-    text-align: center;
-    max-height: 0px;
-    height: 0px;
-    z-index: 100000;
-    transition: 1s;
-    overflow: hidden;
+.statistics .progress-bar {
+    background-color: #8f0f1c;
 }
 
+.md-dialog-content-body,
+.md-dialog-content-body h1,
+.md-dialog-content-body h4 {
+    line-height: 1.2;
+}
 
-.answer-popup-show {
-    height:60px;
-    max-height: 60px;
-    padding: 20px;
+.md-dialog-content-body h1 {
+    margin-top: 0;
 }

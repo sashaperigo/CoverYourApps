@@ -23,7 +23,7 @@
         }, {
             "text": "No",
             "correct": true,
-            "feedback": "You evaded this phishing attack! If you had fallen for it, this adversary would have gained access to your Gmail account, giving them the ability to disseminate this dangerous email further! Although this may seem sophisticated, there are even more complex phishing attacks out there."
+            "feedback": "You evaded this phishing attack. If you had fallen for it, this adversary would have gained access to your Gmail account, giving them the ability to disseminate this dangerous email further. Although this may seem sophisticated, there are even more complex phishing attacks out there."
         }]
     }, {
         "slideType": "text",

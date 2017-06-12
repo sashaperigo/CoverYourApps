@@ -1,53 +1,31 @@
 <link rel="stylesheet" href="components/quiz/quiz.css" />
-
-<div class="answer-popup correctAnswer" ng-class="{'answer-popup-show': module.displayQuizAnswer && module.quizResponseCorrect}">
-            That's Correct!
-</div>
-
-<div class="answer-popup incorrectAnswer" ng-class="{'answer-popup-show': module.displayQuizAnswer && !module.quizResponseCorrect}">
-            Not Quite!
-</div>
-
 <div class="quiz-container">
-
-    <div class="prompt">
-        <div class="row">
-            <div class="col-xs-9" ng-if="!$ctrl.slide.imgSrc">
-                <h2>Quiz Time!</h2>
-                <p class="question" ng-bind-html="$ctrl.slide.text | html"><br><br></p>
-                <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
-                    <md-button class="submit" ng-if="!module.displayQuizAnswer" ng-click="quiz.submit(currentOption)">{{ currentOption.text }}</md-button>
-                </div>
-            </div>
-
-            <div class="col-xs-3" ng-if="$ctrl.slide.imgSrc">
-                <h2>Quiz Time!</h2>
-                <p class="question" ng-bind-html="$ctrl.slide.text | html"><br><br></p>
-                <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
-                    <md-button class="submit" ng-if="!module.displayQuizAnswer" ng-click="quiz.submit(currentOption)">{{ currentOption.text }}</md-button>
-                </div>
-                <div id="container"></div>
-            </div>
-            <div class="col-xs-6" ng-if="$ctrl.slide.imgSrc">
-                <div class="image">
-                    <img ng-src="{{ $ctrl.slide.imgSrc }}" />
-                    <p class="img-citation"> Source:
-                        <a ng-href="{{ $ctrl.slide.imgCitation }}">{{ $ctrl.slide.imgCitation }}</a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-xs-3" ng-if="! module.displayQuizAnswer">
-
-            </div>
-            <div class="col-xs-3" ng-if="module.displayQuizAnswer">
-                <br />
-                <h4 class="answer" ng-bind-html="module.quizResponse | html"></h4>
-                <br />
-                <h3 ng-if="module.quizStatistics" class="statistics-header">How did you do compared to others?</h3>
-                <div class="statistics" ng-bind-html="module.quizStatistics | html"></div>
-            </div>
-
+    <!--     <div ng-if="!$ctrl.slide.imgSrc">
+        <h2>Quiz Time!</h2>
+        <p class="question" ng-bind-html="$ctrl.slide.text | html">
+            <br />
+            <br />
+        </p>
+        <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
+            <md-button class="submit" ng-if="!module.displayQuizAnswer" ng-click="quiz.submit(currentOption)">{{ currentOption.text }}</md-button>
         </div>
-
+    </div> -->
+    <div class="question-container">
+        <h2>Quiz Time!</h2>
+        <br />
+        <p class="question" ng-bind-html="$ctrl.slide.text | html">
+        </p>
+        <br />
+        <br />
+        <div class="answers" ng-repeat="currentOption in $ctrl.slide.options">
+            <md-button class="md-raised md-primary" ng-disabled="module.displayQuizAnswer" ng-click="quiz.submit($event, currentOption)">{{ currentOption.text }}</md-button>
+        </div>
     </div>
+    <div class="image" ng-if="$ctrl.slide.imgSrc">
+        <img ng-src=" {{ $ctrl.slide.imgSrc }} " />
+        <p class="img-citation "> Source:
+            <a ng-href="{{ $ctrl.slide.imgCitation }} ">{{ $ctrl.slide.imgCitation }}</a>
+        </p>
+    </div>
+    <div style="clear:both;"></div>
 </div>

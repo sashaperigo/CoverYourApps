@@ -104,11 +104,11 @@ myApp.controller('MainController', ['$scope', '$http',
                     var resultString = '';
                     for (var i = 0; i < response.data.length; i++) {
                         var percent = Math.round(100 * response.data[i].count / total).toString();
-                        resultString+= '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"'
-                        resultString+= percent;
-                        resultString+= ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent +'%\">'
-                        resultString+= '</div></div>'
-                        resultString+= '<p class=\"statistic-subheader\">' + percent + '\% answered ' + response.data[i].behavior + '<p>';
+                        resultString += '<div class=\"progress\"> <div class=\"progress-bar answer-bar\" role=\"progressbar\" aria-valuenow=\"'
+                        resultString += percent;
+                        resultString += ' \" aria-valuemin=\"0\" aria-valuemax=\"100\" style="width:' + percent + '%\">'
+                        resultString += '</div></div>'
+                        resultString += '<p class=\"statistic-subheader\">' + percent + '\% answered ' + response.data[i].behavior + '<p>';
                     }
                     callback(response.data, resultString);
                 }, function errorCallback(response) {

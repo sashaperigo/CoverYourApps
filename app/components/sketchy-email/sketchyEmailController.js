@@ -27,8 +27,9 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
 
 
         // This code sucks - I'm so sorry.
-        function feedbackHtml() {
-            var response = '<h4 class="answer">' + $scope.module.quizResponse + '</h4>' +
+        function feedbackHtml(option) {
+            var response = '<h1>' + option.header + '</h1>' +
+                '<h4 class="answer">' + $scope.module.quizResponse + '</h4>' +
                 '<br />';
 
             if ($scope.module.quizStatistics) {
@@ -48,15 +49,14 @@ var SketchyEmailController = myApp.controller('SketchyEmailController', ['$scope
                     $mdDialog.alert()
                     .parent(angular.element(document.querySelector('#popupContainer')))
                     .clickOutsideToClose(true)
-                    .title(option.header)
-                    .htmlContent(feedbackHtml())
+                    .htmlContent(feedbackHtml(option))
                     .ariaLabel('Alert Dialog Demo')
                     .ok('Got it!')
                     .targetEvent(ev)
                 );
             });
             $scope.buttonDisabled = true;
-        };
+        }
     }
 ]);
 

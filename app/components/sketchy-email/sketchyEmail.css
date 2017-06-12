@@ -22,36 +22,35 @@
 }
 
 .delete-email {
-	position: relative;
-	right: 10px;
-	top: -95px;
-	height:50px;
-	width:315px;
-	font-size: 12px;
-	text-align: right;
-	float:right;
+    position: relative;
+    right: 10px;
+    top: -95px;
+    height: 50px;
+    width: 315px;
+    font-size: 12px;
+    text-align: right;
+    float: right;
 }
 
 .faked-email-reply {
-	position: relative;
-	height:50px;
-	right: 60px;
-	top: -45px;
-	font-size: 12px;
-	text-align: right;
+    position: relative;
+    height: 50px;
+    right: 60px;
+    top: -45px;
+    font-size: 12px;
+    text-align: right;
 }
 
-.sketchy-url-container a {
-    color: blue;
+.statistics .progress-bar {
+    background-color: #8f0f1c;
 }
 
-.sketchy-url-container h2 {
-    font-size: 18px;
-    margin-left: 10px;
+.md-dialog-content-body,
+.md-dialog-content-body h1,
+.md-dialog-content-body h4 {
+    line-height: 1.2;
 }
 
-.sketchy-url-container hr {
-    margin-top: -0px;
-    margin-bottom: 5px;
-    margin-left: 10px;
+.md-dialog-content-body h1 {
+    margin-top: 0;
 }

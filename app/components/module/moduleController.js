@@ -129,7 +129,7 @@ var ModuleController = myApp.controller('ModuleController', ['$scope', '$rootSco
         $scope.module.quizResponseCorrect = false;
         $scope.module.quizStatistics = "";
 
-        // Used for submit quiz and for sumbit email
+        // Used for submit quiz and for submit email
         $scope.module.submitQuizResponse = function(clicked, callback) {
             $scope.module.displayQuizAnswer = true;
             $scope.module.quizResponseCorrect = clicked.correct;
