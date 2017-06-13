@@ -288,7 +288,7 @@
     }, {
         "slideType": "textImage",
         "title": "Intro to certs",
-        "text": "TODO: https websites use certificates to demonstrate a website’s identity; when sharing data with a website, certificates help prove that you are communicating with the party you expect. (In this case: the actual twitter.com as opposed to an attacker impersonating twitter.com)",
+        "text": "HTTPS websites use certificates to demonstrate a website’s identity; when sharing data with a website, certificates help prove that you are communicating with the party you expect. (In this case: the actual twitter.com as opposed to an attacker impersonating twitter.com)",
         "imgSrc": "img/module-img/twitter-cert.png",
         "imgCitation": "https://twitter.com"
     }, {
@@ -343,7 +343,7 @@
         "text": "Now, step into John Podesta's shoes. It's another typical morning, and you've got to catch up on your inbox."
     }, {
         "slideType": "text",
-        "text": "In this simlation, you will not recieve immediate feedback after performing an action on an email. <b>At the end, you will learn if you fell for a phishing attempt or not.</b>"
+        "text": "In this simulation, you will not recieve immediate feedback after performing an action on an email. <b>At the end, you will learn if you fell for a phishing attempt or not.</b>"
     }, {
         "slideType": "inboxSimulation"
     }, {
