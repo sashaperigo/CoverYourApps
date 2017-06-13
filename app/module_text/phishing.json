@@ -65,7 +65,7 @@
     }, {
         "slideType": "text",
         "title": "Have you <i>actually</i> looked at who an email came from?",
-        "text": "<p>It is also easy to fall prey to phishing attempts that spoof an email address. In a simulation in a political science class at Stanford this year, students were assigned to teams representing countries and used emails like <span style=\"font-family: Consolas, monaco, monospace;\">&lt;head.of.philipines@gmail.com&gt;</span> to represent their mock heads of state.</p><p>The winning team actually won the simulation by creating fake email accounts to impersonate other heads of state and tricking participants into sharing confidential information with them!</p>"
+        "text": "<p>It is also easy to fall prey to phishing attempts that spoof an email address. In a simulation in a political science class at Stanford this year, students were assigned to teams representing countries and used emails like <span style=\"font-family: Consolas, monaco, monospace;\">&lt;head.of.philippines@gmail.com&gt;</span> to represent their mock heads of state.</p><p>The winning team actually won the simulation by creating fake email accounts to impersonate other heads of state and tricking participants into sharing confidential information with them!</p>"
     }, {
         "slideType": "sketchyEmail",
         "name": "head-of-russia",
