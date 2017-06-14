@@ -2,11 +2,14 @@
 
 var path = require('path');
 var express = require('express');
+var sslRedirect = require('heroku-ssl-redirect');
 var session = require('express-session');
 var pgSession = require('connect-pg-simple')(session);
 var db = require('./database/connect-db');
 
 var app = express();
+
+app.use(sslRedirect());
 
 app.use(session({
   store: new pgSession({
